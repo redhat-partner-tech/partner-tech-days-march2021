@@ -14,7 +14,7 @@ Week of March 15th:
 |                                      | Monday | Tuesday | Wednesday (9/9)                                 | Thursday (9/10)                                          | Friday (9/11)                                                                 |
 |--------------------------------------|--------|---------|-------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------------|
 | noon-1:30pm ET<br>9am-10:30pm PT<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|        | OpenShift: Hosted & Managed Services Overview | Container Security Deep Dive | Creating Custom Modules for Ansible Automation |        |
+|        |        | OpenShift: Hosted & Managed Services Overview | Container Security Deep Dive | Creating Custom Modules for Ansible Automation |
 | 2pm-3:30pm ET<br>11am-12:30pm PT<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
 |        | Creating Custom Modules for Ansible Automation | Red Hat Management Workshop: Using Insights, Satellite, Ansible, CentOS & RHEL |        |        |
 
