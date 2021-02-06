@@ -11,7 +11,7 @@ The intent is to enable Red Hat Business Partners with products, solutions updat
 ## Schedule
 
 Week of March 15th:
-|                                 | Monday (3/15) | Tuesday (3/16)                                                                  | Wednesday (3/17)                                      | Thursday (3/18)                                         | Friday (3/19) |
+|                                 | Monday<br> (3/15) | Tuesday<br> (3/16)                                                                  | Wednesday<br> (3/17)                                      | Thursday<br> (3/18)                                         | Friday<br> (3/19) |
 |---------------------------------|---------------|---------------------------------------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------|---------------|
 | noon-1:30pm ET / 9am-10:30pm PT |               | OpenShift:  Hosted & Managed Services Overview                                  | Container Security Deep Dive                          | Creating Custom Modules for Ansible Automation Platform |               |
 | 2pm-3:30pm ET / 11am-12:30pm PT |               | Red Hat Management Workshop:  Using Insights, Satellite, Ansible, CentOS & RHEL | Event Driven Architecture and Serverless on OpenShift |                                                         |               |
