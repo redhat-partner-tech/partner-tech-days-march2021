@@ -6,7 +6,7 @@ Greetings. This is the main page for Red Hat Partner Tech Days - March 2021. Thi
 [Red Hat Partner Tech Days - March 2021](https://www.redhat.com)
 
 
-The intent is to enable Red Hat Business Partners with products, solutions update and deliver capabilities through demos and workshops  
+The intent is to enable Red Hat Business Partners with products, solutions, updates and deliver capabilities through demos and hands-on workshops.  
 
 ## Schedule
 
