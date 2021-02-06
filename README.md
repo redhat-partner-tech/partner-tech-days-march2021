@@ -11,14 +11,9 @@ The intent is to enable Red Hat Business Partners with products, solutions updat
 ## Schedule
 
 Week of March 15th:
-|                                      | Monday | Tuesday | Wednesday (9/9)                                 | Thursday (9/10)                                          | Friday (9/11)                                                                 |
-|--------------------------------------|--------|---------|-------------------------------------------------|----------------------------------------------------------|-------------------------------------------------------------------------------|
-| noon-1:30pm ET<br>9am-10:30pm PT<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-|        |        | OpenShift: Hosted & Managed Services Overview | Container Security Deep Dive | Creating Custom Modules for Ansible Automation |
-| 2pm-3:30pm ET<br>11am-12:30pm PT<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  
-|        | Creating Custom Modules for Ansible Automation | Red Hat Management Workshop: Using Insights, Satellite, Ansible, CentOS & RHEL |        |        |
-
-
-
+|                                 | Monday (3/15) | Tuesday (3/16)                                                                  | Wednesday (3/17)                                      | Thursday (3/18)                                         | Friday (3/19) |
+|---------------------------------|---------------|---------------------------------------------------------------------------------|-------------------------------------------------------|---------------------------------------------------------|---------------|
+| noon-1:30pm ET / 9am-10:30pm PT |               | OpenShift:  Hosted & Managed Services Overview                                  | Container Security Deep Dive                          | Creating Custom Modules for Ansible Automation Platform |               |
+| 2pm-3:30pm ET / 11am-12:30pm PT |               | Red Hat Management Workshop:  Using Insights, Satellite, Ansible, CentOS & RHEL | Event Driven Architecture and Serverless on OpenShift |                                                         |               |
 
 
