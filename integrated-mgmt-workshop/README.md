@@ -35,7 +35,7 @@ Things to consider if doing this in dev/test/stage-beta/prod:
 Out of the box, Satellite 6 supports [RHEL systems roles](https://access.redhat.com/articles/3050101) (a collection of Ansible Roles) for a limited set of administration tasks [1]. An Ansible Automation Platform subscription is need to execute more complex Ansible jobs, such as OS conversions and upgrades. Using these two solutions together ensures you have the best tool for the job for:
 - Content Management (Satellite)
 - OS Patching & Standardized Operating Environments (Satellite)
-- Provisioning (OS, Infra Services and Applications/Other (Satellite and/or Ansible Automation Platform)
+- Provisioning: OS, Infra Services and Applications/Other (Satellite and/or Ansible Automation Platform)
 - Configuration of Infra and Apps (Ansible Automation Platform)
 
 [1, Scope of Support for Ansible Components included with Red Hat Satellite 6](https://access.redhat.com/articles/3616041)
