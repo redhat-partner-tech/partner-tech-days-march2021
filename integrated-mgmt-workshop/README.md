@@ -9,7 +9,7 @@ This use-case will focus on conversion and migration from older CentOS versions 
 - 2x CentOS 7 instances 
 - 2x RHEL 7  instances
 
-**Upgrade Scenarios**
+**Upgrade Scenario**
 - Exercise: Convert CentOS 7 to RHEL 7, then upgrade to RHEL 8
     - Covers CentOS 7 to RHEL 7 conversion
     - RHEL 7 to RHEL 8 upgrade
