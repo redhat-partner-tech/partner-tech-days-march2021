@@ -1,6 +1,7 @@
 Intergated Management Workshop: CentOS/RHEL migration and upgrade
 -----------------------------------------------------------------
 
+Introduction:<br>
 This use-case will focus on conversion and migration from older CentOS versions to RHEL 8.3 (latest version as of Feb 2020). While the exercises only show this process for a few host systems, it can be scaled to a larger number of physical, virtual or cloud hosts using content repos provided by [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) (included in [Red Hat Smart Management](https://www.redhat.com/en/technologies/management/smart-management)). The upgrade process will be driven with automation built and run using [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible).
 
 **Environment**
@@ -14,11 +15,10 @@ This use-case will focus on conversion and migration from older CentOS versions 
     - Covers CentOS 7 to RHEL 7 conversion
     - RHEL 7 to RHEL 8 upgrade
 
-Exercise: CentOS/RHEL migration and upgrade
+Overall Process
 -----------------------------------------------------------------
 
-Overall process:
-
+Summary:<br>
 - The first step involves making a backup of the instance data (in case of a fallback or restore is needed. Better safe than sorry.)
 - Second, we will use a tool called Convert2RHEL. There are many sources of information on this handly utility, here are a few key ones:
     - [How to convert from CentOS or Oracle Linux to RHEL](https://access.redhat.com/articles/2360841) (Jan 2021)
@@ -32,7 +32,7 @@ Things to consider if doing this in dev/test/stage-beta/prod:
 - Network connection and network time synchoniztions
 
 
-**A Note about using Satellite vs. Ansible Automation Platform for this...**
+**A Note about using Satellite vs. Ansible Automation Platform for this...**<br>
 Out of the box, Satellite 6 supports RHEL systems roles (a collection of Ansible Roles) for a limited set of administration tasks [1]. An Ansible Automation Platform subscription is need to execute more complex Ansible jobs, such as OS converstions and upgrades. Using these to solution together ensures you have the best tool for the job for
 - Content Management (Satellite)
 - OS Patching & Standardized Operating Environments (Satellite)
@@ -41,7 +41,8 @@ Out of the box, Satellite 6 supports RHEL systems roles (a collection of Ansible
 
 Ok, now, let's get started...  
 
-===
+Exercise:
+-----------------------------------------------------------------
 
 **Login to your Satellite & AAP UI's**
 - [Satellite 6.8 UI](https://www.example.com)
