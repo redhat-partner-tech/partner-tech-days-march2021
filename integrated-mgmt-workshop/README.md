@@ -39,6 +39,9 @@ Out of the box, Satellite 6 supports RHEL systems roles (a collection of Ansible
 - Provisioning (OS, Infra Services and Applications/Other (Satellite and/or Ansible Automation Platform)
 - Configuration of Infra and Apps (Ansible Automation Platform)
 
+[1, Scope of Support for Ansible Components included with Red Hat Satellite 6](https://access.redhat.com/articles/3616041)
+
+
 Ok, now, let's get started...  
 
 Exercise:
