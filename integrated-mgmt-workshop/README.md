@@ -1,7 +1,7 @@
 Intergated Management Workshop: CentOS/RHEL migration and upgrade
 -----------------------------------------------------------------
 
-Introduction:<br>
+**Introduction**<br>
 This use-case will focus on conversion and migration from older CentOS versions to RHEL 8.3 (latest version as of Feb 2020). While the exercises only show this process for a few host systems, it can be scaled to a larger number of physical, virtual or cloud hosts using content repos provided by [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) (included in [Red Hat Smart Management](https://www.redhat.com/en/technologies/management/smart-management)). The upgrade process will be driven with automation built and run using [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible).
 
 **Environment**
@@ -11,14 +11,14 @@ This use-case will focus on conversion and migration from older CentOS versions 
 - 2x RHEL 7  instances
 
 **Upgrade Scenarios**
-- [Exercise](upgrade-exercise1.md) -- Convert CentOS 7 to RHEL 7, then upgrade to RHEL 8
+- Exercise: Convert CentOS 7 to RHEL 7, then upgrade to RHEL 8
     - Covers CentOS 7 to RHEL 7 conversion
     - RHEL 7 to RHEL 8 upgrade
 
 Overall Process
 -----------------------------------------------------------------
 
-Summary:<br>
+**Summary**<br>
 - The first step involves making a backup of the instance data (in case of a fallback or restore is needed. Better safe than sorry.)
 - Second, we will use a tool called Convert2RHEL. There are many sources of information on this handly utility, here are a few key ones:
     - [How to convert from CentOS or Oracle Linux to RHEL](https://access.redhat.com/articles/2360841) (Jan 2021)
