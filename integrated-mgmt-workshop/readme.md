@@ -27,7 +27,15 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 - Configure Activation Keys and Lifecycle environments
 - Register Servers to Satellite Server
 
+### Use Cases
+- Patch Management
+- OpenSCAP Scanning / Vulnerability Management
+- System Baselining and Drift
+- Custom Repository
+- Convert to RHEL from CentOS
+
 ### Guide
+
 #### Your Lab Environment
 
 In this lab you'll work in a pre-configured lab environment. You will have access to the following hosts:
