@@ -79,7 +79,7 @@ This step demonstrates the creation of templates. You will be working with sever
 
 -   PROJECT: Automated Smart Management
 
--   PLAYBOOK: configure_satellite.yml
+-   PLAYBOOK: setup_satellite.yml
 
 -   CREDENTIALS: Satellite *Note: You will need to select the credential type from the drop down menu at the top of the prompt. From there you can select 'Satellite'*
 
