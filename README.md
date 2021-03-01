@@ -3,7 +3,7 @@
 
 Greetings. This is the main page for Red Hat Partner Tech Days - March 2021. This edition will be delivered as a multi-day virtual event. Target audience is North America with the main landing/registration page located here:
 
-[Red Hat Partner Tech Days - March 2021](https://www.redhat.com)
+[Red Hat Partner Tech Days - March 2021](https://events.redhat.com/profile/web/index.cfm?PKwebID=0x71422abcd)
 
 
 The intent is to enable Red Hat Business Partners with products, solutions, updates and deliver capabilities through demos and hands-on workshops.  
