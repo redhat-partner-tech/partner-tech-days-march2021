@@ -84,25 +84,25 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Select on the GREEN + icon on the far right side of the screen and click "Job Template". Fill out the details as follows. 
 
--   Name: "OpenSCAP_Configure "
+        Name: "OpenSCAP_Configure "
 
--   Job Type: "Run"
+        Job Type: "Run"
 
--   Inventory: "Workshop Inventory"
+        Inventory: "Workshop Inventory"
 
--   Playbook: "configure_openscap.yml"
+        Playbook: "configure_openscap.yml"
 
--   Project: "Automated_Management" 
+        Project: "Automated_Management" 
 
--   Credentials: "Satellite_Credential", "Workshop Credential"
+        Credentials: "Satellite_Credential", "Workshop Credential"
 
--   Extra Variables:
+        Extra Variables:
 
--   HOSTS: node1.example.com
+            HOSTS: node1.example.com
 
--   Policy_scan: 
+            Policy_scan: 
 
--   PCI_Compliance
+                - PCI_Compliance
 
 ![](https://lh5.googleusercontent.com/w--1gqh7nJwqHv_q_vjbXDaJCPXmrj5bHbZnx5A0lO3SChPDthAxR9b3IXMapaDUf4oWK_HIk-2iwAszRl671_5D0kOcqBNBKOuMwN5M9TsgmVGJcZxuwLfWrreaGg9zUbVdQC39)
 
@@ -154,27 +154,27 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Then select on the far right side of the screen and click "Job Template". Fill out the details as follows. 
 
--   Name: "OpenSCAP_Configure "
+        Name: "OpenSCAP_Configure"
 
--   Job Type: "Run"
+        Job Type: "Run"
 
--   Inventory: "Workshop Inventory"
+        Inventory: "Workshop Inventory"
 
--   Playbook: "configure_openscap.yml"
+        Playbook: "configure_openscap.yml"
 
--   Project: "Automated_Smart_Management" 
+        Project: "Automated_Smart_Management" 
 
--   Credentials: "Satellite_Credential", "Workshop Credential"
+        Credentials: "Satellite_Credential", "Workshop Credential"
 
--   Extra Variables:
+        Extra Variables:
 
--   HOSTS: rhel7
+            HOSTS: rhel7
 
--   Policy_scan: 
+            Policy_scan: 
 
--   PCI_Compliance
+                - PCI_Compliance
 
--   STIG_Compliance
+                - STIG_Compliance
 
 ![](https://lh4.googleusercontent.com/KV-fvA1EBSSWJL_e9cxPtRrJzGcuzAAl2TjLLGPQVrxo9E-gqnL6VAqBmjRXOs8a6LGjmatQCQWzIjZXu_qnawmZBmERi2ydlPdcNyCOV5zCncwZ5iU7HtKszFDgV9WOYuM0KUal)
 
