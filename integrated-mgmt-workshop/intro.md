@@ -101,9 +101,3 @@ All job templates have now run and we can login to Satellite to perform verifica
 #### 6\. End Lab
 
 -   You have finished the lab.
-
-  __ _       _     _     _
- / _(_)_ __ (_)___| |__ | |
-| |_| | '_ \| / __| '_ \| |
-|  _| | | | | \__ \ | | |_|
-|_| |_|_| |_|_|___/_| |_(_)
