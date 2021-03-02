@@ -1,7 +1,16 @@
-Integrated Management Workshop: Introduction and setting up the lab environment
-===============================================================================
+Integrated Management Workshop: Setting up the lab environment
+==============================================================
 
-In this part of the workshop, we will set up the lab environment. This is TBD
+Objective
+---------
+
+In this part of the workshop, we will set up the lab environment. This exercise will require you to launch (3) pre-configured playbooks. 
+
+-   Setup and configure Satellite with the proper lifecycle environments, content views, activation keys. 
+
+-   Populate Ansible Tower with an inventory source, add templates, as well as an additional project.
+
+-   Register servers to the Satellite installation.
 
 Environment
 -----------
@@ -9,6 +18,8 @@ Environment
 -   Red Hat Satellite v6.8
 
 -   3 x Red Hat Enterprise Linux clients v7.9
+
+-   2 x CentOS clients v7.6
 
 Exercise
 --------
@@ -19,99 +30,61 @@ Exercise
 
 ![](https://lh3.googleusercontent.com/qPZKoTY_llCgALI1Y4E1Y9jpXx9BPiLlcRoZeevtMfZnRq256WKil3RSbKa6RWgXd8Xkl9RZsAOvShmZISoGg1yvxZ2UIYfVMUUCnNnZix4xQF1GVBSa-TKktg1Mvb_W95lHgqiN)
 
--   Once you're in Tower you will be able to see a dashboard
+-   Upon successful login, you will be able to see the Ansible Tower dashboard.
 
-#### 2\. Creating a new Project
+-   Use the side pane menu on the left to select 'Projects' and review the two projects named 'Automated Management' and 'Fact Scan'. These projects, along with the 'Workshop Inventory' have been set up for you during the provisioning of the lab environment.
 
--   Now we will start configuring an Ansible project. Under the 'Resource' heading select 'Projects' then select the green + to create a new project.
+-   Two 'Templates' named 'SETUP / Satellite' and 'SETUP / Tower are also preconfigured. We will need to launch each of these.
 
-![](https://lh3.googleusercontent.com/RxrkFJh-s7P6vbiEuxn6gKojmyKZ-DQ_G_jaDnP5-UJjXAWn7dCRuTIcjmF0RFn0QS4cmv1UlTfLVjADwtP6bWECb-Vfm4sTodv_DRQ4_QqbBofphOsyR42mA576wyqCmhEHLhDC)
+![](https://lh4.googleusercontent.com/kz6l-YuNoKknP6nX7nJTooAmVa91z4up4CoE6c2L2UW2cvJpaOaKXs9vVr62IPN8zA1Od5ADmsX-6K-PNEgKUzFiESAiFW0IqZae94Gd7rS1kt8qm_CrfWbAEHYoQ1FEsglCRFVL)
 
--   Fill out the details required to setup this project in Ansible Tower
+#### 2\. Launch each Ansible job template
 
--   NAME: Automated Smart Management
+This step demonstrates the execution of job templates. You will be working with several templates as the workshop progresses but you will only need to focus on launching three templates as part of getting the lab environment setup.
 
--   SCM TYPE: Git
+-   Select Templates and click ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch 'SETUP / Satellite Job.
 
--   SCM URL: <https://github.com/willtome/automated-smart-management>
+You will be taken to the 'Jobs' dashboard where you will be able to follow each task executed as part of the playbook. This will take approximately 25min to complete.
 
--   SCM BRANCH: smart_mgmt
+![](https://lh3.googleusercontent.com/L3sFy0yfpkcmKvUy1elRQIPbNM7XnCI1HgF5tzi6adwmfDDIbwAl864N0GGchTeGQV6sgCCr5ZoCMtXEKMr3hrEynmkpnMWrh5LtOGbXCxvHyruKbzLRLkhaKxCDa4owY_nnqhQw)
 
-![](https://lh3.googleusercontent.com/oGrCPUY6H0Baa1Ycwik2J41nMrWEv9meRqLTJXC4qqwox91nZ4ZBXdIDIfWbj6-Ar3v3vtu9lPUgDu8Kx51Lj5u-rTTb5eCQ8HP-PSoKiGXEHYqoWwWFZWMukYnHhn8EAWhv1LRs)
+When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
--   You can now click save. *Note: The 'Automated Smart Management' project signal that with a green dot icon that it was able to retrieve the project from GIT.*
+-   Next you will need to run the 'SETUP / Tower' job template. 
 
-#### 3\. Create a Template in Ansible Tower.
+-   Select 'Templates' and click on the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
-This step demonstrates the creation of templates. You will be working with several templates as the workshop progresses but you will only need to focus on creating two templates as part of getting the lab environment setup.
+![](https://lh4.googleusercontent.com/MGisqVAxZlFK4AP9RZ1YsNFv1QdqLr5Y53FAIjyZbsp7khmC9xLCZpDxvpgTMU2qj4jqEJCE-r-KIz6YqIaY2h-Iex4b0OZZ6qHJmpk4K6wW_amI1aWjUs7jzbSrnHN6co1oCMZS)
 
--   Now we will start configuring an Ansible template. Under the 'Resource' heading select 'Templates' then select the green + to create a new template. Choose 'job template' from the selection.
+When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
-![](https://lh4.googleusercontent.com/JgLSt5o5w8vSyw1wiYv-2Umwd6VC148TtE_Q_OECaTlO6QAQWHWTZJeydUclZI4V3jCX3qu6zN9TfwcM8xncWQjncuhK8QsMrXX0IDgl7JYDLLVIM3lbUtMBwgaePJ0imoYJpE1n)
+-   Navigate back to 'Templates' on the left side pane.
 
--   Fill out the details required to setup your first template in Ansible Tower
+The 'SETUP / Tower' job will create multiple job templates that will be useful throughout the remainder of this workshop. This includes the 'SERVER / Register - RHEL7 template'. 
 
--   NAME: Server_Register
+![](https://lh4.googleusercontent.com/xy3fDRQ0LUC9SY1aHlk-hWwdDEDx-UH7nygw3cUb_8SQYSjGLeYpS5juGvl9CjSHB7MvJRShpOVOYMAUNPKfi5C6SPUXHWfGUjaMaax9enjWNS5nbpCM0Fai8hFb4QpJwZypNr4k)
 
--   JOB TYPE: Run
+-   Run the 'SERVER / Register - RHEL7' job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
--   INVENTORY: Workshop Inventory
+-   You will be presented with a survey. Fill this out as follows:
 
--   PROJECT: Automated Smart Management
+-   Server Name or Pattern: node
 
--   PLAYBOOK: server_register.yml
+-   Choose Environment: Dev
 
--   CREDENTIALS: Workshop Credential
+![](https://lh4.googleusercontent.com/DnlOvimZgX8NLFLrgF_loVlkmouWED1-g5BDS5kqDLPeyJvESWt6yY56GGWtCyhM2LVVpkI3D2CkZE7uTG1wD-YiULTCfZSUxxkZU5CilIzxxUNsEwuV1tGQ67Fz2mkONAlEcsgA)
 
--   EXTRA VARIABLES: PREFIX: node
+-   Select 'Next' to Launch the job template.
 
-#### ![](https://lh3.googleusercontent.com/vVVoFVJniG-Nvx9nNpmXLqP2sVDBSMtKvifB9XL7PfUcfKYt977z0iz23eCrM7d7sBt85ijXMq74GBlk-C-QOIEhdZs9t9iXJ8Ac33Arxo-BJCoBi6D8LsksaUWsXHMAB-ZMHlrt)
+![](https://lh5.googleusercontent.com/4dJWGCBg3UYWvsrLMe36j19O2aC5DU2Fo3HW7fyFj8dTVwxrenYa7t7VvvyaXxIBMY4YRfcwL1z5yhZxIbBoe9eVd4o-q0AtpVArgQdMDmAqpV6w4zeDpbe2xobrQ23N4UIk-nlC)
 
--   You can now click save.
+![](https://lh4.googleusercontent.com/AvmmXeKsqMJY7UqF-YkXcc5f1MrdsyzmaRS3DhzDKGCjk33eJSKOmrCYQg-2C_EGb6y0IZdW2k5fTkLDvA4xQOotFbUpivtl3EAZr4vAMyNSaXSYpBtjPB8Woxoo8FuqvqmfxhMK)
 
--   You will need to create another job template. Follow the same instructions above to draft a template with the following values
-
--   NAME: Configure_Satellite
-
--   JOB TYPE: Run
-
--   INVENTORY: Workshop Inventory
-
--   PROJECT: Automated Smart Management
-
--   PLAYBOOK: setup_satellite.yml
-
--   CREDENTIALS: Satellite *Note: You will need to select the credential type from the drop down menu at the top of the prompt. From there you can select 'Satellite'*
-
-![](https://lh4.googleusercontent.com/sfrQ8HRnJkr1czup1rIfYrTOPRMLehQT2FDS0WysBKZ70clGud--kvzf-fhPJZBn7NeMDV6S0Z8CXWRz9JyVeUdChnPTrHNQvVsWVbp7KdC8h8VCTsCqNRlSY7DVlObKhTVg8x2P)
-
--   You can now click save. 
-
-#### 4\. Launch jobs in Ansible using the Templates that you have created.
-
--   Select Templates and click on the ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch 'Configure_Satellite' Job.
-
-This template is setting up a content view in Satellite. You can view this by clicking Content -> Content Views -> RHEL7
-
-Further, this template configures foreman rake as well as creates lifecycle environments and their activation keys.
-
-![](https://lh6.googleusercontent.com/rKJMG2Rh8l9Jk790n4xx2UJwqf4Zq8bekgBc-j8Ad5zG-bc6T2qkR8wPEe97QADGJtVvpqlxv0wCG2VYuSOK_QkyXIaox8V_riuvZdTn0HD-GtYDTJDWQoMeHhHGURbLpYmNgz0a)
-
-When complete, you will see a successful status on Ansible Tower 'Job's
-
--   Next you will need to run the 'Server_Register' job. 
-
--   Select Templates and click on the ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch 'Server_' Job.
-
-This template registers hosts in your inventory to Satellite, sets repositories, installs the katello agent, and registers subscription. *Note: You may see the job fail for a single node during register subscription mangler. This is expected and can be remediated by selecting the ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)at the top of the job and relanching 'all failed'.
-
-When complete, you will see a successful status on Ansible Tower 'Job's
-
-![](https://lh4.googleusercontent.com/6iQlI_L8g3tuIvhSsP8pansIgMixWqt5MEaLgf2M_Fm8ho7TWr5vbPvx9H2ne6otjeD2QQhShczaa9JXSmhIuY9sz7uLtB0QF-sEYm-Z0IS9TSgEoSP3A-l-2mlTDA4jio2e6Rhf)
+All job templates have now run and we can login to Satellite to perform verification.
 
 #### 5\. Login to Satellite and validate your Environment
 
-![](https://lh4.googleusercontent.com/xQc7AudiblHnV7vKVFv0_055wfoeODtDltSS1_C6yV_ppF3rmfN_B78dw-Lo-OvN2ey5aE20UkuxnqYPgtmwQ0pqDdXuHqZZ4yI1rV0_E8PaFeLJHBuTR2FngYQwtutxRzpOSrEe)
+ ![](https://lh4.googleusercontent.com/xQc7AudiblHnV7vKVFv0_055wfoeODtDltSS1_C6yV_ppF3rmfN_B78dw-Lo-OvN2ey5aE20UkuxnqYPgtmwQ0pqDdXuHqZZ4yI1rV0_E8PaFeLJHBuTR2FngYQwtutxRzpOSrEe)
 
 -   Use a web browser on your computer to access the Ansible Tower GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
 
@@ -128,9 +101,3 @@ When complete, you will see a successful status on Ansible Tower 'Job's
 #### 6\. End Lab
 
 -   You have finished the lab.
-
-  __ _       _     _     _
- / _(_)_ __ (_)___| |__ | |
-| |_| | '_ \| / __| '_ \| |
-|  _| | | | | \__ \ | | |_|
-|_| |_|_| |_|_|___/_| |_(_)
