@@ -1,26 +1,30 @@
-# Integrated Management Workshop: Configuring and performing an OpenSCAP Scan
+Integrated Management Workshop: Configuring and performing an OpenSCAP Scan
+===========================================================================
 
 In this part of the workshop, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Tower with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans remotely from a single location. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce and provides tools for automated vulnerability checking.
 
-## Environment
+Environment
+-----------
 
 -   Red Hat Satellite v6.8
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
-## Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+-   2 x CentOS Linux clients v7.8
+
+Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+--------------------------------------------------------------------------------------
 
 -   Organization to be used = Default Organization
 
--   Location to be used = Default Location
-
--   A content view = RHEL7
+-   Content view = RHEL7
 
 -   Lifecycle environments = Dev, QA, Prod
 
--   SSH access to RHEL clients (node1, node2, node3) which has been registered to Satellite
+-   SSH access to RHEL clients (node1, node2, node3) which have been registered to Satellite
 
-## Exercise
+Exercise
+--------
 
 #### 1\. Logging into Satellite
 
@@ -28,7 +32,7 @@ In this part of the workshop, we will learn how to configure and perform an Open
 
 ![](https://lh3.googleusercontent.com/61RJI80QPal7BWRRjw8AGQA_okIXvBTGG6Vfo0ECdVjSFO4PPkvAMKHpVccroazXRtV_uvfC20x38j0i49BZErswpsDXTcDrxFw94cp1KlLYdjNDCC3Sxb8UwYcrOZNCWR7rqcmD)
 
--   Once you're in Satellite you would be able to see a dashboard
+Once you're in Satellite you would be able to see a dashboard
 
 ![](https://lh5.googleusercontent.com/0oL1NhGOFVJQIcnol7xSneJgzAIAX5HKPkV_hHjan5iM9L7qVliUMct53MsKTy4rkJU0Yu8HBmd7yV9VLafJqDJFZKTLHPo73wNMD64dNuvP6xS04C6KAHKr2KIJ1bF67m62cjdA)
 
@@ -36,15 +40,13 @@ In this part of the workshop, we will learn how to configure and perform an Open
 
 -   Now we will start configuring a compliance policy to be able to scan our RHEL nodes.
 
--   Hover over "Hosts" from the menu on the left side of the screen, and then click on "Policies"
-
-![](https://lh4.googleusercontent.com/cVLJMoZs3YrWJayGeOd3-1lhpyC_Lu-xXxX0RD1ZLl6uzoA_M_dXktuknpvA5TgPPNrcCJqyYwnEVMEMlQno3_8q7dnN-5f6ATT2q-UfiPRe3wGYKnMDx2BjNgnB-7-tvcIzo9F2)
+-   In Satellite hover over 'Hosts' from the menu on the left side pane, and then click on 'Policies'
 
 -   Click on the "New Policy" button, and fill out the details as followed in step 3. 
 
 ![](https://lh5.googleusercontent.com/2qOPrqw4iC02hxEM6dfG5fj_TOsR5s-AAPCmEIXRDJo7kcfLlATH-bH36htyDB4UHWVTA-43jpwQfv21QdZx6oW41KohQYz4K8bpg1z_70-J6RkSknnMSiD486UjVziqD0SdnSxU)
 
-#### 3\. Configuring a new compliance policy (values to be changed)
+#### 3\. Configuring a new compliance policy
 
 -   Now we will start configuring our Satellite server to be able to manage a compliance policy
 
@@ -72,17 +74,15 @@ In this part of the workshop, we will learn how to configure and perform an Open
 
 ![](https://lh5.googleusercontent.com/UH3-l8kGnC1UM20Op4_d0HZZ7upq84dechLxShPZZ4Ki-4P-bu8ej8sfUZIO-lxBXwdAx7MaIehy9I0NQt-w_DhzJdHBJnOfwRcYaY6Z2UUXsTY_eekbmDgvfq-2SLEIgqEvF7SG)
 
--   Once you're in Ansible Tower, you'll be able to see a dashboard.
+Once you're in Ansible Tower, you'll be able to see a dashboard.
 
-![](https://lh5.googleusercontent.com/yW3YHJtQU1UkU6iJW6gn0i5BYKGPPYAayj3uZ-Qqcqd1yQQqICaHsQbkVYU1bgJhNEK0iUuX4r-cqP-CY8LtTkjT6III2jgw9isInpaJX6GM2pzhwomqTFw0xd6UcxQYMYFJtcpr)
+![](https://lh4.googleusercontent.com/sVjxVPXbZ0lHrA3clT0kFIMNbYizH4y3OCTrb_kxSK39RhDr1UzLz4AS4N2Tvs6R9wUzmma0nj-CkJtHL8c0EjPyz5oEfbGFYtDzPRZ637X4rRKqtNseCxR9OL7JJNlfA9cygoIN)
 
-#### 4\. Configuring an Ansible Tower template to run an OpenSCAP scan and launch the scan. (values to be changed)
+#### 4\. Configure and launch an Ansible Tower template to run an OpenSCAP scan. 
 
--   Click "Templates" from the left sidebar. 
+-   In Ansible Tower click 'Templates' from the left side pane menu
 
-![](https://lh3.googleusercontent.com/YEBQn4MdNVakLfpdVL2rArmfB-G8wd2esjHQJzMLhni9KWDWx_1vyRtby0uy9Kc46oRdX57mnDXACRs3GT96qNSJk4M5AsJOXqfJdTduMS7Ug7vO2dpcA4yTVV1PbH5vWBczMekf)
-
--   Then select ![](https://lh6.googleusercontent.com/sN5ZK1Ryj9X3y6ynlJlYMn9MN7h4rnSmmPgkkPNxgrUbB268TlOs9PjqgKe6SbGlEM1xuTvdGcFUg7CmUplRab-W6mD-apjgX7hnvzhgzZaoar25Oia4kghBEPcxYCHxRq4SBwDp) on the far right side of the screen and click "Job Template". Fill out the details as follows.
+-   Select on the GREEN + icon on the far right side of the screen and click "Job Template". Fill out the details as follows. 
 
 -   Name: "OpenSCAP_Configure "
 
@@ -92,33 +92,29 @@ In this part of the workshop, we will learn how to configure and perform an Open
 
 -   Playbook: "configure_openscap.yml"
 
--   Project: "Automated_Smart_Management" 
+-   Project: "Automated_Management" 
 
 -   Credentials: "Satellite_Credential", "Workshop Credential"
 
 -   Extra Variables:
 
--   HOSTS: web
+-   HOSTS: node1.example.com
 
 -   Policy_scan: 
 
 -   PCI_Compliance
 
-![](https://lh6.googleusercontent.com/B_rNKlbNdXn35bcf5KFW_Igt8VSQs3EM1PJryo-T-9eugHt3LBs3TVB5BN5LCDxP2zlQbracBL1z0exSSEt49gYxqFPU1U8OJP1WNxj7hgQS-w03iQg4KZzJ85VwQiXxGAbF3dgH)
+![](https://lh5.googleusercontent.com/w--1gqh7nJwqHv_q_vjbXDaJCPXmrj5bHbZnx5A0lO3SChPDthAxR9b3IXMapaDUf4oWK_HIk-2iwAszRl671_5D0kOcqBNBKOuMwN5M9TsgmVGJcZxuwLfWrreaGg9zUbVdQC39)
 
-Leave the rest of the fields blank or as they are, and click "Save".
+-   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template.
 
--   Launch the job by clicking: ![](https://lh4.googleusercontent.com/-q-chMPmF9atKHlW8-yHvUIN1auckybzcS8T2eyIfkG4vkyKisav_Vk0j3VUzve5yICD3jr4SomqCa8erHRMBfTzhQTr2MTC47roIypd18aadDBlRgApzZi_e8A7M65RePeHo7kN)
-
-![](https://lh4.googleusercontent.com/HRMQ7FhoQazxxarlbwAJgLQS4MoXCjy_mnCMhSugXw0WkXDzh2B582ulwFzIP_PW5pr3Y_jAqpO8T47nsLjGIm9UUBZ_jsdxcqzqiKGT0Oi6x01sc0PF2IjpzhPxdOct1cLUl5Xq)
+![](https://lh3.googleusercontent.com/nkQNdZD0E3zKh6oHQTiF29A_qYR6qgFJWH8_HRuttjgR69vyLuagPJJQ-3nw7jh32DvSy39RPWFzN6qz2Hp0gj6JjdOpjlCdV8V5hFALlPEMiE8EhNuRcXPbi7Oz5aZlXucGRBPM)
 
 #### 5\. Navigate back to Satellite to examine the Asset Reporting File (ARF). 
 
--   Hover over "Hosts" from the menu on the left side of the screen, and then click on "Reports".
+-   Hover over 'Hosts' from the side pane menu and then click on 'Reports'.
 
-![](https://lh4.googleusercontent.com/JZnAxnuQhawkHkBdF1YfOLrXfQ7WV6pRLkpvFwKz9Vrx1Frd3cHZcrLRe7s41qefgY7515rb580oLW5PbrWFm90uip1pNpb1_DhbrWMRfSs9N-9WCCTDc8obztT9uKnMg_MNOqe2)
-
--   Click on the ![](https://lh5.googleusercontent.com/5xFQMKyfWZ3kWEJpqFymvptsqV7KHkxFQGTQcTJWW5YDALMCnGm2PTIkzXKT9_qJ8keIDJl2yKtlYHSmxCnzuOVFHa7MPC-02ksTREuF2jis47m3ARKa2OWMNsdmt6wxUa4VPcuD) for 'node1.example.com' to evaluate
+-   Click on the report for 'node1.example.com' to evaluate
 
 -   You can sort by "Pass", "Fail", "Fixed", or any number of qualifiers as well as group rules by "Severity"
 
@@ -134,13 +130,11 @@ Leave the rest of the fields blank or as they are, and click "Save".
 
 -   In Satellite, hover over "Hosts" from the menu on the left side of the screen, and then click on "Policies".
 
-![](https://lh4.googleusercontent.com/cVLJMoZs3YrWJayGeOd3-1lhpyC_Lu-xXxX0RD1ZLl6uzoA_M_dXktuknpvA5TgPPNrcCJqyYwnEVMEMlQno3_8q7dnN-5f6ATT2q-UfiPRe3wGYKnMDx2BjNgnB-7-tvcIzo9F2)
-
 -   Select "Manual" from the deployment options and click "Next"
 
 ![](https://lh3.googleusercontent.com/j9IPZGS-LJPKAZJj4k6wZbbx15cAkOtvqT_UBDj2iAzhi5_Mkkq6aGZClS8gSq__DxVEMsPik-pQVDEK7l2JqWJNYZJXGr2yNdETyeNaSydhU8A205f9cha97QQYNLzlPRjW9-Ka)
 
--   Create the policy name "PCI-Compliance" and provide any description you like. Then click "Next"
+-   Create the policy name "STIG_Compliance" and provide any description you like. Then click "Next"
 
 ![](https://lh4.googleusercontent.com/dTnvNbOssJCLU4h2wp1OkN6fOTlVORkANhgW6dmt2gxcegGsXdYlhNbXGVMlc6VDzu8OMzXgXR0oHbs_UWAoBhijgVvsPUEu3_GDkLWaCdLudhJHrlB4Kyv_CGFCEUS362ZqzQak)
 
@@ -158,9 +152,7 @@ Leave the rest of the fields blank or as they are, and click "Save".
 
 -   Click "Templates" from the left sidebar. 
 
-![](https://lh3.googleusercontent.com/YEBQn4MdNVakLfpdVL2rArmfB-G8wd2esjHQJzMLhni9KWDWx_1vyRtby0uy9Kc46oRdX57mnDXACRs3GT96qNSJk4M5AsJOXqfJdTduMS7Ug7vO2dpcA4yTVV1PbH5vWBczMekf)
-
--   Then select ![](https://lh6.googleusercontent.com/sN5ZK1Ryj9X3y6ynlJlYMn9MN7h4rnSmmPgkkPNxgrUbB268TlOs9PjqgKe6SbGlEM1xuTvdGcFUg7CmUplRab-W6mD-apjgX7hnvzhgzZaoar25Oia4kghBEPcxYCHxRq4SBwDp) on the far right side of the screen and click "Job Template". Fill out the details as follows.
+-   Then select on the far right side of the screen and click "Job Template". Fill out the details as follows. 
 
 -   Name: "OpenSCAP_Configure "
 
@@ -176,36 +168,30 @@ Leave the rest of the fields blank or as they are, and click "Save".
 
 -   Extra Variables:
 
--   HOSTS: web
+-   HOSTS: rhel7
 
 -   Policy_scan: 
 
--   PCI-Compliance
+-   PCI_Compliance
 
--   STIG-Compliance
+-   STIG_Compliance
 
-![](https://lh5.googleusercontent.com/OhrtdmXwa7y3bQoaAgb2JRhj2LI1ZAsRPpi-VP-EAXYncMYvRFlHMJm4PSprCUfwKGOZcwgBEUC8P4D177epWSsPALU5LMb6Yc-t8BnPj7uIz-NdC7qWPG0Xtq7Pg__OTlkpN27b)
+![](https://lh4.googleusercontent.com/KV-fvA1EBSSWJL_e9cxPtRrJzGcuzAAl2TjLLGPQVrxo9E-gqnL6VAqBmjRXOs8a6LGjmatQCQWzIjZXu_qnawmZBmERi2ydlPdcNyCOV5zCncwZ5iU7HtKszFDgV9WOYuM0KUal)
 
-Leave the rest of the fields blank or as they are, and click "Save".
+-   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template.
 
--   Launch the job by clicking: ![](https://lh4.googleusercontent.com/-q-chMPmF9atKHlW8-yHvUIN1auckybzcS8T2eyIfkG4vkyKisav_Vk0j3VUzve5yICD3jr4SomqCa8erHRMBfTzhQTr2MTC47roIypd18aadDBlRgApzZi_e8A7M65RePeHo7kN)
-
-![](https://lh6.googleusercontent.com/2DXuz9ZjyFFEZixvCiSnh8EzcM9xpiY1fIgWyI-8i5VR8cuCFzM8fEaVB7Pij0Nd91EBtQjDpeT1YwD8dGJcfJvzOmFfQc9kvqqjNHzMEuWCljQMT0nO6USaBEjJoHQYWdbSGjao)
+![](https://lh5.googleusercontent.com/0r_XUXeCaLqSE3ehvvRB8TCCQLZPa9USDwhU46etuzb_eYxZbHJCTVb7SmyqZuebAO2xm1eSRsPVWLYgS43-KVGDbxob5hkZ8bHS8Q2speQTilfaV38oSXInVqUF5tRN8PekEVeW)
 
 #### 8\. Navigate back to Satellite to examine the Asset Reporting File (ARF). 
 
 -   Hover over "Hosts" from the menu on the left side of the screen, and then click on "Reports".
 
-![](https://lh4.googleusercontent.com/JZnAxnuQhawkHkBdF1YfOLrXfQ7WV6pRLkpvFwKz9Vrx1Frd3cHZcrLRe7s41qefgY7515rb580oLW5PbrWFm90uip1pNpb1_DhbrWMRfSs9N-9WCCTDc8obztT9uKnMg_MNOqe2)
-
--   Notice that we've now easily scaled to six scans, 2 scans of each node for PCI-Compliance and for STIG-Compliance. 
+-   Notice that we've now easily scaled to six scans, 2 scans of each node for PCI_Compliance and for STIG_Compliance. 
 
 ![](https://lh3.googleusercontent.com/BoUp9jxDCNaqpWabW1hdEZJazSA5T79Oh1jt7hzCaLtm374oH8EZfrloculCO3ekg2ncdqKMAzAGqdXo7bwNsmMPaxElddYXZx7vmbS3s-J3bGKqCClh7wPjDq0oVC3zL8Xq1wIc)
 
 -   Each report can be reviewed independent of other node scans and remediations for rule findings can be completed according to the requirements of your own internal policies.
 
-  __ _       _     _     _
- / _(_)_ __ (_)___| |__ | |
-| |_| | '_ \| / __| '_ \| |
-|  _| | | | | \__ \ | | |_|
-|_| |_|_| |_|_|___/_| |_(_)
+#### 9\. End Lab
+
+-   You have finished the lab.
