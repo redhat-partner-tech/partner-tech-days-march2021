@@ -17,14 +17,13 @@ This lab is geared towards systems administrators, cloud administrators and oper
 == Lab Environment:
 
 Users user1 .. user10 are created with password `openshift`
-  
-OpenShift credentials for attendees: userXX / openshift 
-* CodeReady Workspaces credentials for attendees: userXX / openshift 
+
+* OpenShift credentials for attendees: user<1..10> / openshift 
+* CodeReady Workspaces credentials for attendees: user<1..10> / openshift 
 * OpenShift Console: http://console-openshift-console.apps.cluster-d275.d275.example.opentlc.com 
 * CodeReady Console: https://codeready-ocp-workshop.apps.cluster-d275.d275.example.opentlc.com 
 * Openshift API for command line 'oc' client: https://api.cluster-d275.d275.example.opentlc.com:6443
-
-Download oc client from http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/4.5.4/openshift-client-linux-4.5.4.tar.gz
+* Download oc client from http://d3s3zqyaz8cp2d.cloudfront.net/pub/openshift-v4/clients/ocp/4.5.4/openshift-client-linux-4.5.4.tar.gz
 
 == Table of Contents
 * link:lab1.adoc[Lab 1: OpenShift blocks rogue containers from running as privileged user]
