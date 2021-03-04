@@ -22,6 +22,7 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 
 ## Lab Diagram
 ![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
+
 ## Lab Setup
 - See intro.md
 
@@ -30,11 +31,11 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 - Register Servers to Satellite Server
 
 ### Use Cases
-- Patch Management
 - OpenSCAP Scanning / Vulnerability Management
+- Patch Management
 - System Baselining and Drift
-- Custom Repository
 - Convert to RHEL from CentOS
+- Custom Repository
 
 ### Guide
 
@@ -46,9 +47,11 @@ In this lab you'll work in a pre-configured lab environment. You will have acces
 | ---------------------| ---------------|
 | Automation Platform  | ansible-1      |
 | Satellite Server     | satellite      |
-| Managed Host 1       | node1          |
-| Managed Host 2       | node2          |
-| Managed Host 3       | node3          |
+| Managed Host 1       | node1-rhel     |
+| Managed Host 2       | node2-rhel     |
+| Managed Host 3       | node3-rhel     |
+| Managed Host 4       | node4-centos   |
+| Managed Host 5       | node5-centos   |
 
 #### **Step 1 - Setup Ansible Tower**
 
