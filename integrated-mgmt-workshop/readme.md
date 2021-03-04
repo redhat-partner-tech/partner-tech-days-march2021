@@ -21,7 +21,9 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 
 
 ## Lab Diagram
+![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
 ## Lab Setup
+- See intro.md
 
 ### Objective
 - Configure Activation Keys and Lifecycle environments
