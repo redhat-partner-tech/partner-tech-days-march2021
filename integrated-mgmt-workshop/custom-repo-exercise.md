@@ -1,14 +1,14 @@
-Integrated Management Workshop: Managing Additional Software with Satellite
+# Integrated Management Workshop: Managing Additional Software with Satellite
 
 In this part of the workshop, we will learn how to manage extra/additional software with Satellite. When you have RHEL clients managed by Satellite in your environment, often there is also a requirement to manage additional software packages that don't come from any of the RHEL distributions/repositories. For example, the Creative department wanted you to manage a CAD/CAM software that runs on many of their RHEL workstations. Satellite has the ability to manage other software packages on top of what comes with Red Hat subscriptions.
 
-Environment
+## Environment
 
 -   Red Hat Satellite 6
 
 -   3 x Red Hat Enterprise Linux clients
 
-Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+## Pre-requisites (completed in previous exercises in the workshop, values to be changed)
 
 -   Organization to be used = Default Organization
 
@@ -16,9 +16,9 @@ Pre-requisites (completed in previous exercises in the workshop, values to be ch
 
 -   Lifecycle environments = RHEL7_Dev, RHEL7_QA, RHEL7_Prod
 
-Exercise
+## Exercise
 
-1\. Logging in to Satellite
+#### 1\. Logging in to Satellite
 
 -   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above.
 
@@ -28,13 +28,13 @@ Exercise
 
 ![](https://lh5.googleusercontent.com/g22VsrKilxepC3DSpw-tGWM9YOFHfrH2z8GRmwj6s_0369aX9JhXY0K2YGBI13mM7xB1CiWAOLg1CbQrNchNsWZsUgDBO3bNd9J_3bF5dQO0A1GztjMyVNx1OUrLM5STVk50Wx1a)
 
-2\. Set Organization and Location
+#### 2\. Set Organization and Location
 
 -   Ensure that you select "Default Organization" as the Organization and "Default Location" as the location, by clicking on the menu on top of the page
 
 ![](https://lh3.googleusercontent.com/JBbWFK5lF_cgtCzCbzONkCJzQfXRMYpXyOcqVrrkflzlxjQUuw8seO_JJu7VBo3-yV0PSELR8-gAgdRvUeVcgDONhS_qGQhgdqY9-2129AdweJY7SCdB26XhnledDfu24TkY2z2l)
 
-3\. Creating a custom product (values to be changed)
+#### 3\. Creating a custom product (values to be changed)
 
 -   Now we will start preparing our Satellite server to be able to manage a custom product
 
@@ -48,7 +48,7 @@ Exercise
 
 Leave the rest of the fields blank, and click "Save". It should then take you to the "Creative Software" product screen.
 
-4\. Creating a custom repository
+#### 4\. Creating a custom repository
 
 -   Click the "New Repository" button, and fill out the details as followed (note that the Label field will be filled out automatically):
 
@@ -56,7 +56,7 @@ Leave the rest of the fields blank, and click "Save". It should then take you to
 
 Leave the rest of the fields blank or as their default values, and click "Save".
 
-5\. Preparing a custom software package
+#### 5\. Preparing a custom software package
 
 -   Let's prepare a software package which doesn't come with RHEL distribution. Since we have limited time, let's stick with a small footprint software package.
 
@@ -64,7 +64,7 @@ Leave the rest of the fields blank or as their default values, and click "Save".
 
 <https://www.rpmfind.net/linux/epel/7/x86_64/Packages/f/figlet-2.2.5-9.el7.x86_64.rpm>
 
-6\. Uploading custom software package to Satellite
+#### 6\. Uploading custom software package to Satellite
 
 -   Go back to the "Creative Software" product page, and you should see the "Figlet Application" repository under the "Repositories" tab
 
@@ -78,7 +78,7 @@ Leave the rest of the fields blank or as their default values, and click "Save".
 
 ![](https://lh6.googleusercontent.com/gCY1mGVpEgEPRdEQ-Et7rmKohHPA4DNkrTURbRdz_CYwJI5932Z_CP6IggEqPFYog2QhpPblm7fQ8l90e4GbRWPs0mf_mQmh3h7fv9DJj7mQ3BwvQYO5Lg-6laGN_DHNAdtG9G-u)
 
-7\. Creating a content view
+#### 7\. Creating a content view
 
 -   Now that we have a custom repository, let's create a content view in Satellite that we will use to make the repository available to our RHEL clients
 
@@ -124,7 +124,7 @@ Leave the rest of the fields blank or as their default values, and click "Save".
 
 ![](https://lh4.googleusercontent.com/EJLq295DZoh0vMzHQt46FB-efZVUHttu1OaBj7Gq8hMxbtrK9ON7BUGeP72zp9AYvX76N6N2thX-B6huk7Kxo4FRueoFL0agebH0koFTEs6Yre0CqMK7VP29pnTRFZ6fL8KdNa1v)
 
-8\. Installing software on RHEL clients
+#### 8\. Installing software on RHEL clients
 
 -   From the menu choose Hosts -> Content Hosts, and select one or multiple clients, click the "Select Action" button and choose "Manage Packages"
 
@@ -140,16 +140,12 @@ OR
 
 -   And verify if you can use the figlet application (type figlet on command line)
 
+```
 $ figlet
-
 finish!
-
   __ _       _     _     _
-
  / _(_)_ __ (_)___| |__ | |
-
 | |_| | '_ \| / __| '_ \| |
-
 |  _| | | | | \__ \ | | |_|
-
 |_| |_|_| |_|_|___/_| |_(_)
+```
