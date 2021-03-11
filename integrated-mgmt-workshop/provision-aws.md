@@ -10,6 +10,7 @@
 - Active Satellite and Ansible Subscriptions
     - As a Red Hat Partner, you can obtain via NFR or eval/developer
 - Active public domain name
+- AWS Account
 - DNS setup via AWS Route53 
 
 **Steps:**
