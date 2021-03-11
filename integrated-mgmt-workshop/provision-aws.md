@@ -1,12 +1,12 @@
 ## Provision
 
-The below instructions are steps that originated from:
-- https://github.com/ansible/workshops/tree/devel/provisioner 
-- https://github.com/ansible/workshops/blob/devel/docs/setup.md 
-- https://github.com/willtome/workshops/blob/master/provisioner/README.md 
+***The below instructions are steps that originated from:***
+*- https://github.com/ansible/workshops/tree/devel/provisioner*
+*- https://github.com/ansible/workshops/blob/devel/docs/setup.md*
+
 
 **Requirements:**
-- RHEL 8 instance (VM, etc.)
+- RHEL 8 instance, registered using RHSM (We used a VM in this example)
 - Active Satellite and Ansible Subscriptions
     - As a Red Hat Partner, you can obtain via NFR or eval/developer
 
@@ -72,20 +72,21 @@ ansible_workshops_version: smart_mgmt
 ibm_community_grid: false
 ```
 
-**Setup DNS, Manifest, AWS Keys/Credentials, AWS CLI** 
-DNS Setup (Route53, public hosted zone)
-AWS Public Hosted zone
-mw01.redhatpartnertech.net
+**Setup DNS** 
+- You will need to setup DNS via AWS route53
+- Use AWS Public Hosted zone
+- Example: mw01.redhatpartnertech.net
+- Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
 
 
 **Manifest**
-- Login to access.redhat.com --> Subscriptions --> Subscription Allocation
-- Satellite 6.8, added 20 Ansible subs, download .zip, move to provisioner VM
+- Login to https://access.redhat.com --> Subscriptions --> Subscription Allocation
+- Satellite 6.8, added # of Ansible subs, download .zip, move to provisioner VM
 - Then on Provisioner VM, move zip file to default "provisioner" folder and rename
 ```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/will/workshops/provisioner/manifest.zip```
 
 **AWS Keys/Credentials**
-aws.com 
+- Reference AWS documentation [here](https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html)
 ```# cd ~/
 # mkdir .aws
 # cd .aws
@@ -119,6 +120,7 @@ python3             	auto  	/usr/bin/python3.6
 # python --version
 Python 3.6.8
 ```
+
 **Finally, run the provisioner**
 ```
 # cd /root/github/will/workshops/provisioner
