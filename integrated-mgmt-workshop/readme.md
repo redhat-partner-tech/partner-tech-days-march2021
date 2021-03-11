@@ -8,7 +8,7 @@ In this workshop you will learn how to get the most from using both Red Hat Smar
 - [Lab Setup](#lab-setup)
     - [Deployment](#deployment)
     - [Configure](#configure)
-    - [Your Lab Environment](#your-lab-environment)
+    - [Environment](#environment)
 - [Guide](#guide)
 
 ## Use Cases
@@ -34,9 +34,9 @@ After the workshop is deployed, you will need to configure the environment<br>
 
 This step will configure the deployed environment, including Activation Keys, Lifecycle Environments, Registering Servers to Satellite Server, etc.
 
-### Your Workshop Environment
+### Environment
 
-Now you should have the following configured lab environment:
+Now you should have the following configured workshop environment:
 
 | Role                 | Inventory name |
 | ---------------------| ---------------|
