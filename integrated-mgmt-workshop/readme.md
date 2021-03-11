@@ -29,10 +29,10 @@ We will focus on 5 main customer pain points:
 - Option 2: [RHPDS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-rhpds.md) (Coming soon)
 
 ### Configure
-After the workshop is deployed, you will need to configure the environment<br>
+After the workshop is deployed, you will need to configure the environment. This step will configure the deployed environment, including Activation Keys, Lifecycle Environments, Registering Servers to Satellite Server, etc.
 - [Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/configure.md)<br>
 
-This step will configure the deployed environment, including Activation Keys, Lifecycle Environments, Registering Servers to Satellite Server, etc.
+
 
 ### Environment
 
