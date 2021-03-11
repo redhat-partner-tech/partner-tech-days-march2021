@@ -38,8 +38,9 @@ Exercise
     - Copy **Workshop Credential** to **RHEL Credential**  
     - Copy **Workshop Credential** to **CentOS Credential** 
     - From the navigation section on the left side of the Automation Platform homepage, select **Project**. 
-    - Select the project named **Automated Managemen**
+    - Select the project named **Automated Management**
     - Update the SCM URL to: https://github.com/heatmiser/automated-smart-management-2.git
+    - Leave the SCM branch set to smart_mgmt
     - Save
 
 -   Two 'Templates' named 'SETUP / Satellite' and 'SETUP / Tower are also preconfigured. We will need to launch each of these.
