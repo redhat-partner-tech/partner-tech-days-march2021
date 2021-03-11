@@ -33,11 +33,9 @@ We will focus on 5 main customer pain points:
 
 ### Configure
 After the workshop is deployed, you will need to configure the environment<br>
-[Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/configure.md)<br>
+- [Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/configure.md)<br>
 
-This step will configure the environment as follows:
-- Configure Activation Keys and Lifecycle environments
-- Register Servers to Satellite Server
+This step will configure the deployed environment, including Activation Keys, Lifecycle Environments, Registering Servers to Satellite Server, etc.
 
 ### Your Workshop Environment
 
