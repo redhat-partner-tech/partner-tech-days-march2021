@@ -15,17 +15,6 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
   - [Config Management](#config-management)
   - [Security and Compliance](#security-and-compliance)
 
-
-## Lab Diagram
-![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
-
-## Lab Setup
-- Deployment
-    - Option 1: AWS Provisioner (awscli)  
-    - Option 2: RHPDS (Coming soon)
-- After the lab is deployed, you will need to configure the environment
-    - See [intro.md](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
-
 ## Objective
 - Configure Activation Keys and Lifecycle environments
 - Register Servers to Satellite Server
@@ -36,6 +25,16 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 - System Baselining and Drift
 - CentOS to RHEL conversion + upgrade
 - Custom Repositories
+
+## Lab Diagram
+![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
+
+## Lab Setup
+- Deployment
+    - Option 1: AWS Provisioner (awscli)  
+    - Option 2: RHPDS (Coming soon)
+- After the lab is deployed, you will need to configure the environment
+    - See [intro.md](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
 
 ### Guide
 
