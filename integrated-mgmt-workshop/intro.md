@@ -34,7 +34,7 @@ Exercise
 
 -   Use the side pane menu on the left to select 'Projects' and review the two projects named 'Automated Management' and 'Fact Scan'. These projects, along with the 'Workshop Inventory' have been set up for you during the provisioning of the lab environment.
 
-- Temporary Steps
+- Temporary Steps: Use the side pane menu on the left to select 'Credentials'
     - Copy **Workshop Credential** to **RHEL Credential**  
     - Copy **Workshop Credential** to **CentOS Credential** 
 
