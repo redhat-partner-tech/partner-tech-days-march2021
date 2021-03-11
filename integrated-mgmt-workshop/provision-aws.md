@@ -78,7 +78,6 @@ ibm_community_grid: false
 - You will need to setup DNS via AWS route53
 - Use AWS Public Hosted zone
 - Example: mw01.redhatpartnertech.net
-- [Walkthrough Steps:](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
 - Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
 
 **Manifest**
@@ -88,7 +87,8 @@ ibm_community_grid: false
 ```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/will/workshops/provisioner/manifest.zip```
 
 **AWS Keys/Credentials**
-- Reference AWS documentation [here](https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html)
+- [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
+- Reference: https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html
 ```# cd ~/
 # mkdir .aws
 # cd .aws
