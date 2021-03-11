@@ -1,6 +1,6 @@
 # Ansible Workshop - Smart Management Automation
 
-In this workshop you will learn how to get the most from Red Hat Smart Management subscription and the Ansible Automation Platform.
+In this workshop you will learn how to get the most from using both Red Hat Smart Management and the Ansible Automation Platform.
 
 ## Table of Contents
 - [Use Cases](#use-cases)
@@ -33,7 +33,7 @@ We will focus on 5 main customer pain points:
 
 ### Configure
 After the workshop is deployed, you will need to configure the environment<br>
-[Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)<br>
+[Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/configure.md)<br>
 
 This step will configure the environment as follows:
 - Configure Activation Keys and Lifecycle environments
@@ -59,8 +59,8 @@ In this workshop you'll work in a pre-configured lab environment. You will have 
 ## Guide
 Workshop Presentation: [Partner Content Hub](http://redhat-partner.highspot.com)<br>
 *You will need a Red Hat Partner Connect account/login to access. Don't have one, look [here](https://connect.redhat.com/en/support)*
-* [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md)
-* [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md)
-* Exercise 3: System Baseline / Drift (See presentation)
-* [Exercise 4: CentOS to RHEL conversion + upgrade](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/upgrade-exercise.md)
-* [Exercise 5: Custom Repositories](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/custom-repo-exercise.md)
+* [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/2-compliance/openscap-exercise.md)
+* [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/3-patching/automated-patch-management.md)
+* Exercise 3: System Baseline / Drift (see presentation)
+* [Exercise 4: CentOS to RHEL conversion + upgrade](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/4-convert2rhel/upgrade-exercise.md)
+* [Exercise 5: Custom Repositories](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/5-customerepo/custom-repo-exercise.md)
