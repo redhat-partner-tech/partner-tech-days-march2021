@@ -53,7 +53,7 @@ Now you should have the following configured workshop environment:
 
 ## Guide
 Workshop Presentation: [Partner Content Hub](http://redhat-partner.highspot.com)<br>
-*You will need a Red Hat Partner Connect account/login to access. Don't have one, look [here](https://connect.redhat.com/en/support)*
+*You will need a Red Hat Partner Connect account/login to access. Don't have one? Click [here](https://connect.redhat.com/en/support)*
 * [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/2-compliance/openscap-exercise.md)
 * [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/3-patching/automated-patch-management.md)
 * Exercise 3: System Baseline / Drift (see presentation)
