@@ -65,16 +65,16 @@ workshop_dns_zone: mw01.redhatpartnertech.net
 # automatically installs Tower to control node
 towerinstall: true
 create_cluster: false
-#ansible_workshops_url: https://github.com/ansible/workshops
-#ansible_workshops_version: smart_mgmt
 
 # IBM Community Grid - defaults to true if you don't tell the provisioner
 ibm_community_grid: false
 
 # select rhel7 or rhel8 client nodes
 rhel: rhel7
+
 # select centos6 client node version
 #centos6: centos68
+
 # select centos7 client node version
 centos7: centos78
 
