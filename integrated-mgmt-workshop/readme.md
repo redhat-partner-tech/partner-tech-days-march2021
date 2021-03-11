@@ -12,7 +12,7 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
       - [**Step 1 - Setup Ansible Tower**](#step-1---setup-ansible-tower)
       - [**Step 2 - Create a Project**](#step-2---create-a-project)
       - [**Step 3 - Create Job Template**](#step-3---create-job-template)
-    - [Guide](#guide)
+- [Guide](#guide)
 
 ## Use Cases
 We will focus on 5 main customer pain points:
@@ -67,7 +67,7 @@ Create a project using the `https://github.com/willtome/automated-smart-manageme
 
 #### **Step 3 - Create Job Template**
 
-### Guide
+## Guide
 * [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md)
 * [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md)
 * [Exercise 3: System Baseline / Drift)
