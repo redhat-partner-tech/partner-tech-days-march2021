@@ -68,12 +68,8 @@ Create a project using the `https://github.com/willtome/automated-smart-manageme
 #### **Step 3 - Create Job Template**
 
 ### Guide
-* Exercise 1: Compliance / Vulnerability Management - Chris (XX mins?)
-* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md 
-* Exercise 2: Patch Management / OS - Chris (XX mins?)
-* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md 
-* Exercise 3: System Baseline / Drift - Arief (XX mins?) 
-* Exercise 4: CentOS to RHEL conversion + upgrade - Savage (XX mins?)
-* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/upgrade-exercise.md 
-* Exercise 5: Custom Repositories - Arief (XX mins?)
-* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/custom-repo-exercise.md 
+* [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md)
+* [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md)
+* [Exercise 3: System Baseline / Drift)
+* [Exercise 4: CentOS to RHEL conversion + upgrade](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/upgrade-exercise.md)
+* [Exercise 5: Custom Repositories](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/custom-repo-exercise.md)
