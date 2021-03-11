@@ -1,6 +1,6 @@
 # Ansible Workshop - Smart Management Automation
 
-In this workshop you will learn how to get the most from your Red Hat Smart Management subscription and the Ansible Automation Platform.
+In this workshop you will learn how to get the most from Red Hat Smart Management subscription and the Ansible Automation Platform.
 
 ## Table of Contents
 - [Use Cases](#use-cases)
