@@ -78,8 +78,8 @@ ibm_community_grid: false
 - You will need to setup DNS via AWS route53
 - Use AWS Public Hosted zone
 - Example: mw01.redhatpartnertech.net
+- [Walkthrough Steps:](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
 - Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
-
 
 **Manifest**
 - Login to https://access.redhat.com --> Subscriptions --> Subscription Allocation
