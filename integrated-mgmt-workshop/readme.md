@@ -36,7 +36,7 @@ This step will configure the deployed environment, including Activation Keys, Li
 
 ### Your Workshop Environment
 
-In this workshop you'll work in a pre-configured lab environment. You will have access to the following hosts:
+Now you should have the following configured lab environment:
 
 | Role                 | Inventory name |
 | ---------------------| ---------------|
