@@ -42,11 +42,11 @@ Now you should have the following configured workshop environment:
 | ---------------------| ---------------|
 | Automation Platform  | ansible-1      |
 | Satellite Server     | satellite      |
-| Managed Host 1       | node1-rhel     |
-| Managed Host 2       | node2-rhel     |
-| Managed Host 3       | node3-rhel     |
-| Managed Host 4       | node4-centos   |
-| Managed Host 5       | node5-centos   |
+| Managed Host 1       | node1          |
+| Managed Host 2       | node2          |
+| Managed Host 3       | node3          |
+| Managed Host 4       | node4          |
+| Managed Host 5       | node5          |
 
 
 
