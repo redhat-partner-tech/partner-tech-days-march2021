@@ -29,18 +29,18 @@ We will focus on 5 main customer pain points:
 
 ### Deployment
 - Option 1: [AWS Provisioner](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-aws.md) (awscli)  
-- Option 2: [RHPDS]( (Coming soon)
-- After the lab is deployed, you will need to configure the environment
-    - See [intro.md](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
+- Option 2: [RHPDS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-rhpds.md) (Coming soon)
+- After the workshop is deployed, you will need to configure the environment
+    - Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
 
 ### Objective
 Once the lap is deployed, we will need to configure the environment:
 - Configure Activation Keys and Lifecycle environments
 - Register Servers to Satellite Server
 
-### Your Lab Environment
+### Your Workshop Environment
 
-In this lab you'll work in a pre-configured lab environment. You will have access to the following hosts:
+In this workshop you'll work in a pre-configured lab environment. You will have access to the following hosts:
 
 | Role                 | Inventory name |
 | ---------------------| ---------------|
