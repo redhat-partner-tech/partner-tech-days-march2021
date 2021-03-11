@@ -7,11 +7,8 @@ In this workshop you will learn how to get the most from using both Red Hat Smar
 - [Lab Diagram](#lab-diagram)
 - [Lab Setup](#lab-setup)
     - [Deployment](#deployment)
-    - [Objective](#objective)
-      - [Your Lab Environment](#your-lab-environment)
-      - [**Step 1 - Setup Ansible Tower**](#step-1---setup-ansible-tower)
-      - [**Step 2 - Create a Project**](#step-2---create-a-project)
-      - [**Step 3 - Create Job Template**](#step-3---create-job-template)
+    - [Configure](#configure)
+    - [Your Lab Environment](#your-lab-environment)
 - [Guide](#guide)
 
 ## Use Cases
