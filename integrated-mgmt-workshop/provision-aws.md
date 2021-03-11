@@ -79,10 +79,12 @@ ibm_community_grid: false
 - Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
 
 **Manifest**
-- Login to https://access.redhat.com --> Subscriptions --> Subscription Allocations
-- Satellite 6.8, added # of Ansible subs, download .zip, move to provisioner VM
-- Then on Provisioner VM, move zip file to default "provisioner" folder and rename
-```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/will/workshops/provisioner/manifest.zip```
+- Login to https://access.redhat.com --> Subscriptions --> Subscription Allocations, then [New Subscription Allocation]
+- Name it, then select type: Satellite 6.8, then click [Create]
+- Once created, select the Subscriptions tab, then click [Add Subscriptions] to add # of Red Hat Ansible Automation subs
+- Click [Export Manifest] to download .zip file, then move to provisioner VM
+- On Provisioner VM, move zip file to default "provisioner" folder and rename
+```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/ansible/workshops/provisioner/manifest.zip```
 
 **AWS Keys/Credentials**
 - [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
