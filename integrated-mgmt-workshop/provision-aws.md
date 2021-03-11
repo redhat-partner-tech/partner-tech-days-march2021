@@ -1,7 +1,7 @@
 ## Provision
 
-***The below instructions are steps that originated from:***
-*- https://github.com/ansible/workshops/tree/devel/provisioner*
+***The below instructions are steps that originated from:***<br>
+*- https://github.com/ansible/workshops/tree/devel/provisioner*<br>
 *- https://github.com/ansible/workshops/blob/devel/docs/setup.md*
 
 
@@ -9,6 +9,8 @@
 - RHEL 8 instance, registered using RHSM (We used a VM in this example)
 - Active Satellite and Ansible Subscriptions
     - As a Red Hat Partner, you can obtain via NFR or eval/developer
+- Active public domain name
+- DNS setup via AWS Route53 
 
 **Steps:**
  
