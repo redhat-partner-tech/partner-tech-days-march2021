@@ -32,13 +32,14 @@ We will focus on 5 main customer pain points:
 - Option 2: [RHPDS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-rhpds.md) (Coming soon)
 
 ### Configure
-- After the workshop is deployed, you will need to configure the environment
-1)[Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
+After the workshop is deployed, you will need to configure the environment<br>
+1)[Configure Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)<br>
 
 This step will configure the environment as follows:
 - Configure Activation Keys and Lifecycle environments
 - Register Servers to Satellite Server
 
+<br>
 2) TBD
 #### **Step 1 - Setup Ansible Tower**
 
@@ -50,7 +51,7 @@ Open your browser and navigate to the Ansible Tower UI link provided on the atte
 
 From the navigation section on the left side of the Automation Platform homepage, select **Project**. Click the green **Create** button in the top right corner. 
 
-Create a project using the `https://github.com/willtome/automated-smart-management.git` as the source git repository. Enable the checkbox **Update on Launch**.
+Create a project using the `https://github.com/heatmiser/automated-smart-management-2.git` as the source git repository. Enable the checkbox **Update on Launch**.
 
 #### **Step 3 - Create Job Template**
 
