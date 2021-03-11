@@ -4,10 +4,8 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 
 ## Table of Contents
 - [Ansible Workshop - Smart Management Automation](#ansible-workshop---smart-management-automation)
-  - [Table of Contents](#table-of-contents)
-- [Table of Contents](#table-of-contents-1)
-  - [Lab Diagram](#lab-diagram)
-  - [Lab Setup](#lab-setup)
+- [Lab Diagram](#lab-diagram)
+- [Lab Setup](#lab-setup)
     - [Objective](#objective)
     - [Guide](#guide)
       - [Your Lab Environment](#your-lab-environment)
@@ -22,18 +20,22 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 ![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
 
 ## Lab Setup
-- See intro.md
+- Deployment
+    - Option 1: AWS Provisioner (awscli)  
+    - Option 2: RHPDS (Coming soon)
+- After the lab is deployed, you will need to configure the environment
+    - See [intro.md](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
 
-### Objective
+## Objective
 - Configure Activation Keys and Lifecycle environments
 - Register Servers to Satellite Server
 
-### Use Cases
-- OpenSCAP Scanning / Vulnerability Management
+## Use Cases
+- Compliance (OpenSCAP Scanning) and Vulnerability Management
 - Patch Management
 - System Baselining and Drift
-- Convert to RHEL from CentOS
-- Custom Repository
+- CentOS to RHEL conversion + upgrade
+- Custom Repositories
 
 ### Guide
 
