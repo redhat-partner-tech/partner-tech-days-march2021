@@ -1,4 +1,4 @@
-Integrated Management Workshop: Setting up the lab environment
+Integrated Management Workshop: Configuring the lab environment
 ==============================================================
 
 Objective
