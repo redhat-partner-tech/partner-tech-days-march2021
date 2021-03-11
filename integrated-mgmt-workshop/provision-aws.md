@@ -79,7 +79,7 @@ ibm_community_grid: false
 - Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
 
 **Manifest**
-- Login to https://access.redhat.com --> Subscriptions --> Subscription Allocation
+- Login to https://access.redhat.com --> Subscriptions --> Subscription Allocations
 - Satellite 6.8, added # of Ansible subs, download .zip, move to provisioner VM
 - Then on Provisioner VM, move zip file to default "provisioner" folder and rename
 ```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/will/workshops/provisioner/manifest.zip```
