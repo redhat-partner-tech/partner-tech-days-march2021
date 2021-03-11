@@ -35,8 +35,6 @@ OS Config -- Repo Setup + needed software tools install (including Ansible)
 # mkdir -p /root/github/ansible
 # cd /root/github/ansible
 # git clone https://github.com/ansible/workshops/
-# cd workshops/
-# git checkout smart_mgmt
  
 # vim /root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
 ---
