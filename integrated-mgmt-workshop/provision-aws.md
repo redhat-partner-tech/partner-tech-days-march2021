@@ -1,4 +1,4 @@
-## Provision
+## Use Ansible to Provision Workshop on AWS
 
 ***The below instructions are steps that originated from:***<br>
 *- https://github.com/ansible/workshops/tree/devel/provisioner*<br>
