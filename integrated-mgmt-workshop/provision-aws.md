@@ -29,11 +29,11 @@ OS Config -- Repo Setup + needed software tools install (including Ansible)
 # dnf install vim git python3 expect ansible
 # pip3 install boto boto3 netaddr passlib 
 
-# mkdir /root/smrtmgmt01/deploy_logs
-# mkdir /root/smrtmgmt01/deploy_vars
-# mkdir /root/github
-# mkdir /root/github/ansible
-# cd /root/github/ansible
+# mkdir -p /root/smrtmgmt01/deploy_logs
+# mkdir -p /root/smrtmgmt01/deploy_vars
+# mkdir -p /root/github
+# mkdir -p /root/github/ansible_smart_mgmt
+# cd /root/github/ansible_smart_mgmt
 # git clone https://github.com/ansible/workshops/
 # cd workshops/
 # git checkout smart_mgmt
