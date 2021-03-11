@@ -95,8 +95,8 @@ ibm_community_grid: false
 # vim credentials 
 # cat credentials
 [default]
-aws_access_key_id = AKIAIDA7I6XTEYJU2FIA
-aws_secret_access_key = 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
+aws_access_key_id = AKIAIDA7I6XT....
+aws_secret_access_key = GP7nC7Oq+tP8akFWqO....
 
 #
 ```
