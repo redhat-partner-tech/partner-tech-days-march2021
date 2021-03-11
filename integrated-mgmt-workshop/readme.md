@@ -28,8 +28,8 @@ We will focus on 5 main customer pain points:
 ## Lab Setup
 
 ### Deployment
-- Option 1: AWS Provisioner (awscli)  
-- Option 2: RHPDS (Coming soon)
+- Option 1: [AWS Provisioner](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-aws.md) (awscli)  
+- Option 2: [RHPDS]( (Coming soon)
 - After the lab is deployed, you will need to configure the environment
     - See [intro.md](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
 
@@ -68,9 +68,9 @@ Create a project using the `https://github.com/willtome/automated-smart-manageme
 #### **Step 3 - Create Job Template**
 
 ## Guide
-Workshop Presentation: [Partner Content Hub](link)
+Workshop Presentation: [Partner Content Hub](link).
 * [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md)
 * [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md)
-* [Exercise 3: System Baseline / Drift)
+* Exercise 3: System Baseline / Drift (See presentation)
 * [Exercise 4: CentOS to RHEL conversion + upgrade](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/upgrade-exercise.md)
 * [Exercise 5: Custom Repositories](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/custom-repo-exercise.md)
