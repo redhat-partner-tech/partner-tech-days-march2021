@@ -83,7 +83,7 @@ ibm_community_grid: false
 - Name it, then select type: Satellite 6.8, then click [Create]
 - Once created, select the Subscriptions tab, then click [Add Subscriptions] to add # of Red Hat Ansible Automation subs
 - Click [Export Manifest] to download .zip file, then move to provisioner VM
-- On Provisioner VM, move zip file to default "provisioner" folder and rename
+- On Provisioner VM, move zip file to default "provisioner" folder and rename<br>
 ```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/ansible/workshops/provisioner/manifest.zip```
 
 **AWS Keys/Credentials**
