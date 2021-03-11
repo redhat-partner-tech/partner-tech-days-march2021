@@ -3,23 +3,19 @@
 In this workshop you will learn how to get the most from your Red Hat Smart Management subscription and the Ansible Automation Platform.
 
 ## Table of Contents
-- [Ansible Workshop - Smart Management Automation](#ansible-workshop---smart-management-automation)
+- [Use Cases](#use-cases)
 - [Lab Diagram](#lab-diagram)
 - [Lab Setup](#lab-setup)
+    - [Deployment](#deployment)
     - [Objective](#objective)
-    - [Guide](#guide)
       - [Your Lab Environment](#your-lab-environment)
       - [**Step 1 - Setup Ansible Tower**](#step-1---setup-ansible-tower)
       - [**Step 2 - Create a Project**](#step-2---create-a-project)
       - [**Step 3 - Create Job Template**](#step-3---create-job-template)
-  - [Config Management](#config-management)
-  - [Security and Compliance](#security-and-compliance)
-
-## Objective
-- Configure Activation Keys and Lifecycle environments
-- Register Servers to Satellite Server
+    - [Guide](#guide)
 
 ## Use Cases
+We will focus on 5 main customer pain points:
 - Compliance (OpenSCAP Scanning) and Vulnerability Management
 - Patch Management
 - System Baselining and Drift
@@ -30,15 +26,19 @@ In this workshop you will learn how to get the most from your Red Hat Smart Mana
 ![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
 
 ## Lab Setup
-- Deployment
-    - Option 1: AWS Provisioner (awscli)  
-    - Option 2: RHPDS (Coming soon)
+
+### Deployment
+- Option 1: AWS Provisioner (awscli)  
+- Option 2: RHPDS (Coming soon)
 - After the lab is deployed, you will need to configure the environment
     - See [intro.md](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/intro.md)
 
-### Guide
+### Objective
+Once the lap is deployed, we will need to configure the environment:
+- Configure Activation Keys and Lifecycle environments
+- Register Servers to Satellite Server
 
-#### Your Lab Environment
+### Your Lab Environment
 
 In this lab you'll work in a pre-configured lab environment. You will have access to the following hosts:
 
@@ -51,6 +51,7 @@ In this lab you'll work in a pre-configured lab environment. You will have acces
 | Managed Host 3       | node3-rhel     |
 | Managed Host 4       | node4-centos   |
 | Managed Host 5       | node5-centos   |
+
 
 #### **Step 1 - Setup Ansible Tower**
 
@@ -66,5 +67,13 @@ Create a project using the `https://github.com/willtome/automated-smart-manageme
 
 #### **Step 3 - Create Job Template**
 
-## Config Management
-## Security and Compliance
+### Guide
+* Exercise 1: Compliance / Vulnerability Management - Chris (XX mins?)
+* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md 
+* Exercise 2: Patch Management / OS - Chris (XX mins?)
+* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md 
+* Exercise 3: System Baseline / Drift - Arief (XX mins?) 
+* Exercise 4: CentOS to RHEL conversion + upgrade - Savage (XX mins?)
+* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/upgrade-exercise.md 
+* Exercise 5: Custom Repositories - Arief (XX mins?)
+* https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/custom-repo-exercise.md 
