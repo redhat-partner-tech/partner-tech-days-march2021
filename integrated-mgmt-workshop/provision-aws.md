@@ -29,16 +29,16 @@ OS Config -- Repo Setup + needed software tools install (including Ansible)
 # dnf install vim git python3 expect ansible
 # pip3 install boto boto3 netaddr passlib 
 
-# mkdir /root/deploy_logs
-# mkdir /root/deploy_vars
+# mkdir /root/smrtmgmt01/deploy_logs
+# mkdir /root/smrtmgmt01/deploy_vars
 # mkdir /root/github
-# mkdir /root/github/will
-# cd /root/github/will
-# git clone https://github.com/willtome/workshops/
+# mkdir /root/github/ansible
+# cd /root/github/ansible
+# git clone https://github.com/ansible/workshops/
 # cd workshops/
 # git checkout smart_mgmt
  
-# vim /root/deploy_vars/smart_mgmt_wkshop_vars.yml
+# vim /root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
 ---
 # region where the nodes will live
 ec2_region: us-east-1
@@ -67,7 +67,7 @@ workshop_dns_zone: mw01.redhatpartnertech.net
 # automatically installs Tower to control node
 towerinstall: true
 create_cluster: false
-ansible_workshops_url: https://github.com/willtome/workshops
+ansible_workshops_url: https://github.com/ansible/workshops
 ansible_workshops_version: smart_mgmt
 
 # IBM Community Grid - defaults to true if you don't tell the provisioner
