@@ -3,8 +3,6 @@
 In this workshop you will learn how to get the most from your Red Hat Smart Management subscription and the Ansible Automation Platform.
 
 ## Table of Contents
-
-# Table of Contents
 - [Ansible Workshop - Smart Management Automation](#ansible-workshop---smart-management-automation)
   - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents-1)
