@@ -32,8 +32,8 @@ OS Config -- Repo Setup + needed software tools install (including Ansible)
 # mkdir -p /root/smrtmgmt01/deploy_logs
 # mkdir -p /root/smrtmgmt01/deploy_vars
 # mkdir -p /root/github
-# mkdir -p /root/github/ansible_smart_mgmt
-# cd /root/github/ansible_smart_mgmt
+# mkdir -p /root/github/ansible
+# cd /root/github/ansible
 # git clone https://github.com/ansible/workshops/
 # cd workshops/
 # git checkout smart_mgmt
