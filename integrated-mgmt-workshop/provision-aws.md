@@ -125,14 +125,14 @@ Python 3.6.8
 
 **Finally, run the provisioner**
 ```
-# cd /root/github/will/workshops/provisioner
-# unbuffer ansible-playbook provision_lab.yml -e @/root/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee /root/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
+# cd /root/github/ansible/workshops/provisioner
+# unbuffer ansible-playbook provision_lab.yml -e @/root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee /root/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
 ```
 
 **Teardown**
 ```
-# cd /root/github/will/workshops/provisioner
-# unbuffer ansible-playbook teardown_lab.yml -e @/root/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee /root/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
+# cd /root/github/ansible/workshops/provisioner
+# unbuffer ansible-playbook teardown_lab.yml -e @/root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee /root/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
 ```
 
 
