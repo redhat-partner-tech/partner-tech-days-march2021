@@ -68,6 +68,7 @@ Create a project using the `https://github.com/willtome/automated-smart-manageme
 #### **Step 3 - Create Job Template**
 
 ## Guide
+Workshop Presentation: [Partner Content Hub](link)
 * [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/openscap-exercise.md)
 * [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/automated-patch-management.md)
 * [Exercise 3: System Baseline / Drift)
