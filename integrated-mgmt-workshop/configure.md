@@ -14,7 +14,7 @@ Environment
 ---------
 - Satellite URL (Example: 
 - Satellite login/password
-- Ansible Automation Platform URL (Example: 
+- Ansible Automation Platform URL (Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net)
 - Ansible Automation Platform login/password 
 
 
