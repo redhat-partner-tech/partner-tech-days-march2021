@@ -97,7 +97,7 @@ The **SETUP / Tower** job will create multiple job templates that will be useful
 
 ![](https://lh4.googleusercontent.com/AvmmXeKsqMJY7UqF-YkXcc5f1MrdsyzmaRS3DhzDKGCjk33eJSKOmrCYQg-2C_EGb6y0IZdW2k5fTkLDvA4xQOotFbUpivtl3EAZr4vAMyNSaXSYpBtjPB8Woxoo8FuqvqmfxhMK)
 
-All job templates have now run and we can login to Satellite to perform verification.
+Now, we can login to Satellite to perform verification.
 
 #### 3\. Login to Satellite and validate your Environment
 
