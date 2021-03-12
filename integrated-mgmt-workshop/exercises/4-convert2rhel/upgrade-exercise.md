@@ -14,7 +14,7 @@ This use-case will focus on conversion and migration from older CentOS versions 
     - Covers CentOS 7 to RHEL 7 conversion
     - RHEL 7 to RHEL 8 upgrade
 
-Overall Process
+Overview
 -----------------------------------------------------------------
 
 **Summary**<br>
@@ -37,9 +37,9 @@ Things to consider if doing this in dev/test/stage-beta/prod:
 - Content Management (Satellite)
 - OS Patching & Standardized Operating Environments (Satellite)
 - Provisioning: OS, Infra Services and Applications/Other (Satellite and/or Ansible Automation Platform)
-- Configuration of Infra and Apps (Ansible Automation Platform)  | 
+- Configuration of Infra and Apps (Ansible Automation Platform)  
 Reference:[Scope of Support for Ansible Components included with Red Hat Satellite 6](https://access.redhat.com/articles/3616041)
-
+| 
 
 Ok, now, let's get started...  
 
@@ -60,10 +60,10 @@ Login to Ansible Tower, From the Dashboard main menu item, click [Hosts]
 
 Here you will see the Centos nodes
 
-Background:
+**Background:**
 Using the same Satellite workflow (Content Views, Lifecycles, etc.) we can  treat the CentOS nodes just like the RHEL nodes
 
-Steps:
+**Steps:**
 Now, we need to run through to register to Satellite (using subscription manager) vis activation keys
 Ansible Tower -> Templatres - SERVER / Register CentOS
 
