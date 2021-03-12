@@ -103,7 +103,7 @@ Now, we can login to Satellite to perform verification.
 
  ![](https://lh4.googleusercontent.com/xQc7AudiblHnV7vKVFv0_055wfoeODtDltSS1_C6yV_ppF3rmfN_B78dw-Lo-OvN2ey5aE20UkuxnqYPgtmwQ0pqDdXuHqZZ4yI1rV0_E8PaFeLJHBuTR2FngYQwtutxRzpOSrEe)
 
--   Use a web browser on your computer to access the Ansible Tower GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>*
+-   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>*
 
 -   Once you have logged in you will see a dashboard.
 
