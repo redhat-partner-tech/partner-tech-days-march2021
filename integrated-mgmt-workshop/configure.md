@@ -105,7 +105,7 @@ Now, we can login to Satellite to perform verification.
 
 -   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>*
 
--   Once you have logged in you will see a dashboard.
+-   Once you have logged in you will see the main Monitor page.
 
 -   Click on **Hosts** -> **All Hosts** to validate that all three RHEL server nodes are loaded into Satellite. 
 
