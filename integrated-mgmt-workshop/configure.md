@@ -47,7 +47,7 @@ Exercise
     - *In LIMIT box, type: satellite*
     - *Check the* ***ENABLE PRIVILEDGE ESCALATION*** *checkbox*
     - *Save*
-    - *Then, run the ***SETUP / Satellite - CentOS GPG Keys*** *job template*
+    - *Then, run the* ***SETUP / Satellite - CentOS GPG Keys*** *job template*
 
 -   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are also preconfigured. We will need to launch each of these.
 
