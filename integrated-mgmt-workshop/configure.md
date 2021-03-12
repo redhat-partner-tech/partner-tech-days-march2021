@@ -109,4 +109,6 @@ All job templates have now run and we can login to Satellite to perform verifica
 
 #### 5\. End of exercise
 
--   You have finished this exercise.
+-   You have finished this exercise
+-   Continue to [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/2-compliance/openscap-exercise.md), OR
+-   [Return to the main workshop page](https://github.com/redhat-partner-tech/partner-tech-days-march2021/tree/main/integrated-mgmt-workshop)
