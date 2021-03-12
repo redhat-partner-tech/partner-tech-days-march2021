@@ -12,7 +12,7 @@ In this part of the workshop we will set up the lab environment. This exercise w
 
 Environment
 ---------
-- Satellite URL *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net
+- Satellite URL *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
 - Satellite login/password
 - Ansible Automation Platform URL *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
 - Ansible Automation Platform login/password 
