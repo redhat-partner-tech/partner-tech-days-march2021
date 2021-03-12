@@ -39,7 +39,8 @@ Exercise
     - *Leave the SCM branch set to smart_mgmt*
     - *Save*
     - *Now, we need to configure GPG Keys for the CentOS nodes*
-    - *Go to* ***Templates*** *->* ***SETUP / Satellite***
+    - *Go to* ***Templates*** 
+    - *Make a copy of the ***SETUP / Satellite*** *job template*
     - *Rename to* ***SETUP / Satellite - CentOS GPG Keys*** 
     - *Change PLAYBOOK to centos_gpg_key_import.yml*
     - *Change CREDENTIALS to: Workshop Credentials*
