@@ -10,6 +10,13 @@ In this part of the workshop we will set up the lab environment. This exercise w
 -   Populate Ansible Tower with an inventory source, add templates, as well as an additional project.
 -   Register servers to the Satellite installation.
 
+Environment
+---------
+- Satellite URL (Example: 
+- Satellite login/password
+- Ansible Automation Platform URL (Example: 
+- Ansible Automation Platform login/password 
+
 
 Exercise
 --------
@@ -35,11 +42,11 @@ Exercise
 
 ![](https://lh4.googleusercontent.com/kz6l-YuNoKknP6nX7nJTooAmVa91z4up4CoE6c2L2UW2cvJpaOaKXs9vVr62IPN8zA1Od5ADmsX-6K-PNEgKUzFiESAiFW0IqZae94Gd7rS1kt8qm_CrfWbAEHYoQ1FEsglCRFVL)
 
-#### 2\. Launch each Ansible job template
+#### 2\. Launch Ansible job templates
 
 This step demonstrates the execution of job templates. You will be working with several templates as the workshop progresses but you will only need to focus on launching three templates as part of getting the lab environment setup.
 
--   Select **Templates** and click ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch **SETUP / Satellite Job**.
+-   Select **Templates** and click ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch **SETUP / Satellite** job.
 
 You will be taken to the **Jobs** dashboard where you will be able to follow each task executed as part of the playbook. This will take approximately 25 mins to complete.
 
@@ -79,7 +86,7 @@ The **SETUP / Tower** job will create multiple job templates that will be useful
 
 All job templates have now run and we can login to Satellite to perform verification.
 
-#### 5\. Login to Satellite and validate your Environment
+#### 3\. Login to Satellite and validate your Environment
 
  ![](https://lh4.googleusercontent.com/xQc7AudiblHnV7vKVFv0_055wfoeODtDltSS1_C6yV_ppF3rmfN_B78dw-Lo-OvN2ey5aE20UkuxnqYPgtmwQ0pqDdXuHqZZ4yI1rV0_E8PaFeLJHBuTR2FngYQwtutxRzpOSrEe)
 
@@ -95,6 +102,11 @@ All job templates have now run and we can login to Satellite to perform verifica
 
 ![](https://lh4.googleusercontent.com/AWbPrWmlXnm6ALxRs45Q-7LGnyA9muQiM_wWRqBUcU3OUwg1c26OML0YGywUL_5eivJK7F5e1NlwCvKDrIBDr8qflTut1KNIUsOUuQgpl6dkpHJ3mFjsKh3sg01NP5CJYn3HHGQa)
 
-#### 6\. End Lab
+#### 4\. Register CentOS nodes to Satellite
+
+- Run the **SERVER / Register - CENTOS7** (similar to **SERVER / Register - RHEL7** as in above Step 2
+- Repeat Step 3 to verify CentOS 7 nodes are now registered/added to Satellite
+
+#### 4\. End Lab
 
 -   You have finished this exercise.
