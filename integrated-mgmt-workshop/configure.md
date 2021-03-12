@@ -27,7 +27,7 @@ Exercise
 -   Use the side pane menu on the left to select 'Projects' and review the two projects named 'Automated Management' and 'Fact Scan'. These projects, along with the 'Workshop Inventory' have been set up for you during the provisioning of the lab environment.
 
 - *Temporary Steps:* 
-    - *From the navigation section on the left side of the Automation Platform homepage, select **Project**. *
+    - *From the navigation section on the left side of the Automation Platform homepage, select **Project**. 
     - *Select the project named **Automated Management***
     - *Update the SCM URL to: https://github.com/heatmiser/automated-smart-management-2.git*
     - *Leave the SCM branch set to smart_mgmt*
