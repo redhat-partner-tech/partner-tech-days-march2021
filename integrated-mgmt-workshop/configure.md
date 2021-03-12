@@ -39,13 +39,13 @@ Exercise
     - *Leave the SCM branch set to smart_mgmt*
     - *Save*
     - *Now, we need to configure GPG Keys for the CentOS nodes*
-    - *Go to **Templates** -> **SETUP / Satellite** *
-    - *Rename to **SETUP / Satellite - CentOS GPG Keys** *
+    - *Go to* ***Templates*** *->* ***SETUP / Satellite***
+    - *Rename to* ***SETUP / Satellite - CentOS GPG Keys** 
     - *Change PAYBOOK to centos_gpg_key_import.yml*
     - *In LIMIT box, type: satellite*
-    - *Check the **ENABLE PRIVILEDGE ESCALATION** checkbox*
+    - *Check the* ***ENABLE PRIVILEDGE ESCALATION*** *checkbox*
     - *Save*
-    - *Then, run the SETUP / Satellite - CentOS GPG Keys job template*
+    - *Then, run the ***SETUP / Satellite - CentOS GPG Keys*** *job template*
 
 -   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are also preconfigured. We will need to launch each of these.
 
