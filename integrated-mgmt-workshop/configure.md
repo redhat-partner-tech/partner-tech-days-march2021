@@ -117,7 +117,7 @@ Now, we can login to Satellite to perform verification.
 
 #### 4\. Register CentOS nodes to Satellite
 
-- Run the **SERVER / Register - CENTOS7** job template (similar to **SERVER / Register - RHEL7** job in above Step 2)
+- Now, run the **SERVER / Register - CENTOS7** job template (similar to **SERVER / Register - RHEL7** job in above Step 2)
 - Repeat Step 3 to verify CentOS 7 nodes are now registered/added to Satellite
 
 #### 5\. End of exercise
