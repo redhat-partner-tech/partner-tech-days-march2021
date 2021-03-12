@@ -22,7 +22,7 @@ Exercise
 
 -   Upon successful login, you will be able to see the Ansible Tower dashboard.
 
--   Use the side pane menu on the left to select **Projects** and review the two projects named **Automated Management** and **Fact Scan**. These projects, along with the **Workshop Inventory** have been set up for you during the provisioning of the lab environment.
+-   Use the side pane menu on the left to select **Projects** and review the two projects named **Automated Management** and **Fact Scan**. These projects, along with the Workshop Inventory (**Inventories** -> **Workshop Inventory**) have been set up for you during the provisioning of the lab environment.
 
 - *Temporary Steps:* 
     - *From the navigation section on the left side of the Automation Platform homepage, select* ***Project*** 
