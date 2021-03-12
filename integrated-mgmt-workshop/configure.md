@@ -38,11 +38,11 @@ Exercise
     - *Update the SCM URL to: https://github.com/heatmiser/automated-smart-management-2.git*
     - *Leave the SCM branch set to smart_mgmt*
     - *Save*
-    - *Now, we need to configure GPG Keys for the CentOS nodes
-    - *Go to **Templates** -> **SETUP / Satellite**
+    - *Now, we need to configure GPG Keys for the CentOS nodes*
+    - *Go to **Templates** -> **SETUP / Satellite** *
     - *Rename to **SETUP / Satellite - CentOS GPG Keys** *
     - *Change PAYBOOK to centos_gpg_key_import.yml*
-    - *In LIMIT box, type: satellite
+    - *In LIMIT box, type: satellite*
     - *Check the **ENABLE PRIVILEDGE ESCALATION** checkbox*
     - *Save*
     - *Then, run the SETUP / Satellite - CentOS GPG Keys job template*
