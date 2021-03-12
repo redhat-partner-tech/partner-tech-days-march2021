@@ -55,10 +55,10 @@ Login to Ansible Tower, From the Dashboard main menu item, click [Hosts]
 
 Here you will see the Centos nodes
 
-**Background:**
+**Background:**<br>
 Using the same Satellite workflow (Content Views, Lifecycles, etc.) we can  treat the CentOS nodes just like the RHEL nodes
 
-**Steps:**
+**Steps:**<br>
 Now, we need to run through to register to Satellite (using subscription manager) vis activation keys
 Ansible Tower -> Templatres - SERVER / Register CentOS
 
