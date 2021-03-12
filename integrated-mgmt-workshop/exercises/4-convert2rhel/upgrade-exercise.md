@@ -45,20 +45,13 @@ Exercise:
 - [Satellite 6.8 UI](https://www.example.com)
 - [Ansible Automation Platform 2.9 UI](https://www.example.com)
 
-Within the AAP UI, click on 'Hosts', then xxxx
-You will see
+**Steps:**<br>
+1. Login to Ansible Tower, From the Dashboard main menu item, click [Hosts]
+2. Here, you will see we have CentoS Nodes in Ansible Inventory
 
-
-We have CentoS Nodes in Ansible Inventory
-
-Login to Ansible Tower, From the Dashboard main menu item, click [Hosts]
-
-Here you will see the Centos nodes
-
-**Background:**<br>
 Using the same Satellite workflow (Content Views, Lifecycles, etc.) we can  treat the CentOS nodes just like the RHEL nodes
 
-**Steps:**<br>
+
 Now, we need to run through to register to Satellite (using subscription manager) vis activation keys
 Ansible Tower -> Templatres - SERVER / Register CentOS
 
