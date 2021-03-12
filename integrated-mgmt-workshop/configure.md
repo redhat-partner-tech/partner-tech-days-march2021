@@ -12,14 +12,6 @@ In this part of the workshop, we will set up the lab environment. This exercise 
 
 -   Register servers to the Satellite installation.
 
-Environment
------------
-
--   Red Hat Satellite v6.8
-
--   3 x Red Hat Enterprise Linux clients v7.9
-
--   2 x CentOS clients v7.6
 
 Exercise
 --------
