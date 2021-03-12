@@ -54,3 +54,36 @@ Within the AAP UI, click on 'Hosts', then xxxx
 You will see
 
 
+We have CentoS Nodes in Ansible Inventory
+
+Login to Ansible Tower, From the Dashboard main menu item, click [Hosts]
+
+Here you will see the Centos nodes
+
+Background:
+Using the same Satellite workflow (Content Views, Lifecycles, etc.) we can  treat the CentOS nodes just like the RHEL nodes
+
+Steps:
+Now, we need to run through to register to Satellite (using subscription manager) vis activation keys
+Ansible Tower -> Templatres - SERVER / Register CentOS
+
+Actually using subscription manager on the Lentos nodes to register to our Satellite
+
+Then run convert2rhwl
+
+Conversion Ansible Autions kickoff
+- Upgrade CentOS nodes to the latest release, 
+- reboot, 
+- double check services, 
+- shutdown, 
+- perform EC2 snapshot, 
+- bring it back up,
+-  run satellite register, 
+- then convert2rhel tool (which points to RHEL7 environment and activation key on Satellite), 
+- perform the upgrade, 
+- then it will reboot and come back up, 
+- check OS and application services on new converted RHEL instance, 
+- if not we can roll back using snapshot
+
+
+
