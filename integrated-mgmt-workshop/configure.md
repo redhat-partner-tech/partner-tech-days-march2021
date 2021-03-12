@@ -111,7 +111,7 @@ Now, we can login to Satellite to perform verification.
 
 ![](https://lh6.googleusercontent.com/_TeRjA3Yk4WUBTBz0XC7JTCSTVg8WKk_0mcFsWvQ59SB3KpxHzIWbGOxAVwvYgHg3onLuQDlhoEv7bcgRQQBCl9AhuZdfoWgHbVu_fMPxx4v9RJiAckvydwMQM_H37ucoYLfCO2D)
 
--   Click on **Content** -> **Content Views** -> **RHEL7** to verify that all DEV, QA and Prod environments are accounted for.
+-   Click on **Content** -> **Content Views** -> **RHEL7** to verify that all Dev, QA and Prod environments are accounted for.
 
 ![](https://lh4.googleusercontent.com/AWbPrWmlXnm6ALxRs45Q-7LGnyA9muQiM_wWRqBUcU3OUwg1c26OML0YGywUL_5eivJK7F5e1NlwCvKDrIBDr8qflTut1KNIUsOUuQgpl6dkpHJ3mFjsKh3sg01NP5CJYn3HHGQa)
 
