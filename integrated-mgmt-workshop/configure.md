@@ -12,11 +12,11 @@ In this part of the workshop we will set up the lab environment. This exercise w
 
 Environment
 ---------
-- Ansible Automation Platform URL 
+- Ansible Automation Platform URL<br> 
         - *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
 - Ansible Automation Platform login/password 
-- Satellite URL 
--       - *Example:https://student1-sat.smrtmgmt013.mw01.redhatpartnertech.net (Note the -sat added to the URL)*
+- Satellite URL<br> 
+        - *Example:https://student1-sat.smrtmgmt013.mw01.redhatpartnertech.net (Note the -sat added to the URL)*
 - Satellite login/password (same as above)
 
 
