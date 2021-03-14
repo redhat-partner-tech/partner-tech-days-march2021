@@ -94,7 +94,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
         Playbook: configure_openscap.yml
 
-        Credentials: Satellite_Credential, Workshop Credential
+        Credentials: Workshop Credential (Click the magnifying glass icon to select)
 
         Extra Variables:
 
