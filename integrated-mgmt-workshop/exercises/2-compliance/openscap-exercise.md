@@ -154,8 +154,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Now we weill configure and launch an Ansible Tower template to run another PCI compliance scan, plus the STIG compliance scan. 
 -   Login to Ansible Tower, click 'Templates' from the left side pane menu
-
-Click "Templates" from the left sidebar. 
+-   Click "Templates" from the left sidebar. 
 
 -   Then select on the far right side of the screen and click "Job Template". Fill out the details as follows. 
 
