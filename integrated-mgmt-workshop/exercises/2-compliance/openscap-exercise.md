@@ -164,7 +164,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
         Playbook: configure_openscap.yml
 
-        Project: Automated_Smart_Management 
+        Project: Automated Management 
 
         Credentials: Satellite_Credential, Workshop Credential
 
