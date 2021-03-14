@@ -40,16 +40,16 @@ Exercise
     - *Update the SCM URL to: https://github.com/heatmiser/automated-smart-management-2.git*
     - *Leave the SCM branch set to smart_mgmt*
     - *Save*
-    - *Now, we need to configure GPG Keys for the CentOS nodes*
-    - *Go to* ***Templates*** 
-    - *Make a copy of the* ***SETUP / Satellite*** *job template*
-    - *Rename to* ***SETUP / Satellite - CentOS GPG Keys*** 
-    - *Open the job template and change PLAYBOOK to centos_gpg_key_import.yml*
-    - *Change CREDENTIALS to: Workshop Credentials*
-    - *In LIMIT box, type: satellite*
-    - *Check the* ***ENABLE PRIVILEDGE ESCALATION*** *checkbox*
-    - *Save*
-    - *Then, go to* ***Templates*** *and launch the* ***SETUP / Satellite - CentOS GPG Keys*** *job template*
+    - ~~*Now, we need to configure GPG Keys for the CentOS nodes*
+    - ~~*Go to* ***Templates*** 
+    - ~~*Make a copy of the* ***SETUP / Satellite*** *job template*
+    - ~~*Rename to* ***SETUP / Satellite - CentOS GPG Keys*** 
+    - ~~*Open the job template and change PLAYBOOK to centos_gpg_key_import.yml*
+    - ~~*Change CREDENTIALS to: Workshop Credentials*
+    - ~~*In LIMIT box, type: satellite*
+    - ~~*Check the* ***ENABLE PRIVILEDGE ESCALATION*** *checkbox*
+    - ~~*Save*
+    - ~~*Then, go to* ***Templates*** *and launch the* ***SETUP / Satellite - CentOS GPG Keys*** *job template*
 
 -   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are also preconfigured. We will need to launch each of these.
 
