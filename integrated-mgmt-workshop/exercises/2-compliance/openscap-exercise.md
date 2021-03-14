@@ -113,7 +113,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Hover over 'Hosts' from the side pane menu and then click on 'Reports'.
 
--   Click on the report for 'node1.example.com' to evaluate
+-   Click on the [Full Report] button for 'node1.example.com' to evaluate
 
 -   You can sort by "Pass", "Fail", "Fixed", or any number of qualifiers as well as group rules by "Severity"
 
