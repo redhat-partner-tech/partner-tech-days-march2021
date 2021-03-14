@@ -20,7 +20,7 @@ OS Config -- Repo Setup + needed software tools install (including Ansible)
 $ sudo subscription-manager register
 $ sudo subscription-manager list --available
 $ sudo subscription-manager remove --all
-$ sudo subscription-manager attach --pool=8a85f99a72fe8ddb017305ae33c15130
+$ sudo subscription-manager attach --pool=8a85f99a72fe8d...
 $ sudo subscription-manager list --consumed
 
 $ sudo subscription-manager repos --disable=*
