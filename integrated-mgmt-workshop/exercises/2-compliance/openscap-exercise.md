@@ -28,7 +28,7 @@ Exercise
 
 #### 1\. Logging into Satellite
 
--   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
+-   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above. And use the following username and password to login: *admin /* <*password*>
 
 ![](https://lh3.googleusercontent.com/61RJI80QPal7BWRRjw8AGQA_okIXvBTGG6Vfo0ECdVjSFO4PPkvAMKHpVccroazXRtV_uvfC20x38j0i49BZErswpsDXTcDrxFw94cp1KlLYdjNDCC3Sxb8UwYcrOZNCWR7rqcmD)
 
@@ -98,11 +98,9 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
         Extra Variables:
 
-            HOSTS: node1.example.com
-
-            Policy_scan: 
-
-                - PCI_Compliance
+        HOSTS: node1.example.com
+        Policy_scan: 
+          - PCI_Compliance
 
 ![](https://lh5.googleusercontent.com/w--1gqh7nJwqHv_q_vjbXDaJCPXmrj5bHbZnx5A0lO3SChPDthAxR9b3IXMapaDUf4oWK_HIk-2iwAszRl671_5D0kOcqBNBKOuMwN5M9TsgmVGJcZxuwLfWrreaGg9zUbVdQC39)
 
