@@ -120,6 +120,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 ![](https://lh3.googleusercontent.com/hu_26q9h1QEMEAs6_57yiqDngir1xM5lolQWOSsDkOOzuiCpSUKtYDDk3TLc2zMozmLNWcmmDXMVuIulAvsolKZa_t6Siu62mqLabFdgO19Mr-V6rw6E14n7qYUxmmwt2PpaiapP)
 
 -   Selecting a rule presents further information regarding rationale as well as a description of the rule that includes references and identifiers.
+-   Now, uncheck everything except the **fail** checkbox. Then scroll down and click on the first failure "Prevent Login to Accounts With Empty Password"
 
 -   If you scroll the page you will notice multiple remediation steps including an 'Ansible' snippet. This presents tasks you can compile within a playbook to automation remediation across affected machines.
 
