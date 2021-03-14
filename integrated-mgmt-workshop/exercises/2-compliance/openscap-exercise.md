@@ -115,7 +115,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Click on the [Full Report] button for 'node1.example.com' to evaluate
 
--   You can sort by "Pass", "Fail", "Fixed", or any number of qualifiers as well as group rules by "Severity"
+-   Scroll down to the **Rule Overview** section. You can sort by "Pass", "Fail", "Fixed", or any number of qualifiers as well as group rules by "Severity"
 
 ![](https://lh3.googleusercontent.com/hu_26q9h1QEMEAs6_57yiqDngir1xM5lolQWOSsDkOOzuiCpSUKtYDDk3TLc2zMozmLNWcmmDXMVuIulAvsolKZa_t6Siu62mqLabFdgO19Mr-V6rw6E14n7qYUxmmwt2PpaiapP)
 
