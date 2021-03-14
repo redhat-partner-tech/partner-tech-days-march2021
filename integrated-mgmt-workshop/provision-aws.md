@@ -98,7 +98,7 @@ centos7: centos78
 - Once created, select the Subscriptions tab, then click [Add Subscriptions] to add # of Red Hat Ansible Automation subs
 - Click [Export Manifest] to download .zip file, then move to provisioner VM
 - On Provisioner VM, move zip file to default "provisioner" folder and rename<br>
-```# mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip```
+```$ mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip```
 
 **AWS Keys/Credentials**
 - [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
