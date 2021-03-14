@@ -78,7 +78,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 ![](https://lh4.googleusercontent.com/sVjxVPXbZ0lHrA3clT0kFIMNbYizH4y3OCTrb_kxSK39RhDr1UzLz4AS4N2Tvs6R9wUzmma0nj-CkJtHL8c0EjPyz5oEfbGFYtDzPRZ637X4rRKqtNseCxR9OL7JJNlfA9cygoIN)
 
-#### 4\. Configure and launch an Ansible Tower template to run an OpenSCAP scan. 
+#### 5\. Configure and launch an Ansible Tower template to run an OpenSCAP scan. 
 
 -   In Ansible Tower click 'Templates' from the left side pane menu
 
@@ -109,7 +109,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 ![](https://lh3.googleusercontent.com/nkQNdZD0E3zKh6oHQTiF29A_qYR6qgFJWH8_HRuttjgR69vyLuagPJJQ-3nw7jh32DvSy39RPWFzN6qz2Hp0gj6JjdOpjlCdV8V5hFALlPEMiE8EhNuRcXPbi7Oz5aZlXucGRBPM)
 
-#### 5\. Navigate back to Satellite to examine the Asset Reporting File (ARF). 
+#### 6\. Navigate back to Satellite to examine the Asset Reporting File (ARF). 
 
 -   Hover over 'Hosts' from the side pane menu and then click on 'Reports'.
 
