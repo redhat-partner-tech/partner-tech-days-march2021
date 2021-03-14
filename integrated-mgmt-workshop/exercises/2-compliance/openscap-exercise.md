@@ -152,33 +152,28 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 ![](https://lh6.googleusercontent.com/Y2DSZltuMov4zXtop_IYzfWZXRRmyk2Ogvnv-Sz22QGaKWm4QD7LcVtjkVP3inDSFIlLUiaRC267gnBrABF0sNJCx-lXN-19Ufu4le-HdUzWz36fxAI4nizD3bi5piEwEoJN3JXF)
 
--   Now we weill configure and launch an Ansible Tower template to run another PCI compliance scan, plus the STIG compliance scan. 
+-   Now, we will update our OpenSCAP_Configure job template in Ansible Tower and run another PCI compliance scan, plus the STIG compliance scan. 
 -   Login to Ansible Tower, click 'Templates' from the left side pane menu
--   Click "Templates" from the left sidebar. 
+-   Then select on the OpenSCAP_Configure job template. Make the following changes: (NOTE the change to "Extra Variables")
 
--   Then select on the far right side of the screen and click "Job Template". Fill out the details as follows. 
+        Name: OpenSCAP_Configure
 
-        Name: "OpenSCAP_Configure"
+        Job Type: Run
 
-        Job Type: "Run"
+        Inventory: Workshop Inventory
 
-        Inventory: "Workshop Inventory"
+        Playbook: configure_openscap.yml
 
-        Playbook: "configure_openscap.yml"
+        Project: Automated_Smart_Management 
 
-        Project: "Automated_Smart_Management" 
-
-        Credentials: "Satellite_Credential", "Workshop Credential"
+        Credentials: Satellite_Credential, Workshop Credential
 
         Extra Variables:
 
-            HOSTS: rhel7
-
-            Policy_scan: 
-
-                - PCI_Compliance
-
-                - STIG_Compliance
+        HOSTS: rhel7
+        Policy_scan: 
+          - PCI_Compliance
+          - STIG_Compliance
 
 ![](https://lh4.googleusercontent.com/KV-fvA1EBSSWJL_e9cxPtRrJzGcuzAAl2TjLLGPQVrxo9E-gqnL6VAqBmjRXOs8a6LGjmatQCQWzIjZXu_qnawmZBmERi2ydlPdcNyCOV5zCncwZ5iU7HtKszFDgV9WOYuM0KUal)
 
