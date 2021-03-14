@@ -54,7 +54,7 @@ Once you're in Satellite you would be able to see a dashboard
 
 ![](https://lh3.googleusercontent.com/j9IPZGS-LJPKAZJj4k6wZbbx15cAkOtvqT_UBDj2iAzhi5_Mkkq6aGZClS8gSq__DxVEMsPik-pQVDEK7l2JqWJNYZJXGr2yNdETyeNaSydhU8A205f9cha97QQYNLzlPRjW9-Ka)
 
--   Create the policy name "PCI-Compliance" and provide any description you like. Then click "Next"
+-   Create the policy name "PCI_Compliance" and provide any description you like. Then click "Next"
 
 ![](https://lh4.googleusercontent.com/sbJOKhFNODc7YodnOaFwZjeOx16eofpbEW0PxDTv76R4aoWKHHtP-BrpKXE7khOnSKKxdKWxQRbWK7TIIoYaW6otQJjxHIO-Rd770NsBLVZiHZdhrpy8MhqaiJRoNQOv0bV1oFo4)
 
