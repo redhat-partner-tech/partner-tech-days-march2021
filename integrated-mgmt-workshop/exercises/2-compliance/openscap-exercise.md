@@ -84,17 +84,17 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Select on the GREEN + icon on the far right side of the screen and click "Job Template". Fill out the details as follows. 
 
-        Name: "OpenSCAP_Configure "
+        Name: OpenSCAP_Configure
 
-        Job Type: "Run"
+        Job Type: Run
 
-        Inventory: "Workshop Inventory"
+        Inventory: Workshop Inventory (Click the magnifying glass icon to select)
 
-        Playbook: "configure_openscap.yml"
+        Project: Automated_Management 
 
-        Project: "Automated_Management" 
+        Playbook: configure_openscap.yml
 
-        Credentials: "Satellite_Credential", "Workshop Credential"
+        Credentials: Satellite_Credential, Workshop Credential
 
         Extra Variables:
 
