@@ -126,7 +126,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 ![](https://lh3.googleusercontent.com/_H6GjCsPq1pntFiW1lSRJQBq5dOyeGBJhk66RxNn6KO4SqeYJfmEeTgr2-rbpJlIEt5-ueQcfA41Ivae-wIErXreIsy9vkYnVB-i9K_FzA9mz_MWrjFpMdDyMcZurjaSNf-t516p)
 
-#### 7\. Scaling an OpenSCAP scan. (values to be changed)
+#### 7\. Scaling an OpenSCAP scan
 
 -   In Satellite, hover over "Hosts" from the menu on the left side of the screen, and then click on "Policies".
 
