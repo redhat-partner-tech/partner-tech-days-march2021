@@ -51,7 +51,7 @@ Exercise
 
 -   Select Start again to add a second node. From the drop-down menu select template and click on 'Satellite / Publish Content View - RHEL'. A survey is attached to this template so you will need to select 'Prompt' at the bottom and select the correct content view for the servers we will patch. Select the RHEL7 content view, Current Lifecycle Environment = RHEL7_Dev and Next Lifecycle Environment = RHEL7_QA. Click NEXT, then CONFIRM. Click the green SELECT button to finish. This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
 
--   Hover over your 'Satellite' inventory node and select the green + icon to generate another node called Fact_Scan. This is what will scan the nodes in our Satellite inventory to check for package updates and errata. 
+-   Hover over your 'Satellite' inventory node and select the green + icon to generate another node called Fact_Scan. Select **SERVER / Fact Scan - RHEL7** then click SELECT to finish. This is what will scan the nodes in our Satellite inventory to check for package updates and errata. 
 
 -   Hover over the Publish Content View node and select the blue link icon. Then click on Server / Fact Scan. Click save to add the link. We will also need to set convergence for the Server / Fact Scan node. Select 'All' from the 'Convergence' drop-down menu. 
 
