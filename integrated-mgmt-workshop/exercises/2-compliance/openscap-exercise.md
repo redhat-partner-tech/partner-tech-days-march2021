@@ -90,7 +90,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
         Inventory: Workshop Inventory (Click the magnifying glass icon to select)
 
-        Project: Automated_Management 
+        Project: Automated Management (Click the magnifying glass icon to select) 
 
         Playbook: configure_openscap.yml
 
