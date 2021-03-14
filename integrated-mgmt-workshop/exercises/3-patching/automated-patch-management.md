@@ -49,7 +49,7 @@ Exercise
 
 -   You are now presented with the WORKFLOW VISUALIZER. Select Start to add a node. From the drop-down menu select **Inventory Sync** and click on satellite_source. This sets up the inventory you will use in your workflow. You may leave the default remaining selections. Click the green Select button to finish.
 
--   Select Start again to add a second node. From the drop-down menu select template and click on 'Satellite / Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the RHEL7 content view .This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
+-   Select Start again to add a second node. From the drop-down menu select template and click on 'Satellite / Publish Content View - RHEL'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the RHEL7 content view .This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
 
 -   Hover over your 'Satellite' inventory node and select the green + icon to generate another node called Fact_Scan. This is what will scan the nodes in our Satellite inventory to check for package updates and errata. 
 
