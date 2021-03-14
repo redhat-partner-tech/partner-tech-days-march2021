@@ -42,7 +42,7 @@ Once you're in Satellite you would be able to see a dashboard
 
 -   In Satellite hover over 'Hosts' from the menu on the left side pane, and then click on 'Policies'
 
--   Click on the "New Policy" button, and fill out the details as followed in step 3. 
+-   Click on the "New Compliance Policy" button, and fill out the details as followed in step 3. 
 
 ![](https://lh5.googleusercontent.com/2qOPrqw4iC02hxEM6dfG5fj_TOsR5s-AAPCmEIXRDJo7kcfLlATH-bH36htyDB4UHWVTA-43jpwQfv21QdZx6oW41KohQYz4K8bpg1z_70-J6RkSknnMSiD486UjVziqD0SdnSxU)
 
@@ -129,6 +129,8 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 #### 7\. Scaling an OpenSCAP scan. (values to be changed)
 
 -   In Satellite, hover over "Hosts" from the menu on the left side of the screen, and then click on "Policies".
+
+-   Click on the "New Compliance Policy" button 
 
 -   Select "Manual" from the deployment options and click "Next"
 
