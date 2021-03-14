@@ -17,27 +17,31 @@
  
 OS Config -- Repo Setup + needed software tools install (including Ansible)
 ```
-# subscription-manager register
-# subscription-manager list --available
-# subscription-manager remove --all
-# subscription-manager attach --pool=8a85f99a72fe8ddb017305ae33c15130
-# subscription-manager list --consumed
+$ sudo subscription-manager register
+$ sudo subscription-manager list --available
+$ sudo subscription-manager remove --all
+$ sudo subscription-manager attach --pool=8a85f99a72fe8ddb017305ae33c15130
+$ sudo subscription-manager list --consumed
 
-# subscription-manager repos --disable=*
-# subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms --enable=rhel-8-for-x86_64-appstream-rpms --enable=ansible-2-for-rhel-8-x86_64-rpms
-# subscription-manager repos --list-enabled
+$ sudo subscription-manager repos --disable=*
+$ sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms --enable=rhel-8-for-x86_64-appstream-rpms --enable=ansible-2-for-rhel-8-x86_64-rpms
+$ sudo subscription-manager repos --list-enabled
 
-# dnf install vim git python3 expect ansible
-# pip3 install boto boto3 netaddr passlib 
+$ sudo dnf install vim git python3 expect ansible
+$ python3 -m pip install --user --upgrade pip setuptools
+$ python3 -m pip install --user wheel
+$ python3 -m pip install --user boto boto3 netaddr passlib 
 
-# mkdir -p /root/smrtmgmt01/deploy_logs
-# mkdir -p /root/smrtmgmt01/deploy_vars
-# mkdir -p /root/github
-# mkdir -p /root/github/ansible
-# cd /root/github/ansible
-# git clone https://github.com/ansible/workshops/
- 
-# vim /root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
+$ mkdir -p ~/smrtmgmt01/deploy_logs
+$ mkdir ~/smrtmgmt01/deploy_vars
+$ mkdir -p ~/github/ansible
+$ cd ~/github/ansible
+$ git clone https://github.com/ansible/workshops.git
+
+$ vim ~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
+```
+
+```
 ---
 # region where the nodes will live
 ec2_region: us-east-1
@@ -61,7 +65,7 @@ dns_type: aws
 admin_password: redhat!!
 
 # Sets the Route53 DNS zone to use for Amazon Web Services
-workshop_dns_zone: mw01.redhatpartnertech.net
+workshop_dns_zone: subdom.redhatpartnertech.net
 
 # automatically installs Tower to control node
 towerinstall: true
@@ -73,18 +77,19 @@ ibm_community_grid: false
 # select rhel7 or rhel8 client nodes
 rhel: rhel7
 
+# choice of centos6 or centos7 nodes
+# refer to https://wiki.centos.org/Cloud/AWS for available minor releases
+# comment out one, uncomment the other
 # select centos6 client node version
 #centos6: centos68
-
 # select centos7 client node version
 centos7: centos78
-
 ```
 
 **Setup DNS** 
 - You will need to setup DNS via AWS route53
 - Use AWS Public Hosted zone
-- Example: mw01.redhatpartnertech.net
+- Example: subdom.redhatpartnertech.net
 - Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
 
 **Manifest**
@@ -93,55 +98,53 @@ centos7: centos78
 - Once created, select the Subscriptions tab, then click [Add Subscriptions] to add # of Red Hat Ansible Automation subs
 - Click [Export Manifest] to download .zip file, then move to provisioner VM
 - On Provisioner VM, move zip file to default "provisioner" folder and rename<br>
-```# mv /home/mikew/manifest_sm-mgmt-wkshop_20210128T182529Z.zip /root/github/ansible/workshops/provisioner/manifest.zip```
+```# mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip```
 
 **AWS Keys/Credentials**
 - [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
 - Reference: https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html
-```# cd ~/
-# mkdir .aws
-# cd .aws
-# vim credentials 
-# cat credentials
+```$ cd ~/
+$ mkdir .aws
+$ cd .aws
+$ vim credentials 
+$ cat credentials
 [default]
 aws_access_key_id = AKIAIDA7I6XT....
 aws_secret_access_key = GP7nC7Oq+tP8akFWqO....
 
-#
+$
 ```
 
 **AWS CLI setup**
 ```
-# which python3
-        # python3 -m pip --user install awscli (use this to install as a "user")
-# python3 -m pip install awscli
-# aws s3 ls (to test that AWS Credentials are setup correctly above)
+$ python3 -m pip --user install awscli
+$ aws ec2 describe-regions --region us-east-1 (to test that AWS Credentials are setup correctly above)
 ```
-***** Set python correctly for provisioner to run right *****
+***** Set default python version via alternatives for provisioner to utilize correct python runtime *****
 ```
-# which python
+$ which python
 /usr/bin/which: no python in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
-# alternatives --list | grep -i python
+$ alternatives --list | grep -i python
 python              	auto  	/usr/libexec/no-python
 python3             	auto  	/usr/bin/python3.6
-# alternatives --set python /usr/bin/python3
-# alternatives --list | grep -i python
+$ alternatives --set python /usr/bin/python3
+$ alternatives --list | grep -i python
 python              	manual	/usr/bin/python3
 python3             	auto  	/usr/bin/python3.6
-# python --version
+$ python --version
 Python 3.6.8
 ```
 
 **Finally, run the provisioner**
 ```
-# cd /root/github/ansible/workshops/provisioner
-# unbuffer ansible-playbook provision_lab.yml -e @/root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee /root/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
+$ cd ~/github/ansible/workshops/provisioner
+$ unbuffer ansible-playbook provision_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
 ```
 
 **Teardown**
 ```
-# cd /root/github/ansible/workshops/provisioner
-# unbuffer ansible-playbook teardown_lab.yml -e @/root/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee /root/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
+$ cd ~/github/ansible/workshops/provisioner
+$ unbuffer ansible-playbook teardown_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
 ```
 
 
