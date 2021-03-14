@@ -47,15 +47,17 @@ Exercise
 
 -   Create the name 'Satellite / Patching Workflow - Dev' and click save (there are no other options necessary to select on this page).
 
--   You are now presented with the WORKFLOW VISUALIZER. Select Start to add a node. From the drop-down menu select **Inventory Sync** and click on satellite_source. This sets up the inventory you will use in your workflow. You may leave the default remaining selections. Click the green SELECT button to finish.
+-   You are now presented with the WORKFLOW VISUALIZER
 
--   Select Start again to add a second node. From the drop-down menu select template and click on 'Satellite / Publish Content View - RHEL'. A survey is attached to this template so you will need to select 'Prompt' at the bottom and select the correct content view for the servers we will patch. Select the RHEL7 content view. Click NEXT, then CONFIRM. Click the green SELECT button to finish. This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
+-   Select Start to add a node. From the drop-down menu select **Inventory Sync** and click on satellite_source. This sets up the inventory you will use in your workflow. You may leave the default remaining selections. Click the green SELECT button to finish.
 
--   Hover over your 'Satellite' inventory node and select the green + icon to generate another node called Fact_Scan. Select **SERVER / Fact Scan - RHEL7** then click **SELECT** to finish. This is what will scan the nodes in our Satellite inventory to check for package updates and errata. 
+-   Select Start again to add a second node. From the drop-down menu select template and click on **Satellite / Publish Content View - RHEL**. A survey is attached to this template so you will need to select 'Prompt' at the bottom and select the correct content view for the servers we will patch. Select the RHEL7 content view. Click NEXT, then CONFIRM. Click the green SELECT button to finish. This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
 
--   Hover over the Publish Content View node and select the blue link icon. Then click on Server / Fact Scan. Click save to add the link. We will also need to set convergence for the Server / Fact Scan node. Select 'All' from the 'Convergence' drop-down menu. 
+-   Hover over your **satellite_source** inventory node and select the green + icon to generate another node called Fact_Scan. Select **SERVER / Fact Scan - RHEL7** then click **SELECT** to finish. This is what will scan the nodes in our Satellite inventory to check for package updates and errata. 
 
--   Next add another node by hovering over Server / Fact Scan and selecting the Server / Patch template. This template also has a survey attached. You will need to select 'Prompt and from the drop-down menu select the environment you would like to patch. Choose 'RHEL7_Dev'. The 'Check' drop-down is a selection that tells the server_patch whether or not to apply updates to the servers in our inventory. Since we want to apply the patches, we will select 'No'. Click 'Next' at the bottom of the window and them select 'Confirm'
+-   Hover over the **Satellite / Publish Content View - RHEL** node and select the blue link icon. Then click on Server / Fact Scan. Click save to add the link. We will also need to set convergence for the Server / Fact Scan node. Click on the **SERVER / Fact Scan - RHEL7** node. Select 'All' from the 'Convergence' drop-down menu. Click the green SELECT button to finish.
+
+-   Next add another node by hovering over **SERVER / Fact Scan - RHEL7**, then click the green + icon. Select the **SERVER / Patch - RHEL7** template. This template also has a survey attached, click the **PROMPT** button. From the SELECT ENVIRONMENT drop-down menu, choose 'RHEL7_Dev'. The 'Check' drop-down is a selection that tells the server_patch whether or not to apply updates to the servers in our inventory. Since we want to apply the patches, we will select 'No'. Click 'NEXT' at the bottom of the window and them select 'CONFIRM'. Click the green SELECT button to finish.
 
 -   You can now save and exit the workflow template.
 
