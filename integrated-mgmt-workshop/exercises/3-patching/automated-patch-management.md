@@ -90,3 +90,4 @@ Exercise
 #### 7\. End Lab
 
 -   You have finished the lab.
+-   [Return to the main workshop page](https://github.com/redhat-partner-tech/partner-tech-days-march2021/tree/main/integrated-mgmt-workshop)
