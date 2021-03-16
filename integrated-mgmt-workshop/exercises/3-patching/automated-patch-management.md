@@ -114,7 +114,7 @@ You can now save and exit the workflow template.
 
 #### 6\. Navigate back to Satellite to examine smart automation
 
--   Click on 'Content' then 'Content Hosts' and select RHEL7. Notice the new content view version.
+-   Click on 'Content' then 'Content Views' and select RHEL7. Notice the new content view version.
 
 -   Navigate to Hosts > All Hosts and select node1.example.com. Select the 'content' tab under Details. Notice that the Installable errata has decreased. This indicates that we have applied our updates.
 
