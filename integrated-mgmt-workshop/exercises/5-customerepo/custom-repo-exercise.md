@@ -8,7 +8,7 @@ In this part of the workshop, we will learn how to manage extra/additional softw
 
 -   3 x Red Hat Enterprise Linux clients
 
-## Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+## Pre-requisites (completed in previous exercises in the workshop)
 
 -   Organization to be used = Default Organization
 
@@ -34,7 +34,7 @@ In this part of the workshop, we will learn how to manage extra/additional softw
 
 ![](https://lh3.googleusercontent.com/JBbWFK5lF_cgtCzCbzONkCJzQfXRMYpXyOcqVrrkflzlxjQUuw8seO_JJu7VBo3-yV0PSELR8-gAgdRvUeVcgDONhS_qGQhgdqY9-2129AdweJY7SCdB26XhnledDfu24TkY2z2l)
 
-#### 3\. Creating a custom product (values to be changed)
+#### 3\. Creating a custom product
 
 -   Now we will start preparing our Satellite server to be able to manage a custom product
 
