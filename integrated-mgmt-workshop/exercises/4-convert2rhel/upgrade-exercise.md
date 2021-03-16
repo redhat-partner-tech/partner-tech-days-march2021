@@ -7,7 +7,7 @@ This use-case will focus on conversion and migration from older CentOS versions 
 **Environment**
 - Satellite 6.8, Ansible Automation Platform 2.9
 - 2x CentOS 7 instances 
-- 2x RHEL 7  instances
+- 3x RHEL 7  instances
 
 **Upgrade Scenario**
 - Exercise: Convert CentOS 7 to RHEL 7, then upgrade to RHEL 8
@@ -28,7 +28,7 @@ Overview
 Things to consider if doing this in dev/test/stage-beta/prod:
 - Commercial and/or in-house developed application version(s) support with the host OS
 - Bootloader changes
-- Network connection and network time synchoniztions
+- Network connection and network time synchonizations
 
 
 | **A Note about using Satellite vs. Ansible Automation Platform for this...**<br>  | 
@@ -51,27 +51,17 @@ Exercise:
 
 Using the same Satellite workflow (Content Views, Lifecycles, etc.) we can  treat the CentOS nodes just like the RHEL nodes
 
+Now, we need to run through to register to Satellite (using subscription manager) via activation keys
+Ansible Tower -> Templates - SERVER / CentOS7 - Register
 
-Now, we need to run through to register to Satellite (using subscription manager) vis activation keys
-Ansible Tower -> Templatres - SERVER / Register CentOS
+This automation utilizes subscription manager on the CentOS nodes to register to our Satellite
 
-Actually using subscription manager on the Lentos nodes to register to our Satellite
+Next, we need to ensure that our CentOS nodes are updated to the latest available minor release
+Ansible Tower -> Templates - CONVERT2RHEL / 02 - Upgrade OS to latest release
 
-Then run convert2rhwl
+This automation updates all packages to the most up to date packages available on the Satellite and reboots the nodes
 
-Conversion Ansible Autions kickoff
-- Upgrade CentOS nodes to the latest release, 
-- reboot, 
-- double check services, 
-- shutdown, 
-- perform EC2 snapshot, 
-- bring it back up,
--  run satellite register, 
-- then convert2rhel tool (which points to RHEL7 environment and activation key on Satellite), 
-- perform the upgrade, 
-- then it will reboot and come back up, 
-- check OS and application services on new converted RHEL instance, 
-- if not we can roll back using snapshot
+Up next, we launch the convert2rhel bundled automation
+Ansible Tower -> Templates - CONVERT2RHEL / 03 - convert2rhel
 
-
-
+Conversion Ansible Automation kickoff
