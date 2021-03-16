@@ -8,7 +8,7 @@ In this part of the workshop, we will learn how to manage extra/additional softw
 
 -   3 x Red Hat Enterprise Linux clients
 
-## Pre-requisites (completed in previous exercises in the workshop)
+## Pre-requisites
 
 -   Organization to be used = Default Organization
 
