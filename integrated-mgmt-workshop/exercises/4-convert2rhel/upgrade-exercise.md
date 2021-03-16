@@ -64,4 +64,8 @@ This automation updates all packages to the most up to date packages available o
 Up next, we launch the convert2rhel bundled automation
 Ansible Tower -> Templates - CONVERT2RHEL / 03 - convert2rhel
 
-Conversion Ansible Automation kickoff
+This automation performs the conversion process, consisting of the following steps:
+- performs pre-conversion preparation steps to allow utilization of Satellite as conversion package source
+- execute the convert2rhel process with the proper configuration settings
+- monitors the convert2rhel process for completion
+- post conversion processing depending on conversion completion status
