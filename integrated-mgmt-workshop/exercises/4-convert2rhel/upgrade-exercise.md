@@ -1,5 +1,5 @@
-Intergated Management Workshop: CentOS/RHEL migration and upgrade
------------------------------------------------------------------
+Intergated Management Workshop: CentOS/RHEL migration and upgrade (Work In Progress)
+------------------------------------------------------------------------------------
 
 **Introduction**<br>
 This use-case will focus on conversion and migration from older CentOS versions to RHEL 8.3 (latest version as of Feb 2020). While we only show this process for a few systems, it can be scaled to a larger number of physical, virtual or cloud hosts using content repos provided by [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) (included in [Red Hat Smart Management](https://www.redhat.com/en/technologies/management/smart-management)). The upgrade process will be driven with automation built and run using [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible).
