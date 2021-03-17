@@ -4,11 +4,12 @@ Integrated Management Workshop: Configuring the lab environment
 Objective
 ---------
 
-In this part of the workshop we will set up the lab environment. This exercise will require you to launch (3) pre-configured playbooks. 
+In this part of the workshop we will set up the lab environment. This exercise will require you to launch (4) pre-configured playbooks. 
 
 -   Setup and configure Satellite with the proper lifecycle environments, content views, activation keys. 
 -   Populate Ansible Tower with an inventory source, add templates, as well as an additional project.
--   Register servers to the Satellite installation.
+-   Register servers to the Satellite installation - RHEL7
+-   Register servers to the Satellite installation - CentOS
 
 Environment
 ---------
