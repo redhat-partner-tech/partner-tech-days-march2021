@@ -12,9 +12,9 @@ They are meant to assist in learning the process to build your own custom module
 
 These modules show examples of variable and status inputs so that you can process and "do stuff" with the framework.
 
-# This README links to the original repo at https://github.com/GoKEV/module-creation
+# This README links to the original repo... 
 
-Please visit this for the latest, most up-to-date version of this code.
+Please visit https://github.com/GoKEV/module-creation for the latest, most up-to-date version of this code.
 
 
 
