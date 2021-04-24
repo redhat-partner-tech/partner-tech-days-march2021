@@ -87,7 +87,7 @@ In addition, edit/update the following files to utilize the proper EC2 region na
     - SCM BRANCH: main (if you didn't create a new branch to work with, otherwise, use branch name created)
     - Save and refresh project.
 
-3. Edit template SETUP / Satellite and include "Workshop Credential" with "Satellite Credential"
+3. Edit template SETUP / Satellite. Under Credentials, "Satellite Credential" will already be present...add "Workshop Credential" by clicking on the magnifying glass icon. 
     For extra_vars box:
     - add ==> refresh_satellite_manifest: no
     - check "PROMPT ON LAUNCH"
