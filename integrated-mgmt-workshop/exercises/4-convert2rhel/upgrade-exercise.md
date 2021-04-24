@@ -66,7 +66,13 @@ Note that in the file `refresh_route53_dns.yml` (student1 appears, DO NOT change
 
 The EC2 region primarily used is us-east-1 and this variable can be found throughout the repo as ==> ec2_region: us-east-1
 
-If the workshop is deployed to some other region than us-east-1, change the region name to reflect where the the workshop is deployed.
+If the workshop is deployed to some other region than us-east-1, change the ec2_region: entry in the four above mentioned files to utilize the proper EC2 region name.
+
+In addition, edit/update the following files to utilize the proper EC2 region name:
+
+`files/dynamic_development_source_vars.json`
+
+`files/dynamic_development_source_vars.yaml`
 
 **Login to your Satellite & AAP UI's**
 - [Satellite 6.8 UI](https://www.example.com)
