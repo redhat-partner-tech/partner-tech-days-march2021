@@ -130,7 +130,7 @@ $
 
 **AWS CLI setup**
 ```
-$ python3 -m pip --user install awscli
+$ python3 -m pip install --user awscli
 $ # now test AWS Credentials are configured correctly via above steps
 $ aws ec2 describe-regions --region us-east-1 
 ```
