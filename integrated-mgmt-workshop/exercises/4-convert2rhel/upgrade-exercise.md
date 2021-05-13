@@ -1,10 +1,8 @@
 Intergated Management Workshop: CentOS/RHEL migration and upgrade
 -----------------------------------------------------------------
-   (Work In Progress)
------------------------------------------------------------------
 
 **Introduction**<br>
-This use-case will focus on conversion and migration from older CentOS versions to RHEL 8.3 (latest version as of Feb 2020). While we only show this process for a few systems, it can be scaled to a larger number of physical, virtual or cloud hosts using content repos provided by [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) (included in [Red Hat Smart Management](https://www.redhat.com/en/technologies/management/smart-management)). The upgrade process will be driven with automation built and run using [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible).
+This use-case will focus on conversion and migration from older CentOS versions to RHEL 8.3 (latest version as of Feb 2020). While we only show this process for a few systems, however, it can be scaled to a larger number of physical, virtual or cloud hosts using content repos provided by [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) (included in [Red Hat Smart Management](https://www.redhat.com/en/technologies/management/smart-management)). The upgrade process will be driven with automation built and run using [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible).
 
 **Environment**
 - Satellite 6.8, Ansible Automation Platform 2.9
@@ -42,58 +40,23 @@ Ok, let's get started...
 
 Exercise:
 -----------------------------------------------------------------
-**Fork Automated Smart Management repo to individual GitHub account**
-Before we begin, you'll need to fork the Automated Smart Management repo into your personal GitHub account.  If you do not have an individual GitHub account, you will need to create one to proceed. Utilization of a source code management (SCM) system is central to the "infrastructure as code" concepts put forth in this lab exercise, and in this case, GitHub is our SCM.
-
-Once logged into [GitHub](https://github.com) navigate to the [Red Hat Partner Tech repo for Automated Smart Management](https://github.com/redhat-partner-tech/automated-smart-management) repo. Next, on the Automated Smart Management repo page, in the top, upper right of the page, click "Fork".  This will create a "forked" Automated Smart Management repo in your personal GitHub account.
-
-[Switch to your cloned repo](https://github.com/your-github-username/automated-smart-management) and in the following files:
-
-`group_vars/control/inventories.yml`
-
-`group_vars/control/job_templates.yml`
-
-`inventory/inventory_centos7_dev.aws_ec2.yml`
-
-`inventory/inventory_rhel7_dev.aws_ec2.yml`
-
-...make these edits (instructor will provide values):
-- EC2_NAME_PREFIX ==> value of 'ec2_name_prefix' variable in workshop deployment vars file
-- STUDENT_NAME_WITH_NUM ==> student name assigned to individual student, ie. student2 or student14
-- WRKSHP_DNS_ZONE ==> value of 'workshop_dns_zone' variable in workshop deployment vars file
-
-Note that in the file `refresh_route53_dns.yml` (student1 appears, DO NOT change)
-
-The EC2 region primarily used is us-east-1 and this variable can be found throughout the repo as ==> ec2_region: us-east-1
-
-If the workshop is deployed to some other region than us-east-1, change the ec2_region: entry in the four above mentioned files to utilize the proper EC2 region name.
-
-In addition, edit/update the following files to utilize the proper EC2 region name:
-
-`files/dynamic_development_source_vars.json`
-
-`files/dynamic_development_source_vars.yaml`
-
 **Login to your Satellite & AAP UI's**
-- [Satellite 6.8 UI](https://www.example.com)
-- [Ansible Automation Platform 2.9 UI](https://www.example.com)
+- [Satellite 6.8 UI](https://student1-sat.guid.domain.com)
+- [Ansible Automation Platform 2.9 UI](https://student1.guid.domain.com)
+
+Note that in the following steps that are being performed on Tower, at any time, over on the Satellite console, review the registered hosts via clicking Hosts => All Hosts.  Refresh the Hosts page to see changes as they occur a result from the automation being peformed via Tower.
 
 **Steps:**<br>
-1. Login to Ansible Tower, From the Dashboard main menu item, click [Hosts]
-    - Here, you will see we have CentOS Nodes in Ansible Inventory
+1. Login to Ansible Tower, From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
+    - Here, you will see we have RHEL and CentOS Nodes in an initial, static Ansible inventory
 
 2. Switch "Automated Management" project to point to:
-    - SCM URL: https://github.com/your-github-username/automated-smart-management.git
-    - SCM BRANCH: main (if you didn't create a new branch to work with, otherwise, use branch name created)
+    - SCM URL: https://github.com/redhat-partner-tech/automated-smart-management.git
+    - SCM BRANCH: main
+    - Place checks beside boxes "DELETE ON UPDATE" and "UPDATE REVISION ON LAUNCH"
     - Save and refresh project.
 
-3. Edit template SETUP / Satellite. Under Credentials, "Satellite Credential" will already be present...add "Workshop Credential" by clicking on the magnifying glass icon. 
-    For extra_vars box:
-    - add ==> refresh_satellite_manifest: no
-    - check "PROMPT ON LAUNCH"
-    - Save template
-
-4. Run the first two SETUP job templates and Publish RHEL7_Dev CV
+4. Run the first two SETUP job templates and the Publish RHEL7_Dev CV job template
     - SETUP / Satellite **** NOTE!!! ***** change refresh_satellite_manifest: no to yes (this one takes a while, ~45-50 minutes)
     - SETUP / Tower
     - SATELLITE / RHEL - Publish Content View
@@ -119,6 +82,12 @@ In addition, edit/update the following files to utilize the proper EC2 region na
     - template EC2 / Set instance tags based on Satellite(Foreman) facts
 
 9. Update inventories via dynamic sources
+    - before you run the dynamic inventory update templates, navigate to the Inventories location in Tower and review the following inventories:
+      - ALL Development => HOSTS
+      - CentOS7 Development => HOSTS
+      - RHEL7 Development => HOSTS
+    Note that these inventories have yet to be populated.  Also, while you are in each of these inventories, click on the "SOURCES" button and review how each of these dynamic source inventories are configured, taking note of the "SOURCE VARIABLES" section to gain an understanding on how the resultant hosts and groups for that particular inventory are populated.
+
     - template TOWER / Update inventories via dynamic sources
 	  - Select "CentOS7" for Inventory To Update
       - select "Dev" for Choose Environment
@@ -134,7 +103,7 @@ In addition, edit/update the following files to utilize the proper EC2 region na
     - template CONVERT2RHEL / 03 - convert2rhel
       - choose LE group to convert CentOS7_Dev
       - choose LE target RHEL7_Dev
-      - with some pre-config, any combo is possible
+      - with some pre-configuration, any combination is possible
 
 12. Query Satellite to get node-related details, set EC2 instance tags based on these details
     - template EC2 / Set instance tags based on Satellite(Foreman) facts
@@ -142,4 +111,20 @@ In addition, edit/update the following files to utilize the proper EC2 region na
 13. Refresh/update inventories
     - repeat step 9.
 
-> **EXTRA CREDIT**: Create a workflow template incorporating the above standalone templates into a complete CentOS to RHEL conversion workflow!
+> **EXTRA CREDIT - Convert2RHEL workflow template**
+Create a workflow template incorporating the above standalone templates into a complete CentOS to RHEL conversion workflow!
+
+>**EXTRA CREDIT - Infrastructure-as-Code "Choose Your Own Adventure"**
+  - Fork Automated Smart Management repo to individual GitHub account
+Before we begin, you'll need to fork the Automated Smart Management repo into your personal GitHub account.  If you do not have an individual GitHub account, you will need to create one to proceed. Utilization of a source code management (SCM) system is central to the "infrastructure as code" concepts put forth in this lab exercise, and in this case, GitHub is our SCM.
+
+Once logged into [GitHub](https://github.com) navigate to the [Red Hat Partner Tech repo for Automated Smart Management](https://github.com/redhat-partner-tech/automated-smart-management) repo. Next, on the Automated Smart Management repo page, in the top, upper right of the page, click "Fork".  This will create a "forked" Automated Smart Management repo in your personal GitHub account.
+
+[Switch the "Automated Management" project in Tower to utilize your newly cloned repo](https://github.com/your-github-username/automated-smart-management.git). The following files are some good places to start looking to see where you can adjust the Extra Vars instance tags to select/filter what particular instances that a job template/playbook gets run against:
+
+`group_vars/control/inventories.yml`
+
+`group_vars/control/job_templates.yml`
+
+Once the updates are made, commit and push these changes to the cloned repo, followed by running the "SETUP / Tower" job template, which will propogate the changes to Tower itself.
+...
