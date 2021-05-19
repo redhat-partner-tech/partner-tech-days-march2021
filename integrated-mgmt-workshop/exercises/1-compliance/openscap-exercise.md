@@ -1,7 +1,7 @@
 Integrated Management Workshop: Configuring and performing an OpenSCAP Scan
 ===========================================================================
 
-In this part of the workshop, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Tower with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans remotely from a single location. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce and provides tools for automated vulnerability checking.
+In this part of the workshop, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Tower with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans remotely from a single location. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce. OpenSCAP provides tools for automated vulnerability checking. Satellite is has RPM packages for SCAP workbench v1.2.0-5 which provides our scanning capabilities and is also loaded with the SCAP security guide v0.1.54-3 for RHEL7 and CentOS devices which provides the appropriate XCCDF benchmarks for PCI and STIG complianc (among several others).
 
 Environment
 -----------
@@ -56,7 +56,7 @@ Once you're in Satellite you would be able to see a dashboard
 
 -   Create the policy name "PCI_Compliance" and provide any description you like. Then click "Next"
 
-![](https://lh4.googleusercontent.com/sbJOKhFNODc7YodnOaFwZjeOx16eofpbEW0PxDTv76R4aoWKHHtP-BrpKXE7khOnSKKxdKWxQRbWK7TIIoYaW6otQJjxHIO-Rd770NsBLVZiHZdhrpy8MhqaiJRoNQOv0bV1oFo4)
+![](https://lh3.googleusercontent.com/wiTNFk6ZHcnwDCy2AOYoTzeMnofdJIQQSC5OtA480aKxcJkexiwOvKKj3iZkByiVZRhsJ-yn1IjMKobF3-R8nuGmBJSMd2EawP5cPQUXWf54Z5PpnwtsG-lpiOIY8EXfGeqa62ZU)
 
 -   Select the "Red Hat rhel7 default content" and "PCI-DSS v3.2.1 Control Baseline for Red Hat Enterprise Linux 7". There is no tailoring file. Then click "Next"![](https://lh6.googleusercontent.com/m4VK9on3A5ZASMOB1sG8Hx76L3-fCy4Pn_mYsSmYT-QZYGbK_bYubLLpYRHzP5DoLGi_XTd7bAXTZZ2xdg5ss0OT-oRWguI7nECaUJtD-8k6i6sxLfTFn6SSLwYsaV8ePRMq5v--)
 
@@ -138,7 +138,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 -   Create the policy name "STIG_Compliance" and provide any description you like. Then click "Next"
 
-![](https://lh4.googleusercontent.com/dTnvNbOssJCLU4h2wp1OkN6fOTlVORkANhgW6dmt2gxcegGsXdYlhNbXGVMlc6VDzu8OMzXgXR0oHbs_UWAoBhijgVvsPUEu3_GDkLWaCdLudhJHrlB4Kyv_CGFCEUS362ZqzQak)
+![](https://lh6.googleusercontent.com/533Ege04oTXKlR_loqIvKBgGqXp2pUdeNPjrTJTmgNJYnzVSZeNw-Gj7Au5HRJ8Wt-EFzjZEGJnZrhH9qgqnyEe7yJJwo6H4LLsRSITUQl9vPxcpWYoo5jksK--v8G2Do_kWJvtB)
 
 -   Select the "Red Hat rhel7 default content" and "DISA STIG for Red Hat Enterprise Linux 7". There is no tailoring file. Then click "Next"
 
