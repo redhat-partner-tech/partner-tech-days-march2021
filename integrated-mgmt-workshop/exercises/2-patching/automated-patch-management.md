@@ -54,17 +54,17 @@ Exercise
 
 -   Select Start to add a node. From the drop-down menu select inventory sync and click on "satellite_source". This sets up the inventory you will use in your workflow. You may leave the default remaining selections and click 'select'
 
--   Select Start again to add a second node. From the drop-down menu select template and click on 'Satellite / Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to 'confirm' the preview.
+-   Select Start again to add a second node. From the drop-down menu select template and click on 'SATELLITE / RHEL - Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to 'confirm' the preview.
 
 This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
 
--   Add another node to the workflow by hovering over your 'satellite_source' inventory node and select the GREEN + icon to generate another node called 'Server / Fact Scan'. This is what will scan the nodes in our Satellite inventory to check for package updates and errata.
+-   Add another node to the workflow by hovering over your 'satellite_source' inventory node and select the GREEN + icon to generate another node called 'SERVER / RHEL7 - Fact Scan'. This is what will scan the nodes in our Satellite inventory to check for package updates and errata.
 
 At this point your workflow should resemble the following:
 
 ![](https://lh5.googleusercontent.com/cus0Z_VD33f_uFiOEdzD9aFY1g9OoLTqnZ8MAvo_2wvlUJ0ZvtFHE_-1wQZI4Xj5xGtypizrbqOTLBiXsN8U41lL7B4qDnIznkgWAQsxKWrqVgqgD6ZUFPEzueUU0fP106UpHL5A)
 
--   There are two more nodes to add to this workflow.  Hover the Publish Content View node and select the GREEN +. Then click on 'Satellite / Promote Content View'. There is a survey attached that requires variables for content view, current lifecycle environment, and next lifecycle environment. For the purpose of this lab we're going to promote Dev to QA. 
+-   There are two more nodes to add to this workflow.  Hover the Publish Content View node and select the GREEN +. Then click on 'SATELLITE / RHEL - Promote Content View'. There is a survey attached that requires variables for content view, current lifecycle environment, and next lifecycle environment. For the purpose of this lab we're going to promote Dev to QA. 
 
 -   Select RHEL7 for 'Content View'
 
@@ -74,9 +74,9 @@ At this point your workflow should resemble the following:
 
                        Click 'next'. You will then need to 'confirm' the preview.
 
--   Add the last node by hovering over 'Satellite / Promote Content' and selecting the GREEN +. Then click on 'Server / Patch' template. This template also has a survey attached. You will need to select 'Prompt' and from the drop-down menu select the environment you would like to patch. Choose 'RHEL7_Dev'. The 'Check' drop-down is a selection that tells server_patch.yml whether or not to apply updates to the servers in our inventory. Since we want to apply the patches, we will select 'No'. Click 'Next' at the bottom of the window and them select 'Confirm'. Click 'select' from the menu on the right to save the node.
+-   Add the last node by hovering over 'SATELLITE / RHEL- Promote Content View' and selecting the GREEN +. Then click on 'SERVER / RHEL7 - Patch' template. This template also has a survey attached. You will need to select 'Prompt' and from the drop-down menu select the environment you would like to patch. Choose 'RHEL7_Dev'. The 'Check' drop-down is a selection that tells server_patch.yml whether or not to apply updates to the servers in our inventory. Since we want to apply the patches, we will select 'No'. Click 'Next' at the bottom of the window and them select 'Confirm'. Click 'select' from the menu on the right to save the node.
 
--   Before we can finish the workflow we need to link 'Server / Fact Scan' to 'Server / Patch' and coverage on success. Hover over 'Server / Fact Scan' and click on the BLUE chain icon. Then click to the right of the 'Server / Patch' node to link. You will be promoted on the right side pane menu to to Run 'On Success'. Click 'Save'
+-   Before we can finish the workflow we need to link 'SERVER / RHEL7 - Fact Scan' to 'SERVER / RHEL7 - Patch' and coverage on success. Hover over 'SERVER / RHEL7 - Fact Scan' and click on the BLUE chain icon. Then click to the right of the 'SERVER / RHEL7 - Patch' node to link. You will be promoted on the right side pane menu to to Run 'On Success'. Click 'Save'. You will then need to click on the 'SERVER / RHEL7 - Patch' node and select 'ALL' from the CONVERGENCE drop-down. Continue with select and save.
 
 Your workflow should resemble the following:
 
