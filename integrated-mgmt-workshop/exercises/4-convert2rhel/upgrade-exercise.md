@@ -57,7 +57,7 @@ Note that in the following steps that are being performed on Tower, at any time,
     - Save and refresh project.
 
 4. Run the first two SETUP job templates and the Publish RHEL7_Dev CV job template
-    - SETUP / Satellite **** NOTE!!! ***** change refresh_satellite_manifest: no to yes (this one takes a while, ~45-50 minutes)
+    - SETUP / Satellite **** NOTE!!! ***** change refresh_satellite_manifest: false to true (this one takes a while, ~45-50 minutes)
     - SETUP / Tower
     - SATELLITE / RHEL - Publish Content View
       - env: Dev
