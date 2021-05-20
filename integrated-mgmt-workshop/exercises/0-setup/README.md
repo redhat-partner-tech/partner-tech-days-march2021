@@ -40,7 +40,7 @@ Exercise
     - *Select the project named **Automated Management***
     - *Update the SCM URL to: https://github.com/redhat-partner-tech/automated-smart-management.git*
     ![](https://lh6.googleusercontent.com/GCkDKHFM6NysO_V6oW_QbL_c4Tw97bzAICQPAx6_w5yIZzqUQawA4AZJ_OuBtvhh2efgdcNrKf-_07wkV2EBJYqRLpstbBF3z9Em79xxi2cojZVAXD4K1Vp8Uk72VsL62z39UGQi)
-    - *Set SCM branch set to be blank*
+    - *Set SCM branch to "main"*
     - *Save*
 
 -   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are also preconfigured. We will need to launch each of these.
