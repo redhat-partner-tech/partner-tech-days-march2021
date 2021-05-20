@@ -48,7 +48,7 @@ Now you should have the following configured workshop environment:
 | Managed Host 3       | node3          |
 | Managed Host 4       | node4          |
 | Managed Host 5       | node5          |
-
+| Managed Host 6       | node6          |
 
 
 
