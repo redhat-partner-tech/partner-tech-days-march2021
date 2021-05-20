@@ -6,7 +6,7 @@ This use-case will focus on conversion and migration from older CentOS versions 
 
 **Environment**
 - Satellite 6.8, Ansible Automation Platform 2.9
-- 2x CentOS 7 instances 
+- 3x CentOS 7 instances 
 - 3x RHEL 7  instances
 
 **Upgrade Scenario**
