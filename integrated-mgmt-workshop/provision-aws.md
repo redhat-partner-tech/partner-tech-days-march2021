@@ -13,9 +13,15 @@
 - AWS Account
 - DNS setup via AWS Route53 
 
+**Setup DNS:** 
+- You will need to setup DNS via AWS route53
+- Use AWS Public Hosted zone
+- Example: subdom.redhatpartnertech.net
+- Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
+
 **Steps:**
- 
 OS Config -- Repo Setup + needed software tools install (including Ansible)
+
 ```
 $ sudo subscription-manager register
 $ sudo subscription-manager list --available
@@ -28,10 +34,31 @@ $ sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms --enabl
 $ sudo subscription-manager repos --list-enabled
 
 $ sudo dnf install vim git python3 expect ansible
+```
+
+Set default python version via alternatives for provisioner to utilize correct python runtime
+
+```
+$ which python
+/usr/bin/which: no python in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
+$ alternatives --list | grep -i python
+python              	auto  	/usr/libexec/no-python
+python3             	auto  	/usr/bin/python3.6
+$ alternatives --set python /usr/bin/python3
+$ alternatives --list | grep -i python
+python              	manual	/usr/bin/python3
+python3             	auto  	/usr/bin/python3.6
+$ python --version
+Python 3.6.8
+
 $ python3 -m pip install --user --upgrade pip setuptools
 $ python3 -m pip install --user wheel
-$ python3 -m pip install --user boto boto3 netaddr passlib 
+$ python3 -m pip install --user boto boto3 netaddr passlib awscli
+```
 
+Create log and var directories and clone provisioner
+
+```
 $ mkdir -p ~/smrtmgmt01/deploy_logs
 $ mkdir ~/smrtmgmt01/deploy_vars
 $ mkdir -p ~/github/ansible
@@ -40,7 +67,13 @@ $ git clone https://github.com/ansible/workshops.git
 
 $ vim ~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
 ```
+Please modify the following variables below to match your unique configuration.
+- ec2_region: (a single ec2 region, ex. us-east-1; us-east-2)
+- ec2_name_prefix: (a single unique name for your workshop, ex. smrtmgmt01; smrtmgmtvendor)
+- admin_password: (a strong password 15+ characters, ex. Ansible=2021!!!)
+- workshop_dns_zone: (setup in your route53 configuration, ex. subdom.redhatpartnertech.net)
 
+All remaining variables LEAVE AS IS
 ```
 ---
 # region where the nodes will live
@@ -62,7 +95,7 @@ workshop_type: smart_mgmt
 dns_type: aws
 
 # password for Ansible control node
-admin_password: redhat!!
+admin_password: Ansible=2021!!!
 
 # Sets the Route53 DNS zone to use for Amazon Web Services
 workshop_dns_zone: subdom.redhatpartnertech.net
@@ -84,13 +117,13 @@ rhel: rhel7
 #centos6: centos68
 # select centos7 client node version
 centos7: centos78
-```
 
-**Setup DNS** 
-- You will need to setup DNS via AWS route53
-- Use AWS Public Hosted zone
-- Example: subdom.redhatpartnertech.net
-- Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
+# this will install VS Code web on all control nodes
+code_server: true
+
+# Enable AWS IAM integration with control(tower) node and workshop nodes
+tower_node_aws_api_access: true
+```
 
 **Manifest**
 - Login to https://access.redhat.com --> Subscriptions --> Subscription Allocations, then [New Subscription Allocation]
@@ -100,10 +133,13 @@ centos7: centos78
 - On Provisioner VM, move zip file to default "provisioner" folder and rename<br>
 ```$ mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip```
 
-**AWS Keys/Credentials**
+**AWS Keys/Credentials - credentials file or via environment variables**
 - [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
 - Reference: https://docs.aws.amazon.com/general/latest/gr/aws-access-keys-best-practices.html
-```$ cd ~/
+
+**via credentials file**
+```
+$ cd ~/
 $ mkdir .aws
 $ cd .aws
 $ vim credentials 
@@ -111,28 +147,21 @@ $ cat credentials
 [default]
 aws_access_key_id = AKIAIDA7I6XT....
 aws_secret_access_key = GP7nC7Oq+tP8akFWqO....
-
 $
 ```
 
-**AWS CLI setup**
+- or if you don't want keys/creds in a file...
+
+**via environment variables**
 ```
-$ python3 -m pip --user install awscli
-$ aws ec2 describe-regions --region us-east-1 (to test that AWS Credentials are setup correctly above)
+$ export AWS_ACCESS_KEY_ID="AKIAIDA7I6XT...."
+$ export AWS_SECRET_ACCESS_KEY="GP7nC7Oq+tP8akFWqO...."
+$
 ```
-***** Set default python version via alternatives for provisioner to utilize correct python runtime *****
+
+**Test AWS Credentials**
 ```
-$ which python
-/usr/bin/which: no python in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
-$ alternatives --list | grep -i python
-python              	auto  	/usr/libexec/no-python
-python3             	auto  	/usr/bin/python3.6
-$ alternatives --set python /usr/bin/python3
-$ alternatives --list | grep -i python
-python              	manual	/usr/bin/python3
-python3             	auto  	/usr/bin/python3.6
-$ python --version
-Python 3.6.8
+$ aws ec2 describe-regions --region us-east-1
 ```
 
 **Finally, run the provisioner**
