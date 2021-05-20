@@ -20,7 +20,7 @@ We will focus on 5 main customer pain points:
 - Custom Repositories
 
 ## Lab Diagram
-![](https://lh3.googleusercontent.com/TFkdkKSfTtqbwE4i0ZDTyzvKCojXgeYuIrxIq4kgK6RqiiVU54msgOjGObQEqskvi6BUilA8YoRJg5rdSq-NFC47L6GC3PFhaTmBc9fKBaUX1Axcm_u0UiuRDNJxDrTjsTfUqUpi)
+![](https://lh5.googleusercontent.com/t6LEJtEw6Q0tHt3RurTtEuR9HgLmCjJofdWyc605qD-yWiFTuMA_gfdv7NHLI7urVwMihly12QDrAvwX1nBf0-kTmLPviSNttHfUzOp3MLHmfYYCc-XDQMkBSebxLJvX0BJr9iUU)
 
 ## Lab Setup
 
