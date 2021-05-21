@@ -105,6 +105,8 @@ Run the **SERVER / Register - CentOS7** job template by clicking the![](https://
 
 ![](https://lh5.googleusercontent.com/j9c1se4WyVKaM3O-nsaNNn7uLPpOpPM3mjMLSl1YzcwNfVWsZ3wDw-ipUA-RQgdJLCSkPAzyW6kvCJpEDeuoXZBgtyTs0dJ5GpfmbvaZJAfgP4RPPvDyc3w_4EaWAQBtTJrt_Nu4)
 
+Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+
 Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
