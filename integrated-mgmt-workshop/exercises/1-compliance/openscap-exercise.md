@@ -10,8 +10,6 @@ Environment
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
--   2 x CentOS Linux clients v7.8
-
 Pre-requisites (completed in previous exercises in the workshop, values to be changed)
 --------------------------------------------------------------------------------------
 
@@ -20,8 +18,6 @@ Pre-requisites (completed in previous exercises in the workshop, values to be ch
 -   Content view = RHEL7
 
 -   Lifecycle environments = Dev, QA, Prod
-
--   SSH access to RHEL clients (node1, node2, node3) which have been registered to Satellite
 
 Exercise
 --------
@@ -38,7 +34,7 @@ Once you're in Satellite you would be able to see a dashboard
 
 #### 2\. Creating a new compliance policy
 
--   Now we will start configuring a compliance policy to be able to scan our RHEL nodes.
+Now we will start configuring a compliance policy to be able to scan our RHEL nodes.
 
 -   In Satellite hover over 'Hosts' from the menu on the left side pane, and then click on 'Policies'
 
@@ -48,7 +44,7 @@ Once you're in Satellite you would be able to see a dashboard
 
 #### 3\. Configuring a new compliance policy
 
--   Now we will start configuring our Satellite server to be able to manage a compliance policy
+Now we will start configuring our Satellite server to be able to manage a compliance policy
 
 -   Select "Manual" from the deployment options and click "Next"
 
@@ -80,6 +76,8 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 #### 5\. Configure and launch an Ansible Tower template to run an OpenSCAP scan. 
 
+This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``` policy that we configured on Satellite.
+
 -   In Ansible Tower click 'Templates' from the left side pane menu
 
 -   Select on the GREEN + icon on the far right side of the screen and click "Job Template". Fill out the details as follows. 
@@ -88,9 +86,9 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
         Job Type: Run
 
-        Inventory: Workshop Inventory (Click the magnifying glass icon to select)
+        Inventory: RHEL7 Development
 
-        Project: Automated Management (Click the magnifying glass icon to select) 
+        Project: Automated Management 
 
         Playbook: configure_openscap.yml
 
@@ -103,7 +101,7 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
         Policy_scan: 
           - PCI_Compliance
 
-![](https://lh5.googleusercontent.com/w--1gqh7nJwqHv_q_vjbXDaJCPXmrj5bHbZnx5A0lO3SChPDthAxR9b3IXMapaDUf4oWK_HIk-2iwAszRl671_5D0kOcqBNBKOuMwN5M9TsgmVGJcZxuwLfWrreaGg9zUbVdQC39)
+![](https://lh3.googleusercontent.com/X-K7LAtX-1GT5b6-rNeqjFLTH2M4HIZs5LLBPpX8A2Njv84nc98DuvW5jRu6nxcvJmW5Uh5m737o0XEELvysycCIWeloS90MiYB-sIHqmxbv1DSCkQi6-kRq0gmLrP_ZDPIabZiT)
 
 -   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template.
 
@@ -126,7 +124,9 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
 ![](https://lh3.googleusercontent.com/_H6GjCsPq1pntFiW1lSRJQBq5dOyeGBJhk66RxNn6KO4SqeYJfmEeTgr2-rbpJlIEt5-ueQcfA41Ivae-wIErXreIsy9vkYnVB-i9K_FzA9mz_MWrjFpMdDyMcZurjaSNf-t516p)
 
-#### 7\. Scaling an OpenSCAP scan
+#### 7\. Expanding OpenSCAP policy scans
+
+This step will expand our OpenSCAP policy scan to add another XCCDF compliance profile called ```STIG_Compliance```. We will also expand to include multiple RHEL7 devices by leveraging the 'rhel7' group as an extra variable instead of just a single host.
 
 -   In Satellite, hover over "Hosts" from the menu on the left side of the screen, and then click on "Policies".
 
@@ -160,22 +160,23 @@ Once you're in Ansible Tower, you'll be able to see a dashboard.
 
         Job Type: Run
 
-        Inventory: Workshop Inventory
+        Inventory: RHEL7 Development
 
         Playbook: configure_openscap.yml
 
         Project: Automated Management 
 
-        Credentials: Satellite_Credential, Workshop Credential
+        Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select. Select Satellite_Collection in the CREDENTIAL TYPE    
+                     dropdown to add the Satellite Credential)
 
         Extra Variables:
 
-        HOSTS: rhel7
+        HOSTS: all
         Policy_scan: 
           - PCI_Compliance
           - STIG_Compliance
 
-![](https://lh4.googleusercontent.com/KV-fvA1EBSSWJL_e9cxPtRrJzGcuzAAl2TjLLGPQVrxo9E-gqnL6VAqBmjRXOs8a6LGjmatQCQWzIjZXu_qnawmZBmERi2ydlPdcNyCOV5zCncwZ5iU7HtKszFDgV9WOYuM0KUal)
+![](https://lh6.googleusercontent.com/iCCURghDHALpdGLVfUAlVZCq7QdA4gUrIX4rqgSi8eFIrkcWRxR78i7vm0QZkzTCs4CnoskfAEoGg4KTzzxQJWu3PlqSZF102RrMNnWe6No-8slovEzCQHYZHghr1SSrNKmoeKE2)
 
 -   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template.
 
