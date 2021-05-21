@@ -10,8 +10,6 @@ Environment
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
--   2 x CentOS v7.8
-
 Pre-requisites 
 ---------------
 
@@ -24,8 +22,6 @@ Pre-requisites 
 -   A content view = RHEL7
 
 -   Lifecycle environments = Dev, QA, Prod
-
--   SSH access to RHEL clients (node1, node2, node3) which has been registered to Satellite
 
 Exercise
 --------
@@ -42,27 +38,27 @@ Exercise
 
 #### 2\. Creating a new Patching Workflow
 
--   Now we will start configuring a workflow that encompasses publishing a content view, promoting a content view, a fact scan, as well as a server patching. The goal is to publish a new content view and promote our rhel7_DEV environment to QA.
+Now we will start configuring a workflow that encompasses publishing a content view, promoting a content view, a fact scan, as well as a server patching. The goal is to publish a new content view and promote our rhel7_DEV environment to QA.
 
 -   Start by clicking "Templates" from the left side pane menu, and then click on the GREEN +  icon to create a "Workflow Template".
 
 -   Create the name "Satellite / Patching Workflow" and click save (there are no other options necessary to select on this page).
 
--   From the template, select the blue 'Workflow Visualizer' button to start creating your workflow. This will open a blank workflow.
+-   This should open a blank workflow. You can always get back to this workflow from the template by selecting the blue 'Workflow Visualizer' button.
 
 ![](https://lh5.googleusercontent.com/9-aMtjHlxDWDbBuudPzmzk5GSOB1yfHE7BEHOQTmKZnam-bwDUmQEwVQ_wzYWYZEicuMS0TH7M2KmNkfJ0L9I8ZG9POVpmXBoaTkNhmw3AzDMJvDg4sIUFcTDUT92MNzoEl56QFF)
 
--   Select Start to add a node. From the drop-down menu select inventory sync and click on "satellite_source". This sets up the inventory you will use in your workflow. You may leave the default remaining selections and click 'select'
+-   Select Start to add a node. From the drop-down menu select inventory sync and click on "EC2 Dynamic Source - RHEL7 Development". This sets up the inventory you will use in your workflow. You may leave the default remaining selections and click 'select'
 
 -   Select Start again to add a second node. From the drop-down menu select template and click on 'SATELLITE / RHEL - Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to 'confirm' the preview.
 
 This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
 
--   Add another node to the workflow by hovering over your 'satellite_source' inventory node and select the GREEN + icon to generate another node called 'SERVER / RHEL7 - Fact Scan'. This is what will scan the nodes in our Satellite inventory to check for package updates and errata.
+-   Add third node to the workflow by hovering over your 'EC2 Dynamic Source - RHEL7 Development' inventory node and select the GREEN + icon to generate another node called 'SERVER / RHEL7 - Fact Scan'. This is what will scan the nodes in our Satellite inventory to check for package updates and errata.
 
 At this point your workflow should resemble the following:
 
-![](https://lh5.googleusercontent.com/cus0Z_VD33f_uFiOEdzD9aFY1g9OoLTqnZ8MAvo_2wvlUJ0ZvtFHE_-1wQZI4Xj5xGtypizrbqOTLBiXsN8U41lL7B4qDnIznkgWAQsxKWrqVgqgD6ZUFPEzueUU0fP106UpHL5A)
+![](https://lh5.googleusercontent.com/klMOgyLq2WU9n-HLfmGNK_6pfnzPdCvWmtHmkpA8wbLyovxA3yUd9secxvV7i-sRcpK15xKFJICKNPXCb7UUBPfR4snw3mm_9eIETcUbur2oUkzmQ54NVjL19LV8CnWPPG6dfd10)
 
 -   There are two more nodes to add to this workflow.  Hover the Publish Content View node and select the GREEN +. Then click on 'SATELLITE / RHEL - Promote Content View'. There is a survey attached that requires variables for content view, current lifecycle environment, and next lifecycle environment. For the purpose of this lab we're going to promote Dev to QA. 
 
@@ -80,7 +76,7 @@ At this point your workflow should resemble the following:
 
 Your workflow should resemble the following:
 
-![](https://lh4.googleusercontent.com/Jm7pLtYP-HmZJ8HhT19IbvAklenw6MNJZBhBwl-7BuAExJj4S2p8Z-LlhGzUuSbVP529YTMZPuBvpUXnVFoo5yoix2GOqnKSEEajowTLzNXtYsMue6Mq6Jh8rRXA7nKKstPr0QOM)
+![](https://lh5.googleusercontent.com/PWyCt58ONFccjZoh-SAZpaI88d5DoN5XCyY4wMKuihD8qJpoZSk9yPSz2UPBHcDvzan62QhSDVvh_5Uyz3i_ZLQIHrjUN4RPr0lHsNXy9napL6R8KOjwCeTuC5hW6idj_lKJZfhs)
 
 You can now save and exit the workflow template.
 
@@ -98,7 +94,7 @@ You can now save and exit the workflow template.
 
 -   Hover over 'Hosts' and select 'Content Hosts'. Observe the multiple security, bug fix, enhancements and package updates available for each server. Further, take note of the life cycle environment 
 
-![](https://lh4.googleusercontent.com/dvuXHm8c3VJkstDuDQmIynABPWpe2ne8wklZOsJBJogBhCyI-otxwNlUm6IpV6idRst5YhwO0-ftnFDQdy-OmmxCoSd2KpIu5OhZckya3U4eolhQchKpRoH0n7diiPOIZPngl3NW)
+![](https://lh4.googleusercontent.com/wj75VKDZGGS1BmRsrmPBNmGcCAmKA25h9nKy1FkYLc9sPPvH1ut8e_pIWdGc8q1X9HAraUEItgjC_7AU65Itb3A3HkuWRB4Zb4-RFIFo1Q8saDakD6m_8Wz5-I--VqkW_W7FaXsW)
 
 -   Navigate to 'Content' and select 'Content Views'. Since the servers that we are working with are RHEL7 select the 'RHEL_7' content view. We need to publish a new content view version. Fortunately, we set that up as part of our workflow! (Note: your content view version may differ from this example, that is OK)
 
