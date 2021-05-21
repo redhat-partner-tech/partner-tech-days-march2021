@@ -48,35 +48,10 @@ Note that in the following steps that are being performed on Tower, at any time,
 
 **Steps:**<br>
 1. Login to Ansible Tower, From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
-    - Here, you will see we have RHEL and CentOS Nodes in an initial, static Ansible inventory
+    - Here, you will see we have RHEL and CentOS Nodes in a **static** Ansible inventory
 
-2. Switch "Automated Management" project to point to:
-    - SCM URL: https://github.com/redhat-partner-tech/automated-smart-management.git
-    - SCM BRANCH: main
-    - Place checks beside boxes "DELETE ON UPDATE" and "UPDATE REVISION ON LAUNCH"
-    - Save and refresh project.
-
-4. Run the first two SETUP job templates and the Publish RHEL7_Dev CV job template
-    - SETUP / Satellite **** NOTE!!! ***** change refresh_satellite_manifest: false to true (this one takes a while, ~45-50 minutes)
-    - SETUP / Tower
-    - SATELLITE / RHEL - Publish Content View
-      - env: Dev
-      - Content View: RHEL7
-
-5. Take CentOS node snapshot (or even RHEL nodes, too!)
+5. Take CentOS node snapshot
     - template CONVERT2RHEL / 01 - Take node snapshot
-
-6. Register RHEL7 nodes to Satellite
-    - template SERVER / RHEL7 - Register
-      - keep rhel7 limit on inventory group
-      - server name or pattern: node
-      - choose env: Dev
-
-7. Register CentOS7 nodes to Satellite
-    - template SERVER / CentOS7 - Register
-      - keep centos7 limit inventory group
-      - server name or pattern: node
-      - choose env: Dev
 
 8. Query Satellite to get node-related details, set EC2 instance tags based on these details
     - template EC2 / Set instance tags based on Satellite(Foreman) facts
