@@ -46,9 +46,9 @@ Exercise
 
 #### 2\. Launch Ansible job templates
 
-This step demonstrates the execution of job templates. You will be working with several templates as the workshop progresses but you will only need to focus on launching five templates as part of getting the lab environment setup.
+This step demonstrates the execution of job templates. You will be working with various templates as the workshop progresses, however, this step utilizes seven templates to initialize the lab environment configuration.
 
--   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are the initial two jobs templates you need to launch.
+-   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are the initial jobs templates you need to launch.
 
 ![](https://lh4.googleusercontent.com/kz6l-YuNoKknP6nX7nJTooAmVa91z4up4CoE6c2L2UW2cvJpaOaKXs9vVr62IPN8zA1Od5ADmsX-6K-PNEgKUzFiESAiFW0IqZae94Gd7rS1kt8qm_CrfWbAEHYoQ1FEsglCRFVL)
 
@@ -56,6 +56,8 @@ This step demonstrates the execution of job templates. You will be working with 
 
 
 You will be taken to the **Jobs** dashboard where you will be able to follow each task executed as part of the playbook. This will take approximately 35 mins to complete.
+
+> **NOTE** Please allow the **SETUP / Satellite** job to run to completion before proceeding to execution of the next template.
 
 ![](https://lh3.googleusercontent.com/WbOAiB0vNeUUT9on7xURXGfOwygQy1q9BuTpm2cQJqgmVW3GA_jbQjAOcIlTRD2JcgunpAhv-6735OQ2xOqt3CJb3e5kc7YaEM1i9IyI10Gh3_3gvRjHXFQZrJmf0LUwL1O-y7pB)
 
@@ -102,6 +104,18 @@ Run the **SERVER / Register - CentOS7** job template by clicking the![](https://
 ![](https://lh5.googleusercontent.com/ohbhAl_wU1qzxVqMHwQnPOV02TpYKQIscd1pwgbWHvM4t7V80KttxHL0PPFl5L4H1ZZZcJqGrmgq_2EIE2bODH-HPEawZFJauqjvRogeStGxPn0j1BbONLJtqRRV6En-Fl2Dj7Wo)
 
 ![](https://lh5.googleusercontent.com/j9c1se4WyVKaM3O-nsaNNn7uLPpOpPM3mjMLSl1YzcwNfVWsZ3wDw-ipUA-RQgdJLCSkPAzyW6kvCJpEDeuoXZBgtyTs0dJ5GpfmbvaZJAfgP4RPPvDyc3w_4EaWAQBtTJrt_Nu4)
+
+Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+
+-   You will be presented with a survey. Fill this out as follows:
+-   put image here
+-   Select **Next** to Launch the job template.
+
+Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+
+-   You will be presented with a survey. Fill this out as follows:
+-   put image here
+-   Select **Next** to Launch the job template.
 
 Now, we can login to Satellite to perform verification.
 
