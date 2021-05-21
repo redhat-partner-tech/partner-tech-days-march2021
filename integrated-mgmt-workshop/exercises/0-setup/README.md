@@ -107,16 +107,22 @@ Run the **SERVER / Register - CentOS7** job template by clicking the![](https://
 
 Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
+![](https://lh3.googleusercontent.com/Yf90jgaCEAMMIuNSb011O4ERVnLkX9fZWx-u5Yb__EDpAsUyWnlkB8CKqiA6E-SMU5-gKEarM0Zv_Crcu7PMFujTT87MJnW0r8xDE1qWbY41eExFILWZt_1VaghLzjbff5yh0L87)
+
 Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
--   put image here
+
+![](https://lh4.googleusercontent.com/9UjqYL0nQ1RFXE78TH74XhNzjUwjE1Ykacdet6tNsOHK7dxgLqPd89xdpxNH-EWax7_FgcfyVvrHhRRd2KUSMAw0QeKBWF6Hgn3tOI5Q0ieITIw8oTil_-6znURdcHbPOLxcAuOH)
+
 -   Select **Next** to Launch the job template.
 
 Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
--   put image here
+
+![](https://lh3.googleusercontent.com/GfcutEe2BcUlOSa1jYuMeFl_e7AmENRpRXLmaKfKhmYvfBdIOc7BoSzyBTmzukbYpkMGEgpEmsTAEikynb8Zot3Rmvn9wYiqMWfV3sDo8mDQpqfnRGmgdAdYOY_eXU624OgejcAq)
+
 -   Select **Next** to Launch the job template.
 
 Now, we can login to Satellite to perform verification.
