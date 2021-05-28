@@ -60,7 +60,7 @@ At this point your workflow should resemble the following:
 
 ![](https://lh5.googleusercontent.com/klMOgyLq2WU9n-HLfmGNK_6pfnzPdCvWmtHmkpA8wbLyovxA3yUd9secxvV7i-sRcpK15xKFJICKNPXCb7UUBPfR4snw3mm_9eIETcUbur2oUkzmQ54NVjL19LV8CnWPPG6dfd10)
 
--   There are two more nodes to add to this workflow.  Hover the Publish Content View node and select the GREEN +. Then click on 'SATELLITE / RHEL - Promote Content View'. There is a survey attached that requires variables for content view, current lifecycle environment, and next lifecycle environment. For the purpose of this lab we're going to promote Dev to QA. 
+-   There are two more nodes to add to this workflow.  Hover the 'SATELLITE / RHEL - Publish Content View' node and select the GREEN +. Then click on 'SATELLITE / RHEL - Promote Content View'. There is a survey attached that requires variables for content view, current lifecycle environment, and next lifecycle environment. For the purpose of this lab we're going to promote Dev to QA. 
 
 -   Select RHEL7 for 'Content View'
 
