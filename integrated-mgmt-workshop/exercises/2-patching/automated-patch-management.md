@@ -96,7 +96,7 @@ You can now save and exit the workflow template.
 
 ![](https://lh4.googleusercontent.com/wj75VKDZGGS1BmRsrmPBNmGcCAmKA25h9nKy1FkYLc9sPPvH1ut8e_pIWdGc8q1X9HAraUEItgjC_7AU65Itb3A3HkuWRB4Zb4-RFIFo1Q8saDakD6m_8Wz5-I--VqkW_W7FaXsW)
 
--   Navigate to 'Content' and select 'Content Views'. Since the servers that we are working with are RHEL7 select the 'RHEL_7' content view. We need to publish a new content view version. Fortunately, we set that up as part of our workflow! (Note: your content view version may differ from this example, that is OK)
+-   Navigate to 'Content' and select 'Content Views'. Since the servers that we are working with are RHEL7 select the 'RHEL7' content view. We may need to publish a new content view version, however, we set that up as part of our workflow! (Note: your content view version may differ from this example, that is OK)
 
 ![](https://lh6.googleusercontent.com/T5Df-Qo6GcSaUapZoZ5hsr92KWFlEMWtRs4XmuiJQUAcAISsD27D7GqJ9nmM5wOZHFpNylkWNGRZZaGFHSlJEKlCKxBAQlULxdigYXUAVvfG_pUQumnElyIOfNBkDrn50N6m4VTh)
 
