@@ -68,7 +68,7 @@ At this point your workflow should resemble the following:
 
 -   Select RHEL7_QA for 'Next Lifecycle Environment'
 
-                       Click 'next'. You will then need to 'confirm' the preview.
+                       Click 'next'. You will then need to 'confirm' the preview. Leave the default remaining selections and click 'select'.
 
 -   Add the last node by hovering over 'SATELLITE / RHEL- Promote Content View' and selecting the GREEN +. Then click on 'SERVER / RHEL7 - Patch' template. This template also has a survey attached. You will need to select 'Prompt' and from the drop-down menu select the environment you would like to patch. Choose 'RHEL7_Dev'. The 'Check' drop-down is a selection that tells server_patch.yml whether or not to apply updates to the servers in our inventory. Since we want to apply the patches, we will select 'No'. Click 'Next' at the bottom of the window and them select 'Confirm'. Click 'select' from the menu on the right to save the node.
 
