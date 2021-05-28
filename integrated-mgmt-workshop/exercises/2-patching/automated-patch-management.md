@@ -92,7 +92,7 @@ You can now save and exit the workflow template.
 
 #### 4\. Exploring the Satellite host configuration
 
--   Hover over 'Hosts' and select 'Content Hosts'. Observe the multiple security, bug fix, enhancements and package updates available for each server. Further, take note of the life cycle environment 
+-   Hover over 'Hosts' and select 'Content Hosts'. Observe the multiple security, bug fix, enhancements and package updates available for each server, which will vary depending on the date of when the workshop takes place. Further, take note of the life cycle environment 
 
 ![](https://lh4.googleusercontent.com/wj75VKDZGGS1BmRsrmPBNmGcCAmKA25h9nKy1FkYLc9sPPvH1ut8e_pIWdGc8q1X9HAraUEItgjC_7AU65Itb3A3HkuWRB4Zb4-RFIFo1Q8saDakD6m_8Wz5-I--VqkW_W7FaXsW)
 
