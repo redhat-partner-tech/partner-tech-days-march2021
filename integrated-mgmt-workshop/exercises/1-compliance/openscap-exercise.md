@@ -195,4 +195,4 @@ This step will expand our OpenSCAP policy scan to add another XCCDF compliance p
 #### 9\. End Lab
 
 -   You have finished the lab.
--   Continue to [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/3-patching/automated-patch-management.md), OR [Return to the main workshop page](https://github.com/redhat-partner-tech/partner-tech-days-march2021/tree/main/integrated-mgmt-workshop#guide)
+-   Continue to [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/2-patching/automated-patch-management.md), OR [Return to the main workshop page](https://github.com/redhat-partner-tech/partner-tech-days-march2021/tree/main/integrated-mgmt-workshop#guide)
