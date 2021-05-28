@@ -48,9 +48,9 @@ Now we will start configuring a workflow that encompasses publishing a content v
 
 ![](https://lh5.googleusercontent.com/9-aMtjHlxDWDbBuudPzmzk5GSOB1yfHE7BEHOQTmKZnam-bwDUmQEwVQ_wzYWYZEicuMS0TH7M2KmNkfJ0L9I8ZG9POVpmXBoaTkNhmw3AzDMJvDg4sIUFcTDUT92MNzoEl56QFF)
 
--   Select Start to add a node. From the drop-down menu select inventory sync and click on "EC2 Dynamic Source - RHEL7 Development". This sets up the inventory you will use in your workflow. You may leave the default remaining selections and click 'select'
+-   Select Start to add a node. From the drop-down menu select inventory sync and click on "EC2 Dynamic Source - RHEL7 Development". This sets up the inventory you will use in your workflow. You may leave the default remaining selections and click 'select'.
 
--   Select Start again to add a second node. From the drop-down menu select template and click on 'SATELLITE / RHEL - Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to 'confirm' the preview.
+-   Select Start again to add a second node. From the drop-down menu select template and click on 'SATELLITE / RHEL - Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to 'confirm' the preview. You may leave the default remaining selections and click 'select'.
 
 This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
 
