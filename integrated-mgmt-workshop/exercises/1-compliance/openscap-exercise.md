@@ -38,7 +38,7 @@ Now we will start configuring a compliance policy to be able to scan our RHEL no
 
 -   In Satellite hover over 'Hosts' from the menu on the left side pane, and then click on 'Policies'
 
--   Click on the "New Compliance Policy" button, and fill out the details as followed in step 3. 
+-   Click on the "New Policy" button, and fill out the details as followed in step 3. 
 
 ![](https://lh5.googleusercontent.com/2qOPrqw4iC02hxEM6dfG5fj_TOsR5s-AAPCmEIXRDJo7kcfLlATH-bH36htyDB4UHWVTA-43jpwQfv21QdZx6oW41KohQYz4K8bpg1z_70-J6RkSknnMSiD486UjVziqD0SdnSxU)
 
