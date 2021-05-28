@@ -120,7 +120,7 @@ This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``
 -   Selecting a rule presents further information regarding rationale as well as a description of the rule that includes references and identifiers.
 -   Now, uncheck everything except the **fail** checkbox. Then scroll down and click on the failure "Prevent Login to Accounts With Empty Password"
 
--   If you scroll the page you will notice multiple remediation steps including an 'Ansible' snippet. This presents tasks you can compile within a playbook to automation remediation across affected machines.
+-   If you scroll the page you will notice multiple remediation options including an 'Ansible' snippet. Click "(show)" next to the 'Remediation Ansible snippet', which then presents tasks you can include within a playbook to automate remediation across affected systems.
 
 ![](https://lh3.googleusercontent.com/_H6GjCsPq1pntFiW1lSRJQBq5dOyeGBJhk66RxNn6KO4SqeYJfmEeTgr2-rbpJlIEt5-ueQcfA41Ivae-wIErXreIsy9vkYnVB-i9K_FzA9mz_MWrjFpMdDyMcZurjaSNf-t516p)
 
