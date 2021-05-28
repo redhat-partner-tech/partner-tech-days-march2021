@@ -80,7 +80,7 @@ This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``
 
 -   In Ansible Tower click 'Templates' from the left side pane menu
 
--   Select on the GREEN + icon on the far right side of the screen and click "Job Template". Fill out the details as follows. 
+-   Click the GREEN + icon on the far right side of the screen to activate the drop-down selection menu, then click "Job Template". Fill out the details as follows. 
 
         Name: OpenSCAP_Configure
 
