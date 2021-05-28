@@ -126,7 +126,7 @@ This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``
 
 #### 7\. Expanding OpenSCAP policy scans
 
-This step will expand our OpenSCAP policy scan to add another XCCDF compliance profile called ```STIG_Compliance```. We will also expand to include multiple RHEL7 devices by leveraging the 'rhel7' group as an extra variable instead of just a single host.
+This step will expand our OpenSCAP policy scan to add another XCCDF compliance profile called ```STIG_Compliance```. We will also expand to include all systems in the 'RHEL7 Development' inventory by adjusting the 'HOSTS' extra variable to 'all' instead of specifying a single system.
 
 -   In Satellite, hover over "Hosts" from the menu on the left side of the screen, and then click on "Policies".
 
