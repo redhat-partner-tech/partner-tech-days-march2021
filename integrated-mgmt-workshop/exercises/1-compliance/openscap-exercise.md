@@ -95,7 +95,7 @@ This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``
         Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select. Select Satellite_Collection in the CREDENTIAL TYPE    
                      dropdown to add the Satellite Credential)
 
-        Extra Variables:
+        Extra Variables (Keep the exact spacing provided below. Note that the extra-vars that we are supplying need to be in YAML format):
 
         HOSTS: node1.example.com
         Policy_scan: 
