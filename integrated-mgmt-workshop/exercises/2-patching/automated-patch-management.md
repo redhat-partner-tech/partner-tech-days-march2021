@@ -42,7 +42,7 @@ Now we will start configuring a workflow that encompasses publishing a content v
 
 -   Start by clicking "Templates" from the left side pane menu, and then click on the GREEN +  icon to create a "Workflow Template".
 
--   Create the name "Satellite / Patching Workflow" and click save (there are no other options necessary to select on this page).
+-   Create the name "SATELLITE / Patching Workflow" and click save (there are no other options necessary to select on this page).
 
 -   This should open a blank workflow. You can always get back to this workflow from the template by selecting the blue 'Workflow Visualizer' button.
 
