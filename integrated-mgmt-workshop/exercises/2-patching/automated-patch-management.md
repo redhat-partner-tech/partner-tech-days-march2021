@@ -102,7 +102,7 @@ You can now save and exit the workflow template.
 
 #### 5\. Navigate back to Ansible and let's launch the workflow job
 
--   Click on Templates to locate the Patching Workflow template. You can either click on the rocketship to the right of the template or select the template and select LAUNCH. (they do the same thing). 
+-   Click on Templates to locate the 'SATELLITE / Patching Workflow' template. You can either click on the rocketship to the right of the template or select the template and select LAUNCH. (they do the same thing). 
 
 -   Observe the job kicking off in Ansible. 
 
