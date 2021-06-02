@@ -61,7 +61,9 @@ You will be taken to the **Jobs** dashboard where you will be able to follow eac
 
 ![](https://lh3.googleusercontent.com/WbOAiB0vNeUUT9on7xURXGfOwygQy1q9BuTpm2cQJqgmVW3GA_jbQjAOcIlTRD2JcgunpAhv-6735OQ2xOqt3CJb3e5kc7YaEM1i9IyI10Gh3_3gvRjHXFQZrJmf0LUwL1O-y7pB)
 
-When complete, you will see a successful status as well as a play recap at the bottom of the screen. Next you will need to run the **SETUP / Tower** job template. 
+When complete, you will see a successful status as well as a play recap at the bottom of the screen.
+
+Next you will need to run the **SETUP / Tower** job template. 
 
 -   Select **Templates** and click on the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
