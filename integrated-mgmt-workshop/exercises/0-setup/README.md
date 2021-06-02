@@ -88,9 +88,11 @@ Next, run the **SERVER / RHEL7 - Register** job template by clicking the![](http
 
 ![](https://lh4.googleusercontent.com/DnlOvimZgX8NLFLrgF_loVlkmouWED1-g5BDS5kqDLPeyJvESWt6yY56GGWtCyhM2LVVpkI3D2CkZE7uTG1wD-YiULTCfZSUxxkZU5CilIzxxUNsEwuV1tGQ67Fz2mkONAlEcsgA)
 
--   Select **Next** to Launch the job template.
+-   Select **Next** to proceed to the survey response confirmation.
 
 ![](https://lh5.googleusercontent.com/4dJWGCBg3UYWvsrLMe36j19O2aC5DU2Fo3HW7fyFj8dTVwxrenYa7t7VvvyaXxIBMY4YRfcwL1z5yhZxIbBoe9eVd4o-q0AtpVArgQdMDmAqpV6w4zeDpbe2xobrQ23N4UIk-nlC)
+
+-   Select **Launch** to run the job template.
 
 ![](https://lh4.googleusercontent.com/AvmmXeKsqMJY7UqF-YkXcc5f1MrdsyzmaRS3DhzDKGCjk33eJSKOmrCYQg-2C_EGb6y0IZdW2k5fTkLDvA4xQOotFbUpivtl3EAZr4vAMyNSaXSYpBtjPB8Woxoo8FuqvqmfxhMK)
 
@@ -100,9 +102,11 @@ Run the **SERVER / CentOS7 - Register** job template by clicking the![](https://
 
 ![](https://lh6.googleusercontent.com/uCAS6XSZw_ySbF6v10vzgSSk50JIb4_CwnSEGpRcGpnMrxT7vvpUH9tNaewHm_Uo2Qn3L0lEKmjbw1WV3B3oMtMO8ffQ7sOwvEXGEckN9JCNhW8MCsW7uNGvypZo27x4c6BE98EW)
 
--   Select **Next** to Launch the job template.
+-   Select **Next** to proceed to the survey response confirmation.
 
 ![](https://lh5.googleusercontent.com/ohbhAl_wU1qzxVqMHwQnPOV02TpYKQIscd1pwgbWHvM4t7V80KttxHL0PPFl5L4H1ZZZcJqGrmgq_2EIE2bODH-HPEawZFJauqjvRogeStGxPn0j1BbONLJtqRRV6En-Fl2Dj7Wo)
+
+-   Select **Launch** to run the job template.
 
 ![](https://lh5.googleusercontent.com/j9c1se4WyVKaM3O-nsaNNn7uLPpOpPM3mjMLSl1YzcwNfVWsZ3wDw-ipUA-RQgdJLCSkPAzyW6kvCJpEDeuoXZBgtyTs0dJ5GpfmbvaZJAfgP4RPPvDyc3w_4EaWAQBtTJrt_Nu4)
 
@@ -116,7 +120,9 @@ Run the **TOWER / Update inventories via dynamic sources** job template by click
 
 ![](https://lh4.googleusercontent.com/9UjqYL0nQ1RFXE78TH74XhNzjUwjE1Ykacdet6tNsOHK7dxgLqPd89xdpxNH-EWax7_FgcfyVvrHhRRd2KUSMAw0QeKBWF6Hgn3tOI5Q0ieITIw8oTil_-6znURdcHbPOLxcAuOH)
 
--   Select **Next** to Launch the job template.
+-   Select **Next** to proceed to the survey response confirmation.
+
+-   Review Extra Variables, then select **Launch** to run the job template.
 
 Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
@@ -124,7 +130,9 @@ Run the **TOWER / Update inventories via dynamic sources** job template by click
 
 ![](https://lh3.googleusercontent.com/GfcutEe2BcUlOSa1jYuMeFl_e7AmENRpRXLmaKfKhmYvfBdIOc7BoSzyBTmzukbYpkMGEgpEmsTAEikynb8Zot3Rmvn9wYiqMWfV3sDo8mDQpqfnRGmgdAdYOY_eXU624OgejcAq)
 
--   Select **Next** to Launch the job template.
+-   Select **Next** to proceed to the survey response confirmation.
+
+-   Review Extra Variables, then select **Launch** to run the job template..
 
 Now, we can login to Satellite to perform verification.
 
@@ -134,7 +142,7 @@ Now, we can login to Satellite to perform verification.
 
 -   Use a web browser on your computer to access the Satellite GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>*. Once you have logged in you will see the main Monitor page.
 
--   Click on **Hosts** -> **All Hosts** to validate that all six RHEL and CentOS server nodes are loaded into Satellite. 
+-   Click on **Hosts** -> **All Hosts** to validate that three RHEL7 and three CentOS7 server nodes are registered to Satellite. 
 
 ![](https://lh6.googleusercontent.com/pUeAvPVvl3DeR_Y_9ZsFM3fj1JStBiOLI2SA-M967wepoYBAALwh2pHuRXs8bD5H6oT2DNSZBQOfE-CLh2-7n8B1oPeaFlv6yjbgThxAnSDAYPctYu1xXd667SyEzkqJFqC3S-ES)
 
