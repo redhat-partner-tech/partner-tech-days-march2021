@@ -144,7 +144,7 @@ Now, we can login to Satellite to perform verification.
 
 -   Click on **Hosts** -> **All Hosts** to validate that three RHEL7 and three CentOS7 server nodes are registered to Satellite. 
 
-![](https://lh6.googleusercontent.com/pUeAvPVvl3DeR_Y_9ZsFM3fj1JStBiOLI2SA-M967wepoYBAALwh2pHuRXs8bD5H6oT2DNSZBQOfE-CLh2-7n8B1oPeaFlv6yjbgThxAnSDAYPctYu1xXd667SyEzkqJFqC3S-ES)
+![](https://lh3.googleusercontent.com/h2t4H08gu0eTk44nR3tmLiBIIfdls5dZH0gVpxQJLm9VOeSj9F3fq2llRNgfxetM61TCPeWYBx9WFlNqKEfhJDQZ1U3Y_-WDkHQT_3WlaX7Yjjb9eern8spRuGkEfwofdeotfbkq)
 
 -   Click on **Content** -> **Content Views** -> **RHEL7** to verify that all Dev, QA and Prod environments are accounted for.
 
