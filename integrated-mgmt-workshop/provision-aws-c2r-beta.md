@@ -1,5 +1,5 @@
 ## Use Ansible to Provision Workshop on AWS
-**(convert2rhel exercise beta)**
+**OUTDATED, primary provisioning document is the correct set of instruictions to follow**
 
 *The below instructions are steps that originated from:*<br>
 *- https://github.com/ansible/workshops/tree/devel/provisioner*<br>
