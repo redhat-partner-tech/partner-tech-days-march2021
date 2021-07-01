@@ -38,7 +38,7 @@ Exercise
     - *Select the project named **Automated Management***
     - *Update the SCM URL to: https://github.com/redhat-partner-tech/automated-smart-management.git*
     ![](https://lh6.googleusercontent.com/1RmTzC-yEReCousl3x8N7YyxQFvOnCK76hmhVjCMePsSRbHA6GcXbIjoZI3hSxSCPmw7CF0JEgg0VXO_MlgIfFIV1oUbdBepyHGG0rKbHwx-ElNuhoyx4cS3OcSdX4ZLEsVSMRbW)
-    - *Set SCM branch to "main"*
+    - *Set SCM branch to "testing"*
     - *Set the following SCM Update Options*
       - DELETE ON UPDATE
       - UPDATE REVISION ON LAUNCH
@@ -75,12 +75,14 @@ The **SETUP / Tower** job will create multiple job templates that will be useful
 
 ![](https://lh4.googleusercontent.com/xy3fDRQ0LUC9SY1aHlk-hWwdDEDx-UH7nygw3cUb_8SQYSjGLeYpS5juGvl9CjSHB7MvJRShpOVOYMAUNPKfi5C6SPUXHWfGUjaMaax9enjWNS5nbpCM0Fai8hFb4QpJwZypNr4k)
 
-Now that we have several more templates at our disposal we will need to run three more of these in order to complete setup.
+Now that we have several more templates at our disposal we will need to run four more of these in order to complete setup.
 
 Run the **SATELLITE / RHEL - Publish Content View** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch. When prompted by the survey for the content view to publish, from the drop down menu, select **RHEL7**
 -   Select **Next** to Launch the job template.
 
 ![](https://lh6.googleusercontent.com/KE_X9CneGR3P5gFh6qH9YSSO2SZpOvPFZAOOH5VndphvanoTbLtNntNmxouNR1llj8KzGQ5a7WrptVLV3XEbcLPBRme3DfkNhyHrY1RfZU-oDjfpl9sGPN2ixxJPMruwFWI3e7sh)
+
+Next, run the **CONVERT2RHEL / 01 - Take node snapshot** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 Next, run the **SERVER / RHEL7 - Register** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
