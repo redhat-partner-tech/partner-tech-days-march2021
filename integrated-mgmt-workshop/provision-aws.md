@@ -6,12 +6,10 @@
 
 
 **Requirements:**
-- RHEL 8 instance, registered using RHSM (We used a VM in this example)
-- Active Satellite and Ansible Subscriptions
-    - As a Red Hat Partner, you can obtain via NFR or eval/developer
-- Active public domain name
+- System with git, python3, expect(unbuffer utility), ansible
+- Active public domain name (from AWS or other DNS registrar)
 - AWS Account
-- DNS setup via AWS Route53 
+- DNS setup (Hosted Zone) via AWS Route53
 
 **Setup DNS:** 
 - You will need to setup DNS via AWS route53
@@ -20,37 +18,14 @@
 - Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
 
 **Steps:**
-OS Config -- Repo Setup + needed software tools install (including Ansible)
+ 
+OS Config -- software tools install & config (including Ansible)
 
+> **NOTE**: The following instructions assume a RHEL family variant, however, all commands (other than package installation commands) *should* work on other Linux variants and Macs, assuming the same tools outlined as installed via dnf/yum are provisioned utilizing installation tools native to those operating systems.
+
+- use yum for RHEL7/CentOS7, dnf for RHEL8/Fedora
 ```
-$ sudo subscription-manager register
-$ sudo subscription-manager list --available
-$ sudo subscription-manager remove --all
-$ sudo subscription-manager attach --pool=8a85f99a72fe8d...
-$ sudo subscription-manager list --consumed
-
-$ sudo subscription-manager repos --disable=*
-$ sudo subscription-manager repos --enable=rhel-8-for-x86_64-baseos-rpms --enable=rhel-8-for-x86_64-appstream-rpms --enable=ansible-2-for-rhel-8-x86_64-rpms
-$ sudo subscription-manager repos --list-enabled
-
 $ sudo dnf install vim git python3 expect ansible
-```
-
-Set default python version via alternatives for provisioner to utilize correct python runtime
-
-```
-$ which python
-/usr/bin/which: no python in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
-$ alternatives --list | grep -i python
-python              	auto  	/usr/libexec/no-python
-python3             	auto  	/usr/bin/python3.6
-$ alternatives --set python /usr/bin/python3
-$ alternatives --list | grep -i python
-python              	manual	/usr/bin/python3
-python3             	auto  	/usr/bin/python3.6
-$ python --version
-Python 3.6.8
-
 $ python3 -m pip install --user --upgrade pip setuptools
 $ python3 -m pip install --user wheel
 $ python3 -m pip install --user boto boto3 netaddr passlib awscli
@@ -79,7 +54,7 @@ All remaining variables LEAVE AS IS
 # region where the nodes will live
 ec2_region: us-east-1
 
-# name prefix for all the VMs
+# name prefix for all the VMs, plus subdomain name prepended to workshop_dns_zone
 ec2_name_prefix: smrtmgmt01
 
 # creates student_total of workbenches for the workshop
@@ -97,7 +72,7 @@ dns_type: aws
 # password for Ansible control node
 admin_password: Ansible=2021!!!
 
-# Sets the Route53 DNS zone to use for Amazon Web Services
+# Sets the AWS Route53 DNS Hosted zone to use
 workshop_dns_zone: subdom.redhatpartnertech.net
 
 # automatically installs Tower to control node
@@ -118,20 +93,26 @@ rhel: rhel7
 # select centos7 client node version
 centos7: centos78
 
-# this will install VS Code web on all control nodes
-code_server: true
+# this will install VS Code web on all control nodes, uncomment if you want it
+#code_server: true
 
 # Enable AWS IAM integration with control(tower) node and workshop nodes
 tower_node_aws_api_access: true
 ```
 
+**Setup DNS** 
+- You will need to setup DNS via AWS Route53
+- Use AWS Public Hosted zone
+- Example: subdom.redhatpartnertech.net
+- Reference: https://github.com/ansible/workshops/tree/devel/provisioner#dns
+
 **Manifest**
 - Login to https://access.redhat.com --> Subscriptions --> Subscription Allocations, then [New Subscription Allocation]
 - Name it, then select type: Satellite 6.8, then click [Create]
 - Once created, select the Subscriptions tab, then click [Add Subscriptions] to add # of Red Hat Ansible Automation subs
-- Click [Export Manifest] to download .zip file, then move to provisioner VM
-- On Provisioner VM, move zip file to default "provisioner" folder and rename<br>
-```$ mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip```
+- Click [Export Manifest] to download .zip file
+- Move zip file to default "provisioner" folder and rename<br>
+`$ mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip`
 
 **AWS Keys/Credentials - credentials file or via environment variables**
 - [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
@@ -139,7 +120,7 @@ tower_node_aws_api_access: true
 
 **via credentials file**
 ```
-$ cd ~/
+$ cd ~
 $ mkdir .aws
 $ cd .aws
 $ vim credentials 
@@ -162,6 +143,21 @@ $
 **Test AWS Credentials**
 ```
 $ aws ec2 describe-regions --region us-east-1
+```
+*** Set default python version via alternatives for provisioner to utilize correct python runtime ***
+- "alternatives" utility used when several programs fulfilling the same or similar functions are installed on a single system at the same time, in this case, `python`
+```
+$ which python
+/usr/bin/which: no python in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
+$ alternatives --list | grep -i python
+python              	auto  	/usr/libexec/no-python
+python3             	auto  	/usr/bin/python3.6
+$ alternatives --set python /usr/bin/python3
+$ alternatives --list | grep -i python
+python              	manual	/usr/bin/python3
+python3             	auto  	/usr/bin/python3.6
+$ python --version
+Python 3.6.8
 ```
 
 **Finally, run the provisioner**
