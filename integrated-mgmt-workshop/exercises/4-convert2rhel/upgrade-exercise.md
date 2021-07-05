@@ -18,11 +18,13 @@ Overview
 -----------------------------------------------------------------
 
 **Summary**<br>
-- The first step involves making a backup of the instance data (in case of a fallback or restore is needed. Better safe than sorry.)
-- Second, we will use a tool called Convert2RHEL. There are many sources of information on this handly utility, here are a few key ones:
+- Remember, during initial environment setup, we created a backup of the instance data (in case a fallback or restore is needed. Better safe than sorry.)
+- We will add an additional project to Ansible Tower, "Three Tier App", which will allow us to install (take a guess) a three tier application stack across the three CentOS nodes, as well as provide a means to test/verify functionality of the application components.
+- Next, we employ the Convert2RHEL utility to convert the CentOS nodes to RHEL. There are many sources of information on this handy utility, here are several of note:
     - [How to convert from CentOS or Oracle Linux to RHEL](https://access.redhat.com/articles/2360841) (Jan 2021)
     - [Converting from CentOS to RHEL with Convert2RHEL and Satellite](https://www.redhat.com/en/blog/converting-centos-rhel-convert2rhel-and-satellite) (March 2020)
     - [Convert2RHEL: How to update RHEL-like systems in place to subscribe to RHEL](https://www.redhat.com/en/blog/convert2rhel-how-update-rhel-systems-place-subscribe-rhel) (Jan 2020)
+- Verify functionality of the application stack post RHEL conversion.
 - Lastly, we will perform an in-place upgrade RHEL 7 to 8 (WIP)
 
 Things to consider if doing this in dev/test/stage-beta/prod:
