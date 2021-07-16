@@ -25,10 +25,20 @@ OS Config -- software tools install & config (including Ansible)
 
 - use yum for RHEL7/CentOS7, dnf for RHEL8/Fedora
 ```
-$ sudo dnf install vim git python3 expect ansible
+$ sudo dnf install vim git python3 expect
 $ python3 -m pip install --user --upgrade pip setuptools
 $ python3 -m pip install --user wheel
-$ python3 -m pip install --user boto boto3 netaddr passlib awscli
+$ python3 -m pip install --user ansible==2.10.5
+$ python3 -m pip install --user requests
+$ python3 -m pip install --user yamllint==1.19.0
+$ python3 -m pip install --user boto3==1.16.59
+$ python3 -m pip install --user boto==2.49.0
+$ python3 -m pip install --user awscli==1.18.219
+$ python3 -m pip install --user netaddr==0.8.0
+$ python3 -m pip install --user passlib==1.7.4
+$ python3 -m pip install --user tox==3.22.0
+$ python3 -m pip install --user pywinrm==0.4.2
+$ python3 -m pip install --user requests-credssp
 ```
 
 Create log and var directories and clone provisioner
@@ -48,7 +58,7 @@ Please modify the following variables below to match your unique configuration.
 - admin_password: (a strong password 15+ characters, ex. Ansible=2021!!!)
 - workshop_dns_zone: (setup in your route53 configuration, ex. subdom.redhatpartnertech.net)
 
-All remaining variables LEAVE AS IS
+All remaining variables LEAVE AS IS (unless you are using a different ec2_region, adjust accordingly)
 ```
 ---
 # region where the nodes will live
@@ -142,6 +152,10 @@ $
 
 **Test AWS Credentials**
 ```
+$ aws sts get-caller-identity
+```
+or
+```
 $ aws ec2 describe-regions --region us-east-1
 ```
 *** Set default python version via alternatives for provisioner to utilize correct python runtime ***
@@ -162,13 +176,19 @@ Python 3.6.8
 
 **Finally, run the provisioner**
 ```
-$ cd ~/github/ansible/workshops/provisioner
-$ unbuffer ansible-playbook provision_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
+$ cd ~/github/ansible/workshops
+$ ansible-galaxy install --force -r requirements.yml
+$ ansible-galaxy collection build --verbose --output-path build/
+$ ansible-galaxy collection install --verbose build/*.tar.gz
+$ ANSIBLE_CONFIG=provisioner/ansible.cfg
+$ AWS_MAX_ATTEMPTS=10
+$ AWS_RETRY_MODE=standard
+$ unbuffer ansible-playbook ./provisioner/provision_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
 ```
 
 **Teardown**
 ```
-$ cd ~/github/ansible/workshops/provisioner
+$ cd ~/github/ansible/workshops
 $ unbuffer ansible-playbook teardown_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
 ```
 
