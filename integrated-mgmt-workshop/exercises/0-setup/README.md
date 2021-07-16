@@ -116,6 +116,8 @@ Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job templa
 
 ![](https://lh3.googleusercontent.com/Yf90jgaCEAMMIuNSb011O4ERVnLkX9fZWx-u5Yb__EDpAsUyWnlkB8CKqiA6E-SMU5-gKEarM0Zv_Crcu7PMFujTT87MJnW0r8xDE1qWbY41eExFILWZt_1VaghLzjbff5yh0L87)
 
+Next, run the **EC2 / Set instance tag - AnsibleGroup** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+
 Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
