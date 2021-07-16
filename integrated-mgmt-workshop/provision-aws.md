@@ -121,8 +121,8 @@ tower_node_aws_api_access: true
 - Name it, then select type: Satellite 6.8, then click [Create]
 - Once created, select the Subscriptions tab, then click [Add Subscriptions] to add # of Red Hat Ansible Automation subs
 - Click [Export Manifest] to download .zip file
-- Move zip file to default "provisioner" folder and rename<br>
-`$ mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/provisioner/manifest.zip`
+- Move zip file to "workshops" folder and rename<br>
+`$ mv ~/manifest_sm-mgmt-wkshop_20210128T182529Z.zip ~/github/ansible/workshops/manifest.zip`
 
 **AWS Keys/Credentials - credentials file or via environment variables**
 - [Walkthrough Steps](https://github.com/ansible/workshops/blob/devel/docs/aws-directions/AWSHELP.md)
