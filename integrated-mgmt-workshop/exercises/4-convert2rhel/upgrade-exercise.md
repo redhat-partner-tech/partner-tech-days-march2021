@@ -55,16 +55,29 @@ Note that in the following steps that are being performed on Tower, at any time,
 2. Take CentOS node snapshot (optional, if you've already performed this step during initial setup then skip)
     - template CONVERT2RHEL / 01 - Take node snapshot
 
+3. Install three tier application stack on CentOS nodes
+    - template CONVERT2RHEL / 96 - Three Tier App deployment
+
+4. Verify three tier application functionality on CentOS nodes
+    - template CONVERT2RHEL / 97 - Three Tier App smoke test
+
+5. Upgrade CentOS nodes to latest
+    - template CONVERT2RHEL / 02 - Upgrade OS to latest release
+
+6. Verify three tier application functionality on CentOS nodes
+    - template CONVERT2RHEL / 97 - Three Tier App smoke test
+
+7. convert2rhel process
+    - template CONVERT2RHEL / 03 - convert2rhel
+      - choose LE group to convert CentOS7_Dev
+      - choose LE target RHEL7_Dev
+      - with some pre-configuration, any combination is possible
+
 8. Query Satellite to get node-related details, set EC2 instance tags based on these details
     - template EC2 / Set instance tags based on Satellite(Foreman) facts
 
 9. Update inventories via dynamic sources
-    - before you run the dynamic inventory update templates, navigate to the Inventories location in Tower and review the following inventories:
-      - ALL Development => HOSTS
-      - CentOS7 Development => HOSTS
-      - RHEL7 Development => HOSTS
-      
-    Note that these inventories have yet to be populated.  Also, while you are in each of these inventories, click on the "SOURCES" button and review how each of these dynamic source inventories are configured, taking note of the "SOURCE VARIABLES" section to gain an understanding on how the resultant hosts and groups for that particular inventory are populated.
+    - template EC2 / Set instance tags based on Satellite(Foreman) facts
 
     - template TOWER / Update inventories via dynamic sources
 	  - Select "CentOS7" for Inventory To Update
@@ -74,20 +87,12 @@ Note that in the following steps that are being performed on Tower, at any time,
 	  - Select "RHEL7" for Inventory To Update
       - select "Dev" for Choose Environment
 
-10. Upgrade CentOS nodes to latest
-    - template CONVERT2RHEL / 02 - Upgrade OS to latest release
+10. Copy template CONVERT2RHEL / 97 - Three Tier App smoke test to template CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7_Dev
+    - set Inventory to RHEL7_Dev
+    - set credential to "Student Credential"
 
-11. convert2rhel process
-    - template CONVERT2RHEL / 03 - convert2rhel
-      - choose LE group to convert CentOS7_Dev
-      - choose LE target RHEL7_Dev
-      - with some pre-configuration, any combination is possible
-
-12. Query Satellite to get node-related details, set EC2 instance tags based on these details
-    - template EC2 / Set instance tags based on Satellite(Foreman) facts
-
-13. Refresh/update inventories
-    - repeat step 9.
+11. Verify three tier application functionality on newly converted RHEL nodes
+    - template CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7_Dev
 
 > **EXTRA CREDIT - Convert2RHEL workflow template**
 Create a workflow template incorporating the above standalone templates into a complete CentOS to RHEL conversion workflow!

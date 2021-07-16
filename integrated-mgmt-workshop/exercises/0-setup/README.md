@@ -118,6 +118,17 @@ Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job templa
 
 Next, run the **EC2 / Set instance tag - AnsibleGroup** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
+Dynamic inventories - understanding inventories populated via dynamic sources
+------------
+
+> **NOTE** Before running the dynamic inventory update templates in the upcoming steps, first navigate to the Inventories location in Tower and review the following inventories:
+>
+>     - ALL Development => HOSTS
+>     - CentOS7 Development => HOSTS
+>     - RHEL7 Development => HOSTS
+>      
+>    Note that these inventories have yet to be populated.  Also, while you are in each of these inventories, click on the "SOURCES" button and review how each of these dynamic source inventories are configured, taking note of the "SOURCE VARIABLES" section to gain an understanding on how the resultant hosts and groups for that particular inventory are populated.
+
 Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
@@ -138,7 +149,17 @@ Run the **TOWER / Update inventories via dynamic sources** job template by click
 
 -   Review Extra Variables, then select **Launch** to run the job template..
 
-Now, we can login to Satellite to perform verification.
+Dynamic inventories - review inventories populated via dynamic sources
+------------
+
+> **NOTE** Now that the dynamic inventory update templates have been executed, navigate to the Inventories location in Tower and review the following inventories:
+>     - ALL Development => HOSTS
+>     - CentOS7 Development => HOSTS
+>     - RHEL7 Development => HOSTS
+>      
+>    Review how the resultant hosts and groups are defined from information based on tags set from earlier Satellite job template queries.
+
+Next, login to Satellite to perform verification.
 
 #### 3\. Login to Satellite and validate your Environment
 
