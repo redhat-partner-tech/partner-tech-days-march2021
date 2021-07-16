@@ -58,7 +58,7 @@ Please modify the following variables below to match your unique configuration.
 - admin_password: (a strong password 15+ characters, ex. Ansible=2021!!!)
 - workshop_dns_zone: (setup in your route53 configuration, ex. subdom.redhatpartnertech.net)
 
-All remaining variables LEAVE AS IS (unless you are using a different ec2_region, adjust accordingly)
+All remaining variables LEAVE AS IS!!!
 ```
 ---
 # region where the nodes will live
