@@ -19,7 +19,7 @@ Overview
 
 **Summary**<br>
 - Remember, during initial environment setup, we created a backup of the instance data (in case a fallback or restore is needed. Better safe than sorry.)
-- We will add an additional project to Ansible Tower, "Three Tier App", which will allow us to install (take a guess) a three tier application stack across the three CentOS nodes, as well as provide a means to test/verify functionality of the application components.
+- We will utilize an additional project in Ansible Tower, "Three Tier App / Dev", which will allow us to install (take a guess) a three tier application stack across the three CentOS nodes. Additionally, the project also provides a means to test/verify functionality of the application components, which we will perform pre RHEL conversion.
 - Next, we employ the Convert2RHEL utility to convert the CentOS nodes to RHEL. There are many sources of information on this handy utility, here are several of note:
     - [How to convert from CentOS or Oracle Linux to RHEL](https://access.redhat.com/articles/2360841) (Jan 2021)
     - [Converting from CentOS to RHEL with Convert2RHEL and Satellite](https://www.redhat.com/en/blog/converting-centos-rhel-convert2rhel-and-satellite) (March 2020)
@@ -52,7 +52,7 @@ Note that in the following steps that are being performed on Tower, at any time,
 1. Login to Ansible Tower, From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
     - Here, you will see we have RHEL and CentOS Nodes in a **static** Ansible inventory
 
-5. Take CentOS node snapshot
+2. Take CentOS node snapshot (optional, if you've already performed this step during initial setup then skip)
     - template CONVERT2RHEL / 01 - Take node snapshot
 
 8. Query Satellite to get node-related details, set EC2 instance tags based on these details
@@ -63,6 +63,7 @@ Note that in the following steps that are being performed on Tower, at any time,
       - ALL Development => HOSTS
       - CentOS7 Development => HOSTS
       - RHEL7 Development => HOSTS
+      
     Note that these inventories have yet to be populated.  Also, while you are in each of these inventories, click on the "SOURCES" button and review how each of these dynamic source inventories are configured, taking note of the "SOURCE VARIABLES" section to gain an understanding on how the resultant hosts and groups for that particular inventory are populated.
 
     - template TOWER / Update inventories via dynamic sources
