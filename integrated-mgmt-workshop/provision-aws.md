@@ -180,9 +180,9 @@ $ cd ~/github/ansible/workshops
 $ ansible-galaxy install --force -r requirements.yml
 $ ansible-galaxy collection build --verbose --output-path build/
 $ ansible-galaxy collection install --verbose build/*.tar.gz
-$ ANSIBLE_CONFIG=provisioner/ansible.cfg
-$ AWS_MAX_ATTEMPTS=10
-$ AWS_RETRY_MODE=standard
+$ export ANSIBLE_CONFIG=provisioner/ansible.cfg
+$ export AWS_MAX_ATTEMPTS=10
+$ export AWS_RETRY_MODE=standard
 $ unbuffer ansible-playbook ./provisioner/provision_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
 ```
 
