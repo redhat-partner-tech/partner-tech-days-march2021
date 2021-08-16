@@ -38,7 +38,7 @@ Exercise
     - *Select the project named **Automated Management***
     - *Update the SCM URL to: https://github.com/redhat-partner-tech/automated-smart-management.git*
     ![](https://lh6.googleusercontent.com/1RmTzC-yEReCousl3x8N7YyxQFvOnCK76hmhVjCMePsSRbHA6GcXbIjoZI3hSxSCPmw7CF0JEgg0VXO_MlgIfFIV1oUbdBepyHGG0rKbHwx-ElNuhoyx4cS3OcSdX4ZLEsVSMRbW)
-    - *Set SCM branch to "testing"*
+    - *Set SCM branch to "testing"*  **<== IMPORTANT!!!**
     - *Set the following SCM Update Options*
       - DELETE ON UPDATE
       - UPDATE REVISION ON LAUNCH
