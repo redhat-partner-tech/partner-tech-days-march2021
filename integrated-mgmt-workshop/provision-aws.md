@@ -29,7 +29,7 @@ $ sudo dnf install vim git python3 expect
 $ python3 -m pip install --user --upgrade pip setuptools
 $ python3 -m pip install --user wheel
 $ python3 -m pip install --user ansible==2.10.5
-$ python3 -m pip install --user requests
+$ python3 -m pip install --user requests==2.26.0
 $ python3 -m pip install --user yamllint==1.19.0
 $ python3 -m pip install --user boto3==1.16.59
 $ python3 -m pip install --user boto==2.49.0
