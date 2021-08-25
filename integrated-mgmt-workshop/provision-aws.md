@@ -46,9 +46,9 @@ Create log and var directories and clone provisioner
 ```
 $ mkdir -p ~/smrtmgmt01/deploy_logs
 $ mkdir ~/smrtmgmt01/deploy_vars
-$ mkdir -p ~/github/ansible
-$ cd ~/github/ansible
-$ git clone https://github.com/ansible/workshops.git
+$ mkdir -p ~/github/redhat-partner-tech
+$ cd ~/github/redhat-partner-tech
+$ git clone https://github.com/redhat-partner-tech/ansible-workshops.git
 
 $ vim ~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
 ```
@@ -95,11 +95,8 @@ ibm_community_grid: false
 # select rhel7 or rhel8 client nodes
 rhel: rhel7
 
-# choice of centos6 or centos7 nodes
+# choice of centos7 nodes
 # refer to https://wiki.centos.org/Cloud/AWS for available minor releases
-# comment out one, uncomment the other
-# select centos6 client node version
-#centos6: centos68
 # select centos7 client node version
 centos7: centos78
 
@@ -176,10 +173,7 @@ Python 3.6.8
 
 **Finally, run the provisioner**
 ```
-$ cd ~/github/ansible/workshops
-$ ansible-galaxy install --force -r requirements.yml
-$ ansible-galaxy collection build --verbose --output-path build/
-$ ansible-galaxy collection install --verbose build/*.tar.gz
+$ cd ~/github/redhat-partner-tech/ansible-workshops
 $ export ANSIBLE_CONFIG=provisioner/ansible.cfg
 $ export AWS_MAX_ATTEMPTS=10
 $ export AWS_RETRY_MODE=standard
