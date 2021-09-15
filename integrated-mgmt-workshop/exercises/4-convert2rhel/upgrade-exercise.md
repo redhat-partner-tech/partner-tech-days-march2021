@@ -19,7 +19,7 @@ Overview
 
 **Summary**<br>
 - Remember, during initial environment setup, we created a backup of the instance data (in case a fallback or restore is needed. Better safe than sorry.)
-- We will utilize an additional project in Ansible Tower, "Three Tier App / Dev", which will allow us to install (take a guess) a three tier application stack across the three CentOS nodes. Additionally, the project also provides a means to test/verify functionality of the application components, which we will perform pre RHEL conversion.
+- We will utilize an additional project in Ansible Automation Platform, "Three Tier App / Dev", which will allow us to install (take a guess) a three tier application stack across the three CentOS nodes. Additionally, the project also provides a means to test/verify functionality of the application components, which we will perform pre RHEL conversion.
 - Next, we employ the Convert2RHEL utility to convert the CentOS nodes to RHEL. There are many sources of information on this handy utility, here are several of note:
     - [How to convert from CentOS or Oracle Linux to RHEL](https://access.redhat.com/articles/2360841) (Jan 2021)
     - [Converting from CentOS to RHEL with Convert2RHEL and Satellite](https://www.redhat.com/en/blog/converting-centos-rhel-convert2rhel-and-satellite) (March 2020)
@@ -46,10 +46,10 @@ Exercise:
 - [Satellite 6.8 UI](https://student1-sat.guid.domain.com)
 - [Ansible Automation Platform 2.9 UI](https://student1.guid.domain.com)
 
-Note that in the following steps that are being performed on Tower, at any time, over on the Satellite console, review the registered hosts via clicking Hosts => All Hosts.  Refresh the Hosts page to see changes as they occur a result from the automation being peformed via Tower.
+Note that in the following steps that are being performed on AAP, at any time, over on the Satellite console, review the registered hosts via clicking Hosts => All Hosts.  Refresh the Hosts page to see changes as they occur a result from the automation being peformed via AAP.
 
 **Steps:**<br>
-1. Login to Ansible Tower, From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
+1. Login to Ansible Automation Platform, From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
     - Here, you will see we have RHEL and CentOS Nodes in a **static** Ansible inventory
 
 2. Take CentOS node snapshot (optional, if you've already performed this step during initial setup then skip)
@@ -79,11 +79,11 @@ Note that in the following steps that are being performed on Tower, at any time,
 9. Update inventories via dynamic sources
     - template EC2 / Set instance tags based on Satellite(Foreman) facts
 
-    - template TOWER / Update inventories via dynamic sources
+    - template CONTROLLER / Update inventories via dynamic sources
 	  - Select "CentOS7" for Inventory To Update
       - select "Dev" for Choose Environment
 
-    - template TOWER / Update inventories via dynamic sources
+    - template CONTROLLER / Update inventories via dynamic sources
 	  - Select "RHEL7" for Inventory To Update
       - select "Dev" for Choose Environment
 
@@ -103,11 +103,11 @@ Before we begin, you'll need to fork the Automated Smart Management repo into yo
 
 Once logged into [GitHub](https://github.com) navigate to the [Red Hat Partner Tech repo for Automated Smart Management](https://github.com/redhat-partner-tech/automated-smart-management) repo. Next, on the Automated Smart Management repo page, in the top, upper right of the page, click "Fork".  This will create a "forked" Automated Smart Management repo in your personal GitHub account.
 
-[Switch the "Automated Management" project in Tower to utilize your newly cloned repo](https://github.com/your-github-username/automated-smart-management.git). The following files are some good places to start looking to see where you can adjust the Extra Vars instance tags to select/filter what particular instances that a job template/playbook gets run against:
+[Switch the "Automated Management" project in AAP to utilize your newly cloned repo](https://github.com/your-github-username/automated-smart-management.git). The following files are some good places to start looking to see where you can adjust the Extra Vars instance tags to select/filter what particular instances that a job template/playbook gets run against:
 
 `group_vars/control/inventories.yml`
 
 `group_vars/control/job_templates.yml`
 
-Once the updates are made, commit and push these changes to the cloned repo, followed by running the "SETUP / Tower" job template, which will propogate the changes to Tower itself.
+Once the updates are made, commit and push these changes to the cloned repo, followed by running the "SETUP / Controller" job template, which will propogate the changes to AAP itself.
 ...
