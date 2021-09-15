@@ -6,7 +6,7 @@ Objective
 The objective of this exercise is to setup the lab environemnt. This exercise will require you to launch (5) playbooks. The playbooks accomplish the following:
 
 -   Setup and configure Satellite with the proper lifecycle environments, content views, activation keys.
--   Populate Ansible Tower with an inventory source, add templates, as well as an additional project.
+-   Populate Ansible Controller with an inventory source, add templates, as well as an additional project.
 -   Publish RHEL7 dev content view in Satellite 
 -   Register servers to the Satellite installation - RHEL7
 -   Register servers to the Satellite installation - CentOS7
@@ -29,7 +29,7 @@ Exercise
 
 ![](https://lh3.googleusercontent.com/qPZKoTY_llCgALI1Y4E1Y9jpXx9BPiLlcRoZeevtMfZnRq256WKil3RSbKa6RWgXd8Xkl9RZsAOvShmZISoGg1yvxZ2UIYfVMUUCnNnZix4xQF1GVBSa-TKktg1Mvb_W95lHgqiN)
 
--   Upon successful login, you will be able to see the Ansible Tower dashboard.
+-   Upon successful login, you will be able to see the Ansible Automation Platform dashboard.
 
 -   Use the side pane menu on the left to select **Projects** and review the two projects named **Automated Management** and **Fact Scan**. These projects, along with the Workshop Inventory (**Inventories** -> **Workshop Inventory**) have been set up for you during the provisioning of the lab environment.
 
@@ -48,7 +48,7 @@ Exercise
 
 This step demonstrates the execution of job templates. You will be working with various templates as the workshop progresses, however, this step utilizes seven templates to initialize the lab environment configuration.
 
--   Two **Templates** named **SETUP / Satellite** and **SETUP / Tower** are the initial jobs templates you need to launch.
+-   Two **Templates** named **SETUP / Satellite** and **SETUP / Controller** are the initial jobs templates you need to launch.
 
 ![](https://lh4.googleusercontent.com/kz6l-YuNoKknP6nX7nJTooAmVa91z4up4CoE6c2L2UW2cvJpaOaKXs9vVr62IPN8zA1Od5ADmsX-6K-PNEgKUzFiESAiFW0IqZae94Gd7rS1kt8qm_CrfWbAEHYoQ1FEsglCRFVL)
 
@@ -63,7 +63,7 @@ You will be taken to the **Jobs** dashboard where you will be able to follow eac
 
 When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
-Next you will need to run the **SETUP / Tower** job template. 
+Next you will need to run the **SETUP / Controller** job template. 
 
 -   Select **Templates** and click on the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
@@ -71,7 +71,7 @@ Next you will need to run the **SETUP / Tower** job template. 
 
 -   Navigate back to **Templates** on the left side pane.
 
-The **SETUP / Tower** job will create multiple job templates that will be useful throughout the remainder of this workshop. 
+The **SETUP / Controller** job will create multiple job templates that will be useful throughout the remainder of this workshop. 
 
 ![](https://lh4.googleusercontent.com/xy3fDRQ0LUC9SY1aHlk-hWwdDEDx-UH7nygw3cUb_8SQYSjGLeYpS5juGvl9CjSHB7MvJRShpOVOYMAUNPKfi5C6SPUXHWfGUjaMaax9enjWNS5nbpCM0Fai8hFb4QpJwZypNr4k)
 
@@ -121,7 +121,7 @@ Next, run the **EC2 / Set instance tag - AnsibleGroup** job template by clicking
 Dynamic inventories - understanding inventories populated via dynamic sources
 ------------
 
-> **NOTE** Before running the dynamic inventory update templates in the upcoming steps, first navigate to the Inventories location in Tower and review the following inventories:
+> **NOTE** Before running the dynamic inventory update templates in the upcoming steps, first navigate to the Inventories location in AAP and review the following inventories:
 >
 >     - ALL Development => HOSTS
 >     - CentOS7 Development => HOSTS
@@ -129,7 +129,7 @@ Dynamic inventories - understanding inventories populated via dynamic sources
 >      
 >    Note that these inventories have yet to be populated.  Also, while you are in each of these inventories, click on the "SOURCES" button and review how each of these dynamic source inventories are configured, taking note of the "SOURCE VARIABLES" section to gain an understanding on how the resultant hosts and groups for that particular inventory are populated.
 
-Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
@@ -139,7 +139,7 @@ Run the **TOWER / Update inventories via dynamic sources** job template by click
 
 -   Review Extra Variables, then select **Launch** to run the job template.
 
-Run the **TOWER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
@@ -152,7 +152,7 @@ Run the **TOWER / Update inventories via dynamic sources** job template by click
 Dynamic inventories - review inventories populated via dynamic sources
 ------------
 
-> **NOTE** Now that the dynamic inventory update templates have been executed, navigate to the Inventories location in Tower and review the following inventories:
+> **NOTE** Now that the dynamic inventory update templates have been executed, navigate to the Inventories location in AAP and review the following inventories:
 >     - ALL Development => HOSTS
 >     - CentOS7 Development => HOSTS
 >     - RHEL7 Development => HOSTS
