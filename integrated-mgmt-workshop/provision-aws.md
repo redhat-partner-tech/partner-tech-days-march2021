@@ -29,7 +29,7 @@ $ sudo dnf install vim git python3 expect
 $ python3 -m pip install --user --upgrade pip setuptools
 $ python3 -m pip install --user wheel
 $ python3 -m pip install --user ansible==2.10.5
-$ python3 -m pip install --user requests
+$ python3 -m pip install --user requests==2.26.0
 $ python3 -m pip install --user yamllint==1.19.0
 $ python3 -m pip install --user boto3==1.16.59
 $ python3 -m pip install --user boto==2.49.0
@@ -55,58 +55,77 @@ $ vim ~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml
 Please modify the following variables below to match your unique configuration.
 - ec2_region: (a single ec2 region, ex. us-east-1; us-east-2)
 - ec2_name_prefix: (a single unique name for your workshop, ex. smrtmgmt01; smrtmgmtvendor)
+- offline_token: (Can be accessed at https://access.redhat.com/management/api)
+- redhat_username: (Red Hat account username)
+- redhat_password: (Red Hat account password)
 - admin_password: (a strong password 15+ characters, ex. Ansible=2021!!!)
-- workshop_dns_zone: (setup in your route53 configuration, ex. subdom.redhatpartnertech.net)
+- workshop_dns_zone: (hosted zone, setup in your route53 configuration, ex. subdom.redhatpartnertech.net)
 
 All remaining variables LEAVE AS IS!!!
 ```
 ---
 # region where the nodes will live
-ec2_region: us-east-1
+ec2_region: us-east-2
 
-# name prefix for all the VMs, plus subdomain name prepended to workshop_dns_zone
+# name prefix for all the VMs
 ec2_name_prefix: smrtmgmt01
 
 # creates student_total of workbenches for the workshop
 student_total: 1
 
-# Set the right workshop type, like network, rhel or f5 (see above)
+# Set the right workshop type, like network, rhel or f5...or smart_mgmt :)
 #workshop_type: rhel
 workshop_type: smart_mgmt
+#workshop_type: windows
+
+# Generate offline token to authenticate the calls to Red Hat's APIs
+# 
+offline_token: "eyJhbGci...9Kx7DU"
+
+# Required for podman authentication to registry.redhat.io
+redhat_username: myredhatacct@redhat.com
+redhat_password: Xtr4Sup3rS3cr3tP4ssw0rd?!
 
 #####OPTIONAL VARIABLES
 
 # turn DNS on for control nodes, and set to type in valid_dns_type
 dns_type: aws
 
+# Sets the Route53 DNS zone to use for Amazon Web Services
+workshop_dns_zone: subdom.redhatpartnertech.net
+
 # password for Ansible control node
 admin_password: Ansible=2021!!!
 
-# Sets the AWS Route53 DNS Hosted zone to use
-workshop_dns_zone: subdom.redhatpartnertech.net
-
-# automatically installs Tower to control node
-towerinstall: true
-create_cluster: false
+# install control node
+controllerinstall: true
 
 # IBM Community Grid - defaults to true if you don't tell the provisioner
 ibm_community_grid: false
 
 # select rhel7 or rhel8 client nodes
 rhel: rhel7
-
-# choice of centos6 or centos7 nodes
+# choice of centos7 nodes
 # refer to https://wiki.centos.org/Cloud/AWS for available minor releases
-# comment out one, uncomment the other
-# select centos6 client node version
-#centos6: centos68
 # select centos7 client node version
 centos7: centos78
 
-# this will install VS Code web on all control nodes, uncomment if you want it
-#code_server: true
+# deploy HA Ansible Tower cluster
+#create_cluster: false
 
-# Enable AWS IAM integration with control(tower) node and workshop nodes
+# Install automation hub node?
+automation_hub: false
+
+# this will install VS Code web on all control nodes
+code_server: true
+
+# this will change the location of lab guide
+# ansible_workshops_url: https://github.com/ansible/workshops
+# ansible_workshops_version: smart_mgmt
+#ansible_workshops_url: https://github.com/willtome/workshops
+#ansible_workshops_version: smart_mgmt
+
+# Enable AWS IAM integration with control node and workshop nodes
 tower_node_aws_api_access: true
 ```
 
@@ -191,5 +210,3 @@ $ unbuffer ansible-playbook ./provisioner/provision_lab.yml -e @~/smrtmgmt01/dep
 $ cd ~/github/ansible/workshops
 $ unbuffer ansible-playbook teardown_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
 ```
-
-
