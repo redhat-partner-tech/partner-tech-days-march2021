@@ -82,7 +82,7 @@ Upgrade user python libraries pip and setuptools, create python virtual env, and
 
 ```
 $ python3 -m pip install --user --upgrade pip setuptools
-$ python3 -m pip venv $PYVENV_PROJDIR
+$ python3 -m venv $PYVENV_PROJDIR
 $ source ~/$PYVENV_PROJDIR/bin/activate
 (smrtmgmt01) $ python3 -m pip install --upgrade pip setuptools
 (smrtmgmt01) $ python3 -m pip install wheel
@@ -204,7 +204,7 @@ $
 ```
 $ cd ~
 $ export PYVENV_PROJDIR="smrtmgmt01"
-$ python3 -m pip venv $PYVENV_PROJDIR
+$ python3 -m venv $PYVENV_PROJDIR
 $ source ~/$PYVENV_PROJDIR/bin/activate
 (smrtmgmt01) $ cd ~/github/redhat-partner-tech/ansible-workshops
 (smrtmgmt01) $ unbuffer ansible-playbook teardown_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
