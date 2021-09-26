@@ -63,19 +63,6 @@ You will be taken to the **Jobs** dashboard where you will be able to follow eac
 
 When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
-Navigate to the Credentials page and click the green plus on the top right area of the page to create a new Tower Credential.
-
-- Name: Tower Credential
-- Organization: Default
-- Credential Type: Ansible Tower
-- Ansible Tower Hostname: localhost
-- Username: admin
-- Password: <password_set_in_deploy_vars>
-
-Click save.
-
-Navigate back to the Templates page and click the **SETUP / Tower** job template, then under Credentials, click the magnifying glass. In the Credential Type drop down, select Ansible Tower, then select Tower Credential and click Select.
-
 Next you will need to run the **SETUP / Tower** job template. 
 
 -   Select **Templates** and click on the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)next to **SETUP / Tower** to launch.
