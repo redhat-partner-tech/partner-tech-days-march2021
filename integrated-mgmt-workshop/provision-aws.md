@@ -163,17 +163,21 @@ $
 ```
 $ aws ec2 describe-regions --region us-east-1
 ```
+**Make sure ansible dependencies are fullfilled**
+```
+$ ansible-galaxy collections install -r ~/github/ansible/workshops/requirements.txt
+```
 
 **Finally, run the provisioner**
 ```
 $ cd ~/github/ansible/workshops/provisioner
-$ unbuffer ansible-playbook provision_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
+$ unbuffer ansible-playbook provision_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log 2>&1
 ```
 
 **Teardown**
 ```
 $ cd ~/github/ansible/workshops/provisioner
-$ unbuffer ansible-playbook teardown_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
+$ unbuffer ansible-playbook teardown_lab.yml -e @~/smrtmgmt01/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true -vvv | tee ~/smrtmgmt01/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log 2>&1
 ```
 
 
