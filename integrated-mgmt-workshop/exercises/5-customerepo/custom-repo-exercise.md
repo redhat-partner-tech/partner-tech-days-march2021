@@ -1,6 +1,7 @@
 # Integrated Management Workshop: Managing Additional Software with Satellite
 
 In this part of the workshop, we will learn how to manage extra/additional software with Satellite. When you have RHEL clients managed by Satellite in your environment, often there is also a requirement to manage additional software packages that don't come from any of the RHEL distributions/repositories. For example, the Creative department wanted you to manage a CAD/CAM software that runs on many of their RHEL workstations. Satellite has the ability to manage other software packages on top of what comes with Red Hat subscriptions. For information on this, please see the product docs:
+
 https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html-single/content_management_guide/index#Importing_Red_Hat_Content-Products_in_Satellite
 
 https://access.redhat.com/documentation/en-us/red_hat_satellite/6.9/html-single/content_management_guide/index#Importing_Custom_Content
