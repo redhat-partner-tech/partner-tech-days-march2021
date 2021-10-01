@@ -50,32 +50,32 @@ You will be taken to the **Jobs > SETUP / Satellite** dashboard where you will b
 
 > **NOTE** Please allow the **SETUP / Satellite** job to run to completion before proceeding to execution of the next template.
 
-![](https://lh3.googleusercontent.com/WbOAiB0vNeUUT9on7xURXGfOwygQy1q9BuTpm2cQJqgmVW3GA_jbQjAOcIlTRD2JcgunpAhv-6735OQ2xOqt3CJb3e5kc7YaEM1i9IyI10Gh3_3gvRjHXFQZrJmf0LUwL1O-y7pB)
+![templates](images/0-setup-aap2-setup-sat-complete.png)
 
 When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
 Next you will need to run the **SETUP / Controller** job template. 
 
--   Select **Templates** and click on the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+-   Select **Templates** and click on the![launch](images/0-setup-aap2-launch.png)to the right of the **SETUP / Controller** job template.
 
-![](https://lh4.googleusercontent.com/MGisqVAxZlFK4AP9RZ1YsNFv1QdqLr5Y53FAIjyZbsp7khmC9xLCZpDxvpgTMU2qj4jqEJCE-r-KIz6YqIaY2h-Iex4b0OZZ6qHJmpk4K6wW_amI1aWjUs7jzbSrnHN6co1oCMZS)
+![templates](images/0-setup-aap2-setup-control-complete.png)
 
 -   Navigate back to **Templates** on the left side pane.
 
 The **SETUP / Controller** job will create multiple job templates that will be useful throughout the remainder of this workshop. 
 
-![](https://lh4.googleusercontent.com/xy3fDRQ0LUC9SY1aHlk-hWwdDEDx-UH7nygw3cUb_8SQYSjGLeYpS5juGvl9CjSHB7MvJRShpOVOYMAUNPKfi5C6SPUXHWfGUjaMaax9enjWNS5nbpCM0Fai8hFb4QpJwZypNr4k)
+![templates](images/0-setup-aap2-setup-templates-iac.png)
 
 Now that we have several more templates at our disposal we will need to run four more of these in order to complete setup.
 
-Run the **SATELLITE / RHEL - Publish Content View** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch. When prompted by the survey for the content view to publish, from the drop down menu, select **RHEL7**
+Run the **SATELLITE / RHEL - Publish Content View** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch. When prompted by the survey for the content view to publish, from the drop down menu, select **RHEL7**
 -   Select **Next** to Launch the job template.
 
 ![](https://lh6.googleusercontent.com/KE_X9CneGR3P5gFh6qH9YSSO2SZpOvPFZAOOH5VndphvanoTbLtNntNmxouNR1llj8KzGQ5a7WrptVLV3XEbcLPBRme3DfkNhyHrY1RfZU-oDjfpl9sGPN2ixxJPMruwFWI3e7sh)
 
-Next, run the **CONVERT2RHEL / 01 - Take node snapshot** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Next, run the **CONVERT2RHEL / 01 - Take node snapshot** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
-Next, run the **SERVER / RHEL7 - Register** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Next, run the **SERVER / RHEL7 - Register** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
@@ -89,7 +89,7 @@ Next, run the **SERVER / RHEL7 - Register** job template by clicking the![](http
 
 ![](https://lh4.googleusercontent.com/AvmmXeKsqMJY7UqF-YkXcc5f1MrdsyzmaRS3DhzDKGCjk33eJSKOmrCYQg-2C_EGb6y0IZdW2k5fTkLDvA4xQOotFbUpivtl3EAZr4vAMyNSaXSYpBtjPB8Woxoo8FuqvqmfxhMK)
 
-Run the **SERVER / CentOS7 - Register** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Run the **SERVER / CentOS7 - Register** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
@@ -103,11 +103,11 @@ Run the **SERVER / CentOS7 - Register** job template by clicking the![](https://
 
 ![](https://lh5.googleusercontent.com/j9c1se4WyVKaM3O-nsaNNn7uLPpOpPM3mjMLSl1YzcwNfVWsZ3wDw-ipUA-RQgdJLCSkPAzyW6kvCJpEDeuoXZBgtyTs0dJ5GpfmbvaZJAfgP4RPPvDyc3w_4EaWAQBtTJrt_Nu4)
 
-Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 ![](https://lh3.googleusercontent.com/Yf90jgaCEAMMIuNSb011O4ERVnLkX9fZWx-u5Yb__EDpAsUyWnlkB8CKqiA6E-SMU5-gKEarM0Zv_Crcu7PMFujTT87MJnW0r8xDE1qWbY41eExFILWZt_1VaghLzjbff5yh0L87)
 
-Next, run the **EC2 / Set instance tag - AnsibleGroup** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Next, run the **EC2 / Set instance tag - AnsibleGroup** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 Dynamic inventories - understanding inventories populated via dynamic sources
 ------------
@@ -120,7 +120,7 @@ Dynamic inventories - understanding inventories populated via dynamic sources
 >      
 >    Note that these inventories have yet to be populated.  Also, while you are in each of these inventories, click on the "SOURCES" button and review how each of these dynamic source inventories are configured, taking note of the "SOURCE VARIABLES" section to gain an understanding on how the resultant hosts and groups for that particular inventory are populated.
 
-Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
@@ -130,7 +130,7 @@ Run the **CONTROLLER / Update inventories via dynamic sources** job template by 
 
 -   Review Extra Variables, then select **Launch** to run the job template.
 
-Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch.
+Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
