@@ -50,7 +50,7 @@ You will be taken to the **Jobs > SETUP / Satellite** dashboard where you will b
 
 > **NOTE** Please allow the **SETUP / Satellite** job to run to completion before proceeding to execution of the next template.
 
-![templates](images/0-setup-aap2-setup-sat-complete.png)
+![sat-complete](images/0-setup-aap2-setup-sat-complete.png)
 
 When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
@@ -58,22 +58,24 @@ Next you will need to run the **SETUP / Controller** job template. 
 
 -   Select **Templates** and click on the![launch](images/0-setup-aap2-launch.png)to the right of the **SETUP / Controller** job template.
 
-![templates](images/0-setup-aap2-setup-control-complete.png)
+![control-complete](images/0-setup-aap2-setup-control-complete.png)
 
 -   Navigate back to **Templates** on the left side pane.
 
 The **SETUP / Controller** job will create multiple job templates that will be useful throughout the remainder of this workshop. 
 
-![templates](images/0-setup-aap2-templates-iac.png)
+![templates-iac](images/0-setup-aap2-templates-iac.png)
 
 Now that we have several more templates at our disposal we will need to run four more of these in order to complete setup.
 
 Run the **SATELLITE / RHEL - Publish Content View** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch. When prompted by the survey for the content view to publish, from the drop down menu, select **RHEL7**
--   Select **Next** to Launch the job template.
+-   Select **Next** to review the setting for the job run, then click **Launch** the run the job template.
 
-![](https://lh6.googleusercontent.com/KE_X9CneGR3P5gFh6qH9YSSO2SZpOvPFZAOOH5VndphvanoTbLtNntNmxouNR1llj8KzGQ5a7WrptVLV3XEbcLPBRme3DfkNhyHrY1RfZU-oDjfpl9sGPN2ixxJPMruwFWI3e7sh)
+![publish-cv-rhel](images/0-setup-aap2-publish-cv-rhel.png)
 
 Next, run the **CONVERT2RHEL / 01 - Take node snapshot** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
+
+![node-snapshot-complete](images/0-setup-aap2-node-snapshot-complete.png)
 
 Next, run the **SERVER / RHEL7 - Register** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
