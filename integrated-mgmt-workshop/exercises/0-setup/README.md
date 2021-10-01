@@ -27,7 +27,7 @@ Exercise
 
 -   Use a web browser on your computer to access the AAP GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>* 
 
-image::images/0-setup-login.png[]
+![login screen](images/0-setup-login.png)
 
 -   Upon successful login, you will be able to see the Ansible Automation Platform dashboard.
 
