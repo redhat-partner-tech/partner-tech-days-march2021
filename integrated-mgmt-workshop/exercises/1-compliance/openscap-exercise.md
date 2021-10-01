@@ -68,7 +68,7 @@ Now we will start configuring our Satellite server to be able to manage a compli
 
 -   Use a web browser on your computer to access the Ansible GUI via the link found in the Environment above
 
-![](https://lh5.googleusercontent.com/UH3-l8kGnC1UM20Op4_d0HZZ7upq84dechLxShPZZ4Ki-4P-bu8ej8sfUZIO-lxBXwdAx7MaIehy9I0NQt-w_DhzJdHBJnOfwRcYaY6Z2UUXsTY_eekbmDgvfq-2SLEIgqEvF7SG)
+![login screen](images/1-compliance-aap2-login.png)
 
 Once you're in Ansible Tower, you'll be able to see a dashboard.
 
