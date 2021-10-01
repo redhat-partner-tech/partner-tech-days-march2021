@@ -64,7 +64,7 @@ Next you will need to run the **SETUP / Controller** job template. 
 
 The **SETUP / Controller** job will create multiple job templates that will be useful throughout the remainder of this workshop. 
 
-![templates](images/0-setup-aap2-setup-templates-iac.png)
+![templates](images/0-setup-aap2-templates-iac.png)
 
 Now that we have several more templates at our disposal we will need to run four more of these in order to complete setup.
 
