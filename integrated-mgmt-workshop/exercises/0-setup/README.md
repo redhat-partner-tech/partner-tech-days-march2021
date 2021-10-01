@@ -33,29 +33,20 @@ Exercise
 
 -   Use the side pane menu on the left to select **Projects** and review the two projects named **Automated Management** and **Fact Scan**. These projects, along with the Workshop Inventory (**Inventories** -> **Workshop Inventory**) have been set up for you during the provisioning of the lab environment.
 
-- *Temporary Steps:* 
-    - *From the navigation section on the left side of the Automation Platform homepage, select* ***Projects*** 
-    - *Select the project named **Automated Management***
-    - *Update the SCM URL to: https://github.com/redhat-partner-tech/automated-smart-management.git*
-    ![](https://lh6.googleusercontent.com/1RmTzC-yEReCousl3x8N7YyxQFvOnCK76hmhVjCMePsSRbHA6GcXbIjoZI3hSxSCPmw7CF0JEgg0VXO_MlgIfFIV1oUbdBepyHGG0rKbHwx-ElNuhoyx4cS3OcSdX4ZLEsVSMRbW)
-    - *Set SCM branch to "testing"*
-    - *Set the following SCM Update Options*
-      - DELETE ON UPDATE
-      - UPDATE REVISION ON LAUNCH
-    - *Save*
-
 #### 2\. Launch Ansible job templates
 
 This step demonstrates the execution of job templates. You will be working with various templates as the workshop progresses, however, this step utilizes seven templates to initialize the lab environment configuration.
 
--   Two **Templates** named **SETUP / Satellite** and **SETUP / Controller** are the initial jobs templates you need to launch.
+-   Use the side pane menu on the left to select **Templates**.
 
-![](https://lh4.googleusercontent.com/kz6l-YuNoKknP6nX7nJTooAmVa91z4up4CoE6c2L2UW2cvJpaOaKXs9vVr62IPN8zA1Od5ADmsX-6K-PNEgKUzFiESAiFW0IqZae94Gd7rS1kt8qm_CrfWbAEHYoQ1FEsglCRFVL)
+-   Initially, you should see two **Templates** named **SETUP / Satellite** and **SETUP / Controller**.
 
--   Select **Templates** and click ![](https://lh4.googleusercontent.com/gzrvCZUQ1OL1alwQW-3Qh4docaalU8LfaEYFYKw2xfXejbS9e6wan9oYMVrqPW9sUACav4GV8ChXdlFEzcb3XyeCh24HhHGCyEs-4iKHDJL8eYJTtuxV-9RB7LbXjQRWMp_jvLdE)to launch **SETUP / Satellite** job. When prompted be sure to change ```refresh_satellite_manifest: false```  to  ```refresh_satellite_manifest: true```
+![templates](images/0-setup-aap2-templates.png)
+
+-   Click ![launch](images/0-setup-aap2-launch.png)to launch the **SETUP / Satellite** job. When prompted, be sure to change ```refresh_satellite_manifest: false```  to  ```refresh_satellite_manifest: true``` and click **Next**. Verify the change, then click **Launch**.
 
 
-You will be taken to the **Jobs** dashboard where you will be able to follow each task executed as part of the playbook. This will take approximately 35 mins to complete.
+You will be taken to the **Jobs > SETUP / Satellite** dashboard where you will be able to follow each task executed as part of the playbook. This will take approximately 35 mins to complete.
 
 > **NOTE** Please allow the **SETUP / Satellite** job to run to completion before proceeding to execution of the next template.
 
