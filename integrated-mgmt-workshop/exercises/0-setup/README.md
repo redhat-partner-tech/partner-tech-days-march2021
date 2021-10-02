@@ -107,9 +107,13 @@ Run the **SERVER / CentOS7 - Register** job template by clicking the![launch](im
 
 Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
-![](https://lh3.googleusercontent.com/Yf90jgaCEAMMIuNSb011O4ERVnLkX9fZWx-u5Yb__EDpAsUyWnlkB8CKqiA6E-SMU5-gKEarM0Zv_Crcu7PMFujTT87MJnW0r8xDE1qWbY41eExFILWZt_1VaghLzjbff5yh0L87)
+![satellite-ec2-tags](images/0-setup-aap2-satellite-ec2-tags.png)
+
+> **NOTE** For the following job template, review the **Variables** section of the template, paying particular note to the **group_tag_map** variable.  A mapping of nodes to group names is defined.  EC2 tags for these group names will be assigned to the nodes defined and this will be utilized later via dynamic inventory building to construct Ansible inventory groups containing the nodes defined, ie. "frontends", "apps", "appdbs".
 
 Next, run the **EC2 / Set instance tag - AnsibleGroup** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
+
+![ansiblegroups-ec2-tags](images/0-setup-aap2-ansiblegroups-ec2-tags.png)
 
 Dynamic inventories - understanding inventories populated via dynamic sources
 ------------
