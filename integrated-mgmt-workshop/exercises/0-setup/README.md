@@ -13,6 +13,7 @@ The objective of this exercise is to setup the lab environemnt. This exercise wi
 
 Environment
 ---------
+> **NOTE** The following are *example* URLS. Your student lab URLs will be different.
 * Ansible Automation Platform URL<br>
     * *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
 * Ansible Automation Platform login/password 
