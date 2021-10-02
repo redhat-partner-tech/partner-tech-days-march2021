@@ -162,6 +162,7 @@ Dynamic inventories - review inventories populated via dynamic sources
 ------------
 
 > **NOTE** Now that the dynamic inventory update templates have been executed, navigate to the Inventories location in AAP and review the following inventories:
+>
 >     - ALL Development => HOSTS
 >     - CentOS7 Development => HOSTS
 >     - RHEL7 Development => HOSTS
