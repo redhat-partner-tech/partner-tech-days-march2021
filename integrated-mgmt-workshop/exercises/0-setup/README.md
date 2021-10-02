@@ -95,15 +95,15 @@ Run the **SERVER / CentOS7 - Register** job template by clicking the![launch](im
 
 -   You will be presented with a survey. Fill this out as follows:
 
-![](https://lh6.googleusercontent.com/uCAS6XSZw_ySbF6v10vzgSSk50JIb4_CwnSEGpRcGpnMrxT7vvpUH9tNaewHm_Uo2Qn3L0lEKmjbw1WV3B3oMtMO8ffQ7sOwvEXGEckN9JCNhW8MCsW7uNGvypZo27x4c6BE98EW)
+![centos-register-survey](images/0-setup-aap2-centos-register-survey.png)
 
 -   Select **Next** to proceed to the survey response confirmation.
 
-![](https://lh5.googleusercontent.com/ohbhAl_wU1qzxVqMHwQnPOV02TpYKQIscd1pwgbWHvM4t7V80KttxHL0PPFl5L4H1ZZZcJqGrmgq_2EIE2bODH-HPEawZFJauqjvRogeStGxPn0j1BbONLJtqRRV6En-Fl2Dj7Wo)
+![centos-register-confirm](images/0-setup-aap2-centos-register-confirm.png)
 
 -   Select **Launch** to run the job template.
 
-![](https://lh5.googleusercontent.com/j9c1se4WyVKaM3O-nsaNNn7uLPpOpPM3mjMLSl1YzcwNfVWsZ3wDw-ipUA-RQgdJLCSkPAzyW6kvCJpEDeuoXZBgtyTs0dJ5GpfmbvaZJAfgP4RPPvDyc3w_4EaWAQBtTJrt_Nu4)
+![centos-register-complete](images/0-setup-aap2-centos-register-complete.png)
 
 Run the **EC2 / Set instance tags based on Satellite(Foreman) facts** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
