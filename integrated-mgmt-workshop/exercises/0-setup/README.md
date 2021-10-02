@@ -81,15 +81,15 @@ Next, run the **SERVER / RHEL7 - Register** job template by clicking the![launch
 
 -   You will be presented with a survey. Fill this out as follows:
 
-![](https://lh4.googleusercontent.com/DnlOvimZgX8NLFLrgF_loVlkmouWED1-g5BDS5kqDLPeyJvESWt6yY56GGWtCyhM2LVVpkI3D2CkZE7uTG1wD-YiULTCfZSUxxkZU5CilIzxxUNsEwuV1tGQ67Fz2mkONAlEcsgA)
+![rhel-register-survey](images/0-setup-aap2-rhel-register-survey.png)
 
 -   Select **Next** to proceed to the survey response confirmation.
 
-![](https://lh5.googleusercontent.com/4dJWGCBg3UYWvsrLMe36j19O2aC5DU2Fo3HW7fyFj8dTVwxrenYa7t7VvvyaXxIBMY4YRfcwL1z5yhZxIbBoe9eVd4o-q0AtpVArgQdMDmAqpV6w4zeDpbe2xobrQ23N4UIk-nlC)
+![rhel-register-confirm](images/0-setup-aap2-rhel-register-confirm.png)
 
 -   Select **Launch** to run the job template.
 
-![](https://lh4.googleusercontent.com/AvmmXeKsqMJY7UqF-YkXcc5f1MrdsyzmaRS3DhzDKGCjk33eJSKOmrCYQg-2C_EGb6y0IZdW2k5fTkLDvA4xQOotFbUpivtl3EAZr4vAMyNSaXSYpBtjPB8Woxoo8FuqvqmfxhMK)
+![rhel-register-complete](images/0-setup-aap2-rhel-register-complete.png)
 
 Run the **SERVER / CentOS7 - Register** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
