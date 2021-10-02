@@ -136,21 +136,27 @@ Run the **CONTROLLER / Update inventories via dynamic sources** job template by 
 
 -   Review Extra Variables
 
-![rhel-inventory-survey](images/0-setup-aap2-rhel-inventory-confirm.png)
+![rhel-inventory-confirm](images/0-setup-aap2-rhel-inventory-confirm.png)
 
 -   then select **Launch** to run the job template.
 
-![rhel-inventory-survey](images/0-setup-aap2-rhel-inventory-complete.png)
+![rhel-inventory-complete](images/0-setup-aap2-rhel-inventory-complete.png)
 
 Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
 -   You will be presented with a survey. Fill this out as follows:
 
-![](https://lh3.googleusercontent.com/GfcutEe2BcUlOSa1jYuMeFl_e7AmENRpRXLmaKfKhmYvfBdIOc7BoSzyBTmzukbYpkMGEgpEmsTAEikynb8Zot3Rmvn9wYiqMWfV3sDo8mDQpqfnRGmgdAdYOY_eXU624OgejcAq)
+![centos-inventory-survey](images/0-setup-aap2-centos-inventory-survey.png)
 
 -   Select **Next** to proceed to the survey response confirmation.
 
--   Review Extra Variables, then select **Launch** to run the job template..
+-   Review Extra Variables
+
+![centos-inventory-confirm](images/0-setup-aap2-centos-inventory-confirm.png)
+
+-   then select **Launch** to run the job template.
+
+![centos-inventory-complete](images/0-setup-aap2-centos-inventory-complete.png)
 
 Dynamic inventories - review inventories populated via dynamic sources
 ------------
