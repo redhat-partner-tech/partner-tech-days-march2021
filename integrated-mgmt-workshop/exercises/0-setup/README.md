@@ -130,11 +130,17 @@ Run the **CONTROLLER / Update inventories via dynamic sources** job template by 
 
 -   You will be presented with a survey. Fill this out as follows:
 
-![](https://lh4.googleusercontent.com/9UjqYL0nQ1RFXE78TH74XhNzjUwjE1Ykacdet6tNsOHK7dxgLqPd89xdpxNH-EWax7_FgcfyVvrHhRRd2KUSMAw0QeKBWF6Hgn3tOI5Q0ieITIw8oTil_-6znURdcHbPOLxcAuOH)
+![rhel-inventory-survey](images/0-setup-aap2-rhel-inventory-survey.png)
 
 -   Select **Next** to proceed to the survey response confirmation.
 
--   Review Extra Variables, then select **Launch** to run the job template.
+-   Review Extra Variables
+
+![rhel-inventory-survey](images/0-setup-aap2-rhel-inventory-confirm.png)
+
+-   then select **Launch** to run the job template.
+
+![rhel-inventory-survey](images/0-setup-aap2-rhel-inventory-complete.png)
 
 Run the **CONTROLLER / Update inventories via dynamic sources** job template by clicking the![launch](images/0-setup-aap2-launch.png)to launch.
 
