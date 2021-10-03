@@ -56,14 +56,26 @@ Pre-requisites 
 Exercise:
 -----------------------------------------------------------------
 **Login to your Satellite & AAP UI's**
-> **NOTE** The following are *example* URLs. Substitute your student number for student1, as you did for the lab setup exercise.
-- [Satellite 6.8 UI](https://student1-sat.guid.domain.com)
-- [Ansible Automation Platform 4.0.0 UI](https://student1.guid.domain.com)
+> **NOTE** The following are *example* URLs. Your student lab URLs will be different.
+* Ansible Automation Platform URL<br>
+    * *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
+* Ansible Automation Platform login/password 
+* Satellite URL<br> 
+    * *Example: https://student1-sat.smrtmgmt013.mw01.redhatpartnertech.net (Note the -sat added to the URL)*
+* Satellite login/password (same as above)
 
 Note that in the following steps that are being performed on AAP, at any time, over on the Satellite console, review the registered hosts via clicking Hosts => All Hosts.  Refresh the Hosts page to see changes as they occur a result from the automation being peformed via AAP.
 
 **Steps:**<br>
-1. Login to Ansible Automation Platform, From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
+#### 1\. Logging into the Ansible Automation Platform (AAP)
+
+-   Use a web browser on your computer to access the AAP GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>* 
+
+![login screen](images/4-convert2rhel-aap2-login.png)
+
+-   Upon successful login, you will be able to see the Ansible Automation Platform dashboard.
+
+1. From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
     - Here, you will see we have RHEL and CentOS Nodes in a **static** Ansible inventory
 
 2. Take CentOS node snapshot (optional, if you've already performed this step during initial setup then skip)
