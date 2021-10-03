@@ -1,5 +1,5 @@
-Integrated Management Workshop: Configuring the Lab Environment
-==============================================================
+Automated Smart Management Workshop: Configuring the Lab Environment
+====================================================================
 
 Objective
 ---------

@@ -1,10 +1,11 @@
-# Integrated Management Workshop: Managing Additional Software with Satellite
+Automated Smart Management Workshop: Managing Additional Software with Satellite
+--------------------------------------------------------------------------------
 
 In this part of the workshop, we will learn how to manage extra/additional software with Satellite. When you have RHEL clients managed by Satellite in your environment, often there is also a requirement to manage additional software packages that don't come from any of the RHEL distributions/repositories. For example, the Creative department wanted you to manage a CAD/CAM software that runs on many of their RHEL workstations. Satellite has the ability to manage other software packages on top of what comes with Red Hat subscriptions.
 
 ## Environment
 
--   Red Hat Satellite 6
+-   Satellite 6.8, Ansible Automation Platform 4.0.0
 
 -   3 x Red Hat Enterprise Linux clients
 

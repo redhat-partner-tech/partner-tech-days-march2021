@@ -1,12 +1,12 @@
-Integrated Management Workshop: Automating Patch Management
-===========================================================
+Automated Smart Management Workshop: Automating Patch Management
+================================================================
 
-In this part of the workshop, we will learn how to leverage the use of workflows in Ansible Tower to orchestrate patch management for several linux servers . Automating patch management reduces human error and improves configuration and patch accuracy. Additionally, automation provides capabilities to reduce the manual input associated with identifying, testing and patching systems. 
+In this part of the workshop, we will learn how to leverage the use of workflows in Ansible Automation Platform to orchestrate patch management for several linux servers . Automating patch management reduces human error and improves configuration and patch accuracy. Additionally, automation provides capabilities to reduce the manual input associated with identifying, testing and patching systems. 
 
 Environment
 -----------
 
--   Red Hat Satellite v6.8
+-   Satellite 6.8, Ansible Automation Platform 4.0.0
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
@@ -28,7 +28,7 @@ Exercise
 
 #### 1\. Logging into the Ansible Automation Platform
 
--   Use a web browser on your computer to access the Ansible Tower GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
+-   Use a web browser on your computer to access the Ansible Automation Platform GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
 
 ![login screen](images/2-patching-aap2-login.png)
 
