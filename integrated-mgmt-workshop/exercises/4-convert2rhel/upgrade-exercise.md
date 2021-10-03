@@ -40,11 +40,25 @@ Things to consider if doing this in dev/test/stage-beta/prod:
 
 Ok, let's get started...  
 
+Pre-requisites 
+---------------
+
+-   Exercise 0 : Lab Setup
+
+-   Organization to be used = Default Organization
+
+-   Location to be used = Default Location
+
+-   A content view = RHEL7
+
+-   Lifecycle environments = Dev, QA, Prod
+
 Exercise:
 -----------------------------------------------------------------
 **Login to your Satellite & AAP UI's**
+> **NOTE** The following are *example* URLs. Substitute your student number for student1, as you did for the lab setup exercise.
 - [Satellite 6.8 UI](https://student1-sat.guid.domain.com)
-- [Ansible Automation Platform 2.9 UI](https://student1.guid.domain.com)
+- [Ansible Automation Platform 4.0.0 UI](https://student1.guid.domain.com)
 
 Note that in the following steps that are being performed on AAP, at any time, over on the Satellite console, review the registered hosts via clicking Hosts => All Hosts.  Refresh the Hosts page to see changes as they occur a result from the automation being peformed via AAP.
 
