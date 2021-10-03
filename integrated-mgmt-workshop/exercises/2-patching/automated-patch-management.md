@@ -30,7 +30,7 @@ Exercise
 
 -   Use a web browser on your computer to access the Ansible Tower GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
 
-![](https://lh5.googleusercontent.com/EBIf_BZxQc4PRn7QSESaQ5Z9sJ3HBMWCBMi-emrz421t_RF7puh2Evrhblke3i9cUEH6fkqWdKvTgvmHB5oWUGkDT2D8Cs65FIdpTf_si9bg_nbqEvLQjV4vWB3Ui-JCDbyyDXII)
+![login screen](images/2-patching-aap2-login.png)
 
 -   Once you're in Tower you will be able to see a dashboard
 
