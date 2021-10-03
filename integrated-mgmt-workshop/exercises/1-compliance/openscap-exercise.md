@@ -13,6 +13,8 @@ Environment
 Pre-requisites (completed in previous exercises in the workshop, values to be changed)
 --------------------------------------------------------------------------------------
 
+-   Exercise 0 : Lab Setup
+
 -   Organization to be used = Default Organization
 
 -   Content view = RHEL7
