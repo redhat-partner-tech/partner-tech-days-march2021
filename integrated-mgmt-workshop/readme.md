@@ -1,4 +1,4 @@
-# Ansible Workshop - Smart Management Automation
+# Automated Smart Management Workshop
 
 In this workshop you will learn how to get the most from using both Red Hat Smart Management and the Ansible Automation Platform.
 
