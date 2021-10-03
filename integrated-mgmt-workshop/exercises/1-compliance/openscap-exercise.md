@@ -1,12 +1,12 @@
-Integrated Management Workshop: Configuring and performing an OpenSCAP Scan
-===========================================================================
+Automated Smart Management Workshop: Configuring and performing an OpenSCAP Scan
+================================================================================
 
-In this part of the workshop, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Tower with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans remotely from a single location. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce. OpenSCAP provides tools for automated vulnerability checking. Satellite is has RPM packages for SCAP workbench v1.2.0-5 which provides our scanning capabilities and is also loaded with the SCAP security guide v0.1.54-3 for RHEL7 and CentOS devices which provides the appropriate XCCDF benchmarks for PCI and STIG complianc (among several others).
+In this part of the workshop, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Automation Platform with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans remotely from a single location. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce. OpenSCAP provides tools for automated vulnerability checking. Satellite is has RPM packages for SCAP workbench v1.2.0-5 which provides our scanning capabilities and is also loaded with the SCAP security guide v0.1.54-3 for RHEL7 and CentOS devices which provides the appropriate XCCDF benchmarks for PCI and STIG complianc (among several others).
 
 Environment
 -----------
 
--   Red Hat Satellite v6.8
+-   Red Hat Satellite v6.8, Ansible Automation Platform 4.0.0
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
@@ -70,15 +70,15 @@ Now we will start configuring our Satellite server to be able to manage a compli
 
 ![login screen](images/1-compliance-aap2-login.png)
 
-Once you're in Ansible Tower, you'll be able to see a dashboard.
+Once you're in Ansible Automation Platform, you'll be able to see a dashboard.
 
 ![](https://lh4.googleusercontent.com/sVjxVPXbZ0lHrA3clT0kFIMNbYizH4y3OCTrb_kxSK39RhDr1UzLz4AS4N2Tvs6R9wUzmma0nj-CkJtHL8c0EjPyz5oEfbGFYtDzPRZ637X4rRKqtNseCxR9OL7JJNlfA9cygoIN)
 
-#### 5\. Configure and launch an Ansible Tower template to run an OpenSCAP scan. 
+#### 5\. Configure and launch an Ansible Automation Platform template to run an OpenSCAP scan. 
 
 This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``` policy that we configured on Satellite.
 
--   In Ansible Tower click 'Templates' from the left side pane menu
+-   In Ansible Automation Platform click 'Templates' from the left side pane menu
 
 -   Click the GREEN + icon on the far right side of the screen to activate the drop-down selection menu, then click "Job Template". Fill out the details as follows. 
 
@@ -152,8 +152,8 @@ This step will expand our OpenSCAP policy scan to add another XCCDF compliance p
 
 ![](https://lh6.googleusercontent.com/Y2DSZltuMov4zXtop_IYzfWZXRRmyk2Ogvnv-Sz22QGaKWm4QD7LcVtjkVP3inDSFIlLUiaRC267gnBrABF0sNJCx-lXN-19Ufu4le-HdUzWz36fxAI4nizD3bi5piEwEoJN3JXF)
 
--   Now, we will update our OpenSCAP_Configure job template in Ansible Tower and run another PCI compliance scan, plus the STIG compliance scan. 
--   Login to Ansible Tower, click 'Templates' from the left side pane menu
+-   Now, we will update our OpenSCAP_Configure job template in Ansible Automation Platform and run another PCI compliance scan, plus the STIG compliance scan. 
+-   In Ansible Automation Platform, click 'Templates' from the left side pane menu
 -   Then select on the OpenSCAP_Configure job template. Make the following changes: (NOTE the change to "Extra Variables")
 
         Name: OpenSCAP_Configure
