@@ -186,11 +186,11 @@ This step will expand our OpenSCAP policy scan to add another XCCDF compliance p
           - PCI_Compliance
           - STIG_Compliance
 
-![aap_template](images/1-compliance-aap2-template2.png)
+![aap_template](images/1-compliance-aap2-template2-fix.png)
 
 -   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template.
 
-![aap_template](images/1-compliance-aap2-OpenSCAP_Configure-output2.png)
+![aap_output](images/1-compliance-aap2-OpenSCAP_Configure-output2-fix.png)
 
 #### 8\. Navigate back to Satellite to examine the Asset Reporting File (ARF). 
 
