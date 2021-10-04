@@ -146,9 +146,9 @@ Note that in the following steps that are being performed on AAP, at any time, o
       - choose LE target RHEL7_Dev
 > **NOTE** with some pre-configuration, any combination is possible
 ![conversion-select](images/4-convert2rhel-conversion-select.png)
-      - click **Next** to continue
+- click **Next** to continue
 ![conversion-confirm](images/4-convert2rhel-conversion-confirm.png)
-      - confirm CentOS and RHEL LE variables set via survey selections and click **Launch**
+- confirm CentOS and RHEL LE variables set via survey selections and click **Launch**
 ![conversion-complete](images/4-convert2rhel-conversion-complete.png)
 
 #### 8\. Query Satellite to get post conversion node-related details, set EC2 instance tags based on these details
