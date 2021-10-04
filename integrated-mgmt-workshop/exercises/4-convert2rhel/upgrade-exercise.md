@@ -75,50 +75,133 @@ Note that in the following steps that are being performed on AAP, at any time, o
 
 -   Upon successful login, you will be able to see the Ansible Automation Platform dashboard.
 
-1. From the Dashboard main menu item, click INVENTORIES => Workshop Inventory => HOSTS
-    - Here, you will see we have RHEL and CentOS Nodes in a **static** Ansible inventory
+#### 2\. Install Three Tier Application Stack
 
-2. Take CentOS node snapshot (optional, if you've already performed this step during initial setup then skip)
-    - template CONVERT2RHEL / 01 - Take node snapshot
+-   Use the side pane menu on the left to select **Templates**.
 
-3. Install three tier application stack on CentOS nodes
-    - template CONVERT2RHEL / 96 - Three Tier App deployment
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 96 - Three Tier App deployment** to launch the job.
 
-4. Verify three tier application functionality on CentOS nodes
-    - template CONVERT2RHEL / 97 - Three Tier App smoke test
+![3tier-install](images/4-convert2rhel-3tier-install.png)
 
-5. Upgrade CentOS nodes to latest
-    - template CONVERT2RHEL / 02 - Upgrade OS to latest release
+#### 3\. Take CentOS node snapshot (optional, however, recommended for this exercise)
 
-6. Verify three tier application functionality on CentOS nodes
-    - template CONVERT2RHEL / 97 - Three Tier App smoke test
+-   Use the side pane menu on the left to select **Templates**.
 
-7. convert2rhel process
-    - template CONVERT2RHEL / 03 - convert2rhel
+-   Click ![copy template](images/4-convert2rhel-copy-template-icon.png)to the right of **CONVERT2RHEL / 01 - Take node snapshot** to copy the template.
+
+![template-copy](images/4-convert2rhel-template-copy.png)
+
+-   Click the newly created job template **CONVERT2RHEL / 01 - Take node snapshot @ some-timestamp**
+
+-   Click **Edit** at the bottom left. 
+    - Edit the name to **CONVERT2RHEL / 01 - Take node snapshot / CentOS7 Development**
+    - In the **Variables** section, within *tags* remove:
+
+    "short_name": "node*",
+
+    ...and add:
+
+    "ContentView": "CentOS7",
+
+    "Environment": "Dev",
+
+![template-edit](images/4-convert2rhel-template-edit.png)
+    - Review the changes, then at the bottom left, click **Save**
+    - Verify the template name change, as well as the tag adjustments in the **Variables** section then click **Launch**
+
+![centos-snapshot](images/4-convert2rhel-centos-snapshot.png)
+
+#### 4\. Verify three tier application functionality on CentOS nodes - pre Centos update
+
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 97 - Three Tier App smoke test** to launch the job.
+
+![3tier-smoketest](images/4-convert2rhel-3tier-smoketest.png)
+
+#### 5\. Upgrade CentOS nodes to latest version
+
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 02 - Upgrade OS to latest release** to launch the job.
+
+![centos-update](images/4-convert2rhel-centos-update.png)
+
+#### 6\. Verify three tier application functionality on CentOS nodes - post Centos update, pre Convert2RHEL
+
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 97 - Three Tier App smoke test** to launch the job.
+
+![3tier-smoketest-2](images/4-convert2rhel-3tier-smoketest-2.png)
+
+#### 7\. Convert2RHEL - CentOS7 Development nodes to RHEL7 Development nodes
+
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 03 - convert2rhel** to launch the job.
+
       - choose LE group to convert CentOS7_Dev
       - choose LE target RHEL7_Dev
-      - with some pre-configuration, any combination is possible
+> **NOTE** with some pre-configuration, any combination is possible
+![conversion-select](images/4-convert2rhel-conversion-select.png)
+      - click **Next** to continue
+![conversion-confirm](images/4-convert2rhel-conversion-confirm.png)
+      - confirm CentOS and RHEL LE variables set via survey selections and click **Launch**
+![conversion-complete](images/4-convert2rhel-conversion-complete.png)
 
-8. Query Satellite to get node-related details, set EC2 instance tags based on these details
-    - template EC2 / Set instance tags based on Satellite(Foreman) facts
+#### 8\. Query Satellite to get post conversion node-related details, set EC2 instance tags based on these details
+-   Use the side pane menu on the left to select **Templates**.
 
-9. Update inventories via dynamic sources
-    - template EC2 / Set instance tags based on Satellite(Foreman) facts
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **EC2 / Set instance tags based on Satellite(Foreman) facts** to launch the job.
+![instance-tags](images/4-convert2rhel-instance-tags.png)
 
-    - template CONTROLLER / Update inventories via dynamic sources
+#### 9\. Update inventories via dynamic sources
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONTROLLER / Update inventories via dynamic sources** to launch the job.
 	  - Select "CentOS7" for Inventory To Update
       - select "Dev" for Choose Environment
+      - Click **Next**, confirm prompted values, then click **Launch**
+![centos-inventory](images/4-convert2rhel-centos-inventory.png)
 
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONTROLLER / Update inventories via dynamic sources** to launch the job.
     - template CONTROLLER / Update inventories via dynamic sources
 	  - Select "RHEL7" for Inventory To Update
       - select "Dev" for Choose Environment
+      - Click **Next**, confirm prompted values, then click **Launch**
+![rhel-inventory](images/4-convert2rhel-rhel-inventory.png)
 
-10. Copy template CONVERT2RHEL / 97 - Three Tier App smoke test to template CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7_Dev
-    - set Inventory to RHEL7_Dev
-    - set credential to "Student Credential"
+#### 10\. Create student credential
+-   Use the side pane menu on the left to select **Credentials**.
+-   Click **Add**
+	  - Name: Student Credential
+      - Organization: Default
+      - Credential Type: Machine
+      - Username: student1 (example shown, use your assigned student name/number)
+      - Password: same password as Ansible Automation Platform login/password
+-   Click **Save**
+![student-credential](images/4-convert2rhel-student-credential.png)
 
-11. Verify three tier application functionality on newly converted RHEL nodes
-    - template CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7_Dev
+#### 11\. Copy template CONVERT2RHEL / 97 - Three Tier App smoke test to template CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7 Development
+-   Use the side pane menu on the left to select **Templates**.
+
+-   Click ![copy template](images/4-convert2rhel-copy-template-icon.png)to the right of **CONVERT2RHEL / 97 - Three Tier App smoke test** to copy the template.
+
+![template-copy](images/4-convert2rhel-template-copy-2.png)
+
+-   Click the newly created job template **CONVERT2RHEL / 97 - Three Tier App smoke test @ some-timestamp**
+
+-   Click **Edit** at the bottom left. 
+    - Edit the name to **CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7 Development**
+    - Click ![lookup](images/4-convert2rhel-lookup-icon.png)under Inventory and select the radio button for **RHEL7 Development**, followed by **Select**.
+    - Click ![lookup](images/4-convert2rhel-lookup-icon.png)under Credentials and select the radio button for **Student Credential**, followed by **Select**.
+    - Review the changes, then scroll down and on the bottom left, click **Save**
+    - Click **Launch** to run the new job template **CONVERT2RHEL / 97 - Three Tier App smoke test / RHEL7 Development**
+
+![3tier-smoketest-3](images/4-convert2rhel-3tier-smoketest-3.png)
 
 > **EXTRA CREDIT - Convert2RHEL workflow template**
 Create a workflow template incorporating the above standalone templates into a complete CentOS to RHEL conversion workflow!
