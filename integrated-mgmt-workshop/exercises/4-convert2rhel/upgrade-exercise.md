@@ -106,8 +106,9 @@ Note that in the following steps that are being performed on AAP, at any time, o
     "Environment": "Dev",
 
 ![template-edit](images/4-convert2rhel-template-edit.png)
-    - Review the changes, then at the bottom left, click **Save**
-    - Verify the template name change, as well as the tag adjustments in the **Variables** section then click **Launch**
+
+- Review the changes, then at the bottom left, click **Save**
+- Verify the template name change, as well as the tag adjustments in the **Variables** section then click **Launch**
 
 ![centos-snapshot](images/4-convert2rhel-centos-snapshot.png)
 
