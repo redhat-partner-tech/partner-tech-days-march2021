@@ -127,6 +127,17 @@ code_server: true
 
 # Enable AWS IAM integration with control node and workshop nodes
 tower_node_aws_api_access: true
+
+# default vars for ec2 AMIs (ec2_info) are located in:
+# provisioner/roles/manage_ec2_instances/defaults/main/main.yml
+# select ec2_info AMI vars can be overwritten via ec2_xtra vars, e.g.:
+#ec2_xtra:
+#  satellite:
+#    owners: 012345678910
+#    filter: Satellite*
+#    username: ec2-user
+#    os_type: linux
+#    size: r5a.xlarge
 ```
 
 **Setup DNS** 
