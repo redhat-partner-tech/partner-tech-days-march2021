@@ -6,7 +6,7 @@
 
 
 **Requirements:**
-- System with git, python3, expect(unbuffer utility), ansible
+- System with git, python3, expect(unbuffer utility)
 - Active public domain name (from AWS or other DNS registrar)
 - AWS Account
 - DNS setup (Hosted Zone) via AWS Route53
