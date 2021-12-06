@@ -25,13 +25,13 @@ We will focus on 5 main customer pain points:
 ## Lab Setup
 
 ### Deployment
-- Option 1: [AWS Provisioner](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-aws.md) (Ansible)  
-- Option 2: [RHPDS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/provision-rhpds.md) (Coming soon)
+- Option 1: [AWS Provisioner](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/provision-aws.md) (Ansible)  
+- Option 2: [RHPDS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/provision-rhpds.md) (Coming soon)
 
 ### Configure
 *This step is only applicable if you did Option 1 for deployment.*<br><br>
 After the workshop is deployed, you will need to configure the environment. This step will configure the deployed environment, including Activation Keys, Lifecycle Environments, Registering Servers to Satellite Server, etc.
-- [Configure/Setup Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/tree/main/integrated-mgmt-workshop/exercises/0-setup)<br>
+- [Configure/Setup Workshop Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/tree/aap2/integrated-mgmt-workshop/exercises/0-setup)<br>
 
 
 
@@ -55,9 +55,9 @@ Now you should have the following configured workshop environment:
 ## Guide
 Workshop Presentation: [Partner Content Hub](http://redhat-partner.highspot.com)<br>
 *You will need a Red Hat Partner Connect account/login to access. Don't have one? Click [here](https://connect.redhat.com/en/support)*
-* [Exercise 0: Configuring the Lab Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/0-setup/README.md)
-* [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/1-compliance/openscap-exercise.md)
-* [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/2-patching/automated-patch-management.md)
+* [Exercise 0: Configuring the Lab Environment](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/exercises/0-setup/README.md)
+* [Exercise 1: Compliance / Vulnerability Management](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/exercises/1-compliance/openscap-exercise.md)
+* [Exercise 2: Patch Management / OS](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/exercises/2-patching/automated-patch-management.md)
 * Exercise 3: System Baseline / Drift (see presentation)
-* [Exercise 4: CentOS to RHEL conversion + upgrade](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/4-convert2rhel/upgrade-exercise.md)
-* [Exercise 5: Custom Repositories](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/main/integrated-mgmt-workshop/exercises/5-customerepo/custom-repo-exercise.md)
+* [Exercise 4: CentOS to RHEL conversion + upgrade](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/exercises/4-convert2rhel/upgrade-exercise.md)
+* [Exercise 5: Custom Repositories](https://github.com/redhat-partner-tech/partner-tech-days-march2021/blob/aap2/integrated-mgmt-workshop/exercises/5-customerepo/custom-repo-exercise.md)
