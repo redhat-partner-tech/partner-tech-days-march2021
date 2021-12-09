@@ -177,7 +177,7 @@ centos7: centos78
 automation_hub: false
 
 # this will install VS Code web on all control nodes
-code_server: false
+code_server: true
 
 # this will change the location of lab guide
 # ansible_workshops_url: https://github.com/ansible/workshops
