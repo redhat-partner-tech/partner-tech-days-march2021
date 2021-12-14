@@ -12,12 +12,11 @@ In this workshop you will learn how to get the most from using both Red Hat Smar
 - [Guide](#guide)
 
 ## Use Cases
-We will focus on 5 main customer pain points:
+We will focus on 4 main customer pain points:
 - Compliance (OpenSCAP Scanning) and Vulnerability Management
 - Patch Management
 - System Baselining and Drift
 - CentOS to RHEL conversion + upgrade
-- Custom Repositories
 
 ## Lab Diagram
 ![](https://lh5.googleusercontent.com/t6LEJtEw6Q0tHt3RurTtEuR9HgLmCjJofdWyc605qD-yWiFTuMA_gfdv7NHLI7urVwMihly12QDrAvwX1nBf0-kTmLPviSNttHfUzOp3MLHmfYYCc-XDQMkBSebxLJvX0BJr9iUU)
