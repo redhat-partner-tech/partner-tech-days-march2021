@@ -3,23 +3,26 @@ Automated Smart Management Workshop: Configuring the Lab Environment
 
 Objective
 ---------
-The objective of this exercise is to setup the lab environemnt. This exercise will require you to launch (5) playbooks. The playbooks accomplish the following:
+The objective of this exercise is to setup the lab environemnt following an Infrastructure as Code process. This exercise will require you to launch (9) playbooks. The playbooks accomplish the following:
 
--   Setup and configure Satellite with the proper lifecycle environments, content views, activation keys.
 -   Populate Ansible Controller with an inventory source, add templates, as well as an additional project.
 -   Publish RHEL7 dev content view in Satellite 
 -   Register servers to the Satellite installation - RHEL7
 -   Register servers to the Satellite installation - CentOS7
+-   Populate dynamic inventories - RHEL7
+-   Populate dynamic inventories - CentOS7
+
+> **NOTE** To save time, Satellite will already have a job executed that configures the proper lifecycle environments, content views, activation keys.
 
 Environment
 ---------
 > **NOTE** The following are *example* URLs. Your student lab URLs will be different.
 * Ansible Automation Platform URL<br>
-    * *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
-* Ansible Automation Platform login/password 
+    * **Example:** `https://student1.smrtmgmt013.mw01.redhatpartnertech.net`
+    * Ansible Automation Platform login/password 
 * Satellite URL<br> 
-    * *Example: https://student1-sat.smrtmgmt013.mw01.redhatpartnertech.net (Note the -sat added to the URL)*
-* Satellite login/password (same as above)
+    * **Example:** `https://student1-sat.smrtmgmt013.mw01.redhatpartnertech.net` (Note the -sat added to the URL)
+    * Satellite login/password (same as above)
 
 Exercise
 --------
@@ -44,22 +47,19 @@ This step demonstrates the execution of job templates. You will be working with 
 
 ![templates](images/0-setup-aap2-templates.png)
 
--   Click ![launch](images/0-setup-aap2-launch.png)to launch the **SETUP / Satellite** job. When prompted, be sure to change ```refresh_satellite_manifest: false```  to  ```refresh_satellite_manifest: true``` and click **Next**. Verify the change, then click **Launch**.
+> **NOTE** Notice that the **SETUP / Satellite** job has already been completed for you.
 
-
-You will be taken to the **Jobs > SETUP / Satellite** dashboard where you will be able to follow each task executed as part of the playbook. This will take approximately 35 mins to complete.
-
-> **NOTE** Please allow the **SETUP / Satellite** job to run to completion before proceeding to execution of the next template.
-
-![sat-complete](images/0-setup-aap2-setup-sat-complete.png)
-
-When complete, you will see a successful status as well as a play recap at the bottom of the screen.
-
-Next you will need to run the **SETUP / Controller** job template. 
+First, you will need to run the **SETUP / Controller** job template. 
 
 -   Select **Templates** and click on the![launch](images/0-setup-aap2-launch.png)to the right of the **SETUP / Controller** job template.
 
 ![control-complete](images/0-setup-aap2-setup-control-complete.png)
+
+You will be taken to the **Jobs > SETUP / Controller** output window where you will be able to follow each task executed as part of the playbook. This will take approximately 2 mins to complete.
+
+> **NOTE** Please allow the **SETUP / Controller** job to run to completion before proceeding to execution of the next template.
+
+When complete, you will see a successful status as well as a play recap at the bottom of the screen.
 
 -   Navigate back to **Templates** on the left side pane.
 
