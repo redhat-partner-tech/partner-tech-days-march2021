@@ -99,17 +99,18 @@ This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``
         Playbook: configure_openscap.yml (Click drop-down to select.)
 
         Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select.) 
-                NOTE: In this new menu. Select the Workshop Credential radio button button. The 'Selected Category' for this is 'Machine'. Next, use the drop-down menu again to select Satellite_Collection. You will choose the Satellite Credential. This will provide you with two sets of credentials. Choosing 'Select' will save your changes and exit the menu. 
-
+                NOTE: In this new menu. Select the Workshop Credential radio button button. The 'Selected Category' for this is 'Machine'. Next, use the drop-down menu again to select Satellite_Collection. You will choose the Satellite Credential. This will provide you with two sets of credentials. Choosing 'Select' will save your changes and exit the menu.
+                
         Extra Variables (Keep the exact spacing provided below. Note that the extra-vars that we are supplying need to be in YAML format):
 
+        ---
         HOSTS: node1.example.com
         Policy_scan: 
           - PCI_Compliance
 
 ![aap_template](images/1-compliance-aap2-template1.png)
 
--   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template.
+-   Leave the rest of the fields blank or as they are, and click 'Save'. You can then select 'Launch' to deploy the job template. Wait for the job template to complete before proceeding to the next step.
 
 ![aap_output](images/1-compliance-aap2-OpenSCAP_Configure-output1.png)
 
@@ -166,21 +167,22 @@ This step will expand our OpenSCAP policy scan to add another XCCDF compliance p
 
         Job Type: Run
 
-        Inventory: RHEL7 Development
+        Inventory: RHEL7 Development (Click the magnifying glass icon to select.)
 
-        Project: Automated Management 
+        Project: Automated Management (Click the magnifying glass icon to select.)
         
-        Execution Environment: smart_mgmt workshop execution environment
+        Execution Environment: smart_mgmt workshop execution environment (Click the magnifying glass icon to select.)
 
-        Playbook: configure_openscap.yml
+        Playbook: configure_openscap.yml (Click the magnifying glass icon to select.)
 
         Project: Automated Management 
 
-        Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select. Select Satellite_Collection in the CREDENTIAL TYPE    
-                     dropdown to add the Satellite Credential)
+        Credentials: Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select.) 
+                NOTE: In this new menu. Select the Workshop Credential radio button button. The 'Selected Category' for this is 'Machine'. Next, use the drop-down menu again to select Satellite_Collection. You will choose the Satellite Credential. This will provide you with two sets of credentials. Choosing 'Select' will save your changes and exit the menu.
 
-        Extra Variables:
+        Extra Variables (Keep the exact spacing provided below. Note that the extra-vars that we are supplying need to be in YAML format):
 
+        ---
         HOSTS: all
         Policy_scan: 
           - PCI_Compliance
