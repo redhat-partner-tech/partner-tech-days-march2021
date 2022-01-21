@@ -1,7 +1,7 @@
 Automated Smart Management Workshop: Configuring and performing an OpenSCAP Scan
 ================================================================================
 
-In this exercise, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Automation Platform 2 with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans often. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce (just to name a few examples). OpenSCAP provides tools for automated vulnerability checking. Satellite can be loaded with RPM packages for SCAP workbench v1.2.0-5 which will provide scanning capabilities. Satellite is also loaded with the SCAP security guide v0.1.54-3 for RHEL7 and CentOS devices which provides the appropriate XCCDF benchmarks for PCI and STIG compliance for the purpose of this exericse.
+In this exercise, we will learn how to configure and perform an OpenSCAP scan using playbooks in Ansible Automation Platform 2 with Satellite. When running multiple Red Hat Enterprise Linux systems, it's important to keep all of these systems compliant with a meaningful security policy and perform security scans often. OpenSCAP is an open source project that is used by government agencies, corporations, as well as e-commerce (just to name a few examples). OpenSCAP provides tools for automated vulnerability checking. Satellite can be loaded with RPM packages for SCAP workbench v1.2.0-8 which will provide scanning capabilities. Satellite is also loaded with the SCAP security guide v0.1.54-3 for RHEL7 and CentOS devices which provides the appropriate XCCDF benchmarks for PCI and STIG compliance for the purpose of this exercise. This exercise will focus on RHEL systems, CentOS will be out of scope. 
 
 Environment
 -----------
@@ -10,7 +10,7 @@ Environment
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
-Pre-requisites (completed in previous exercises in the workshop, values to be changed)
+Pre-requisites 
 --------------------------------------------------------------------------------------
 
 -   Exercise 0 : Lab Setup
@@ -26,7 +26,7 @@ Exercise
 
 #### 1\. Logging into Satellite
 
--   Use a web browser on your computer to access the Satellite GUI via the link found in the environment above, then login using the following nomenclature: *admin /* <*password*>
+-   Use a web browser on your computer to access the Satellite GUI provided , then login using the following nomenclature: *admin /* <*password*>
 
 ![login screen](images/1-compliance-aap2-Satellite_login.png)
 
@@ -64,7 +64,7 @@ Now we will start configuring our Satellite server to be able to manage a compli
 
 ![satellite_policy](images/1-compliance-aap2-Satellite_SCAP4.png)
 
--   Steps 5, 6, and 7 as part of the New Compliance Policy can use default values. Click "Next" through "Locations", "Organizations", and "Hostgroups"
+-   Steps 5, 6, and 7 as part of the New Compliance Policy can use default values. Click "Next" through "Locations", and "Organizations". For "Hostgroups" click "Submit"
 
 ![satellite_policy](images/1-compliance-aap2-Satellite_SCAP5.png)
 
@@ -74,7 +74,7 @@ Now we will start configuring our Satellite server to be able to manage a compli
 
 ![login screen](images/1-compliance-aap2-login.png)
 
--   Once you're in Ansible Automation Platform 2, you'll be able to see a dashboard
+-   Once you have logged into Ansible Automation Platform 2, you will be shown the most recently visited page. 
 
 ![aap_dashboard](images/1-compliance-aap2-dashboard.png)
 
@@ -84,22 +84,22 @@ This step will allow us to scan a single rhel7 host with the ```PCI_Compliance``
 
 -   In Ansible Automation Platform click 'Templates' from the left side pane menu
 
--   Click the BLUE 'Add' icon and select 'Add job template' from the drop-down selection menu. Fill out the details as follows:
+-   Click the BLUE 'Add' drop-down icon and select 'Add job template' from the drop-down selection menu. Fill out the details as follows:
 
         Name: SATELLITE / Compliance - OpenSCAP_Configure
 
         Job Type: Run
 
-        Inventory: RHEL7 Development
+        Inventory: RHEL7 Development (Click the magnifying glass icon to select.)
 
-        Project: Automated Management 
+        Project: Automated Management (Click the magnifying glass icon to select.)
         
-        Execution Environment: smart_mgmt workshop execution environment
+        Execution Environment: smart_mgmt workshop execution environment (Click the magnifying glass icon to select.)
 
-        Playbook: configure_openscap.yml
+        Playbook: configure_openscap.yml (Click drop-down to select.)
 
-        Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select. Select Satellite_Collection in the CREDENTIAL TYPE    
-                     dropdown to add the Satellite Credential)
+        Credentials: Satellite Credential, Workshop Credential (Click the magnifying glass icon to select.) 
+                NOTE: In this new menu. Select the Workshop Credential radio button button. The 'Selected Category' for this is 'Machine'. Next, use the drop-down menu again to select Satellite_Collection. You will choose the Satellite Credential. This will provide you with two sets of credentials. Choosing 'Select' will save your changes and exit the menu. 
 
         Extra Variables (Keep the exact spacing provided below. Note that the extra-vars that we are supplying need to be in YAML format):
 
