@@ -86,12 +86,12 @@ $ python3 -m venv $PYVENV_PROJDIR
 $ source ~/$PYVENV_PROJDIR/bin/activate
 (smrtmgmt01) $ python3 -m pip install --upgrade pip setuptools
 (smrtmgmt01) $ python3 -m pip install wheel
-(smrtmgmt01) $ python3 -m pip install ansible-core==2.11.5 \
-    requests==2.26.0 \
-    yamllint==1.19.0 \
-    boto3==1.16.59 \
+(smrtmgmt01) $ python3 -m pip install ansible-core==2.11.7 \
+    requests==2.27.1 \
+    yamllint==1.26.3 \
+    boto3==1.20.49 \
     boto==2.49.0 \
-    awscli==1.18.219 \
+    awscli==1.22.49 \
     netaddr==0.8.0 \
     passlib==1.7.4 \
     tox==3.22.0 \
