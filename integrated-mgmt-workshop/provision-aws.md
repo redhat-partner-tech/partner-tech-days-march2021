@@ -225,9 +225,9 @@ or
 
 **Finally, set some related environment variables and run the provisioner via ansible-playbook**
 ```
-(smrtmgmt01) $ ANSIBLE_CONFIG=provisioner/ansible.cfg
-(smrtmgmt01) $ AWS_MAX_ATTEMPTS=10
-(smrtmgmt01) $ AWS_RETRY_MODE=standard
+(smrtmgmt01) $ export ANSIBLE_CONFIG=provisioner/ansible.cfg
+(smrtmgmt01) $ export AWS_MAX_ATTEMPTS=10
+(smrtmgmt01) $ export AWS_RETRY_MODE=standard
 ```
 > **NOTE**: Utilizing `unbuffer` utility to handle `ansible-playbook` is not required, however, provides a convenient method to monitor console while simultaneously writing to log file
 ```
@@ -249,9 +249,9 @@ $
 $ export PYVENV_PROJDIR="smrtmgmt01"
 $ source ~/$PYVENV_PROJDIR/bin/activate
 (smrtmgmt01) $ cd ~/github/ansible/workshops
-(smrtmgmt01) $ ANSIBLE_CONFIG=provisioner/ansible.cfg
-(smrtmgmt01) $ AWS_MAX_ATTEMPTS=10
-(smrtmgmt01) $ AWS_RETRY_MODE=standard
+(smrtmgmt01) $ export ANSIBLE_CONFIG=provisioner/ansible.cfg
+(smrtmgmt01) $ export AWS_MAX_ATTEMPTS=10
+(smrtmgmt01) $ export AWS_RETRY_MODE=standard
 (smrtmgmt01) $ unbuffer ansible-playbook teardown_lab.yml -e @~/$PYVENV_PROJDIR/deploy_vars/smart_mgmt_wkshop_vars.yml -e debug_teardown=true | tee ~/$PYVENV_PROJDIR/deploy_logs/mgmtlab-teardown-$(date +%Y-%m-%d.%H%M).log
 (smrtmgmt01) $ deactivate
 $
