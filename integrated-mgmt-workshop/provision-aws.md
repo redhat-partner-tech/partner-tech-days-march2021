@@ -87,6 +87,7 @@ $ source ~/$PYVENV_PROJDIR/bin/activate
 (smrtmgmt01) $ python3 -m pip install --upgrade pip setuptools
 (smrtmgmt01) $ python3 -m pip install wheel
 (smrtmgmt01) $ python3 -m pip install ansible-core==2.11.7 \
+    paramiko==2.8.1 \
     requests==2.27.1 \
     yamllint==1.26.3 \
     boto3==1.20.49 \
@@ -196,6 +197,11 @@ tower_node_aws_api_access: true
 #    username: ec2-user
 #    os_type: linux
 #    size: r5a.xlarge
+#    disk_volume_type: gp3
+#    disk_space: 500
+#    disk_iops: 3000
+#    disk_throughput: 125
+#    architecture: x86_64
 ```
 
 **Manifest**
@@ -218,14 +224,14 @@ or
 **Build Ansible workshops provisioner collection**
 ```
 (smrtmgmt01) $ cd ~/github/ansible/workshops
-(smrtmgmt01) $ ansible-galaxy install --force -r requirements.yml
+(smrtmgmt01) $ export ANSIBLE_CONFIG=provisioner/ansible.cfg
+(smrtmgmt01) $ ansible-galaxy install --force -r collections/requirements.yml
 (smrtmgmt01) $ ansible-galaxy collection build --verbose --output-path build/
 (smrtmgmt01) $ ansible-galaxy collection install --verbose build/*.tar.gz
 ```
 
 **Finally, set some related environment variables and run the provisioner via ansible-playbook**
 ```
-(smrtmgmt01) $ export ANSIBLE_CONFIG=provisioner/ansible.cfg
 (smrtmgmt01) $ export AWS_MAX_ATTEMPTS=10
 (smrtmgmt01) $ export AWS_RETRY_MODE=standard
 ```
