@@ -106,7 +106,6 @@ $ source ~/$PYVENV_PROJDIR/bin/activate
 (smrtmgmt01) $ mkdir -p ~/github/ansible
 (smrtmgmt01) $ cd ~/github/ansible
 (smrtmgmt01) $ git clone https://github.com/ansible/workshops.git
-
 (smrtmgmt01) $ vim ~/$PYVENV_PROJDIR/deploy_vars/smart_mgmt_wkshop_vars.yml
 ```
 Please modify the following variables below to match your unique configuration.
@@ -224,6 +223,7 @@ or
 **Build Ansible workshops provisioner collection**
 ```
 (smrtmgmt01) $ cd ~/github/ansible/workshops
+(smrtmgmt01) $ git checkout main
 (smrtmgmt01) $ export ANSIBLE_CONFIG=provisioner/ansible.cfg
 (smrtmgmt01) $ ansible-galaxy install --force -r collections/requirements.yml
 (smrtmgmt01) $ ansible-galaxy collection build --verbose --output-path build/
