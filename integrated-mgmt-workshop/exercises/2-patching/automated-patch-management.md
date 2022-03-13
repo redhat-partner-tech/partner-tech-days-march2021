@@ -6,7 +6,7 @@ In this part of the workshop, we will learn how to leverage the use of workflows
 Environment
 -----------
 
--   Satellite 6.8, Ansible Automation Platform 4.0.0
+-   Satellite 6.10, Ansible Automation Platform 2.1
 
 -   3 x Red Hat Enterprise Linux clients v7.9
 
@@ -28,31 +28,35 @@ Exercise
 
 #### 1\. Logging into the Ansible Automation Platform
 
--   Use a web browser on your computer to access the Ansible Automation Platform GUI via the link found in the Environment above. And use the following username and password to login: admin / ansible123
+-   Use a web browser on your computer to access the Ansible Automation Platform GUI via the link found in the Environment above. And use the following username and password to login: admin / <password you were provided>
 
 ![login screen](images/2-patching-aap2-login.png)
 
 -   Once you're in Tower you will be able to see a dashboard
 
-![](https://lh6.googleusercontent.com/eMeUqr6L3P_O-YjRDLfxJ5FSKze9wypgTW9gbotRkU1wjBrZ7O8NGAxZ86yvTsb6yuc8BeMqCGSy0RUeRSKyD7U2C1yHkp86kDTARExzcMz-7MgQGpJMnMp__iOYZi2hObQyPNUK)
+![dashboard](images/2-patching-aap2-dashboard.png)
 
 #### 2\. Creating a new Patching Workflow
 
 Now we will start configuring a workflow that encompasses publishing a content view, promoting a content view, a fact scan, as well as a server patching. The goal is to publish a new content view and promote our rhel7_DEV environment to QA.
 
--   Start by clicking "Templates" from the left side pane menu, and then click on the GREEN +  icon to create a "Workflow Template".
+-   Start by clicking "Templates" from the left side pane menu, and then click on the blue "Add" dropdown button and choose "Add workflow template".
 
--   Create the name "SATELLITE / Patching Workflow" and click save (there are no other options necessary to select on this page).
+-   Create the name "SATELLITE / Patching Workflow" and click Save (there are no other options necessary to select on this page).
 
--   This should open a blank workflow. You can always get back to this workflow from the template by selecting the blue 'Workflow Visualizer' button.
+-   This should open a blank workflow, offering to start building it by choosing the green Start button. You can always get back to this workflow from the template by selecting the 'Visualizer' tab.
 
-![](https://lh5.googleusercontent.com/9-aMtjHlxDWDbBuudPzmzk5GSOB1yfHE7BEHOQTmKZnam-bwDUmQEwVQ_wzYWYZEicuMS0TH7M2KmNkfJ0L9I8ZG9POVpmXBoaTkNhmw3AzDMJvDg4sIUFcTDUT92MNzoEl56QFF)
+![workflow start](images/2-patching-aap2-workflow-start.png)
 
--   Select Start to add a node. From the drop-down menu select inventory sync and click on "EC2 Dynamic Source - RHEL7 Development". This sets up the inventory you will use in your workflow. You may leave the default remaining selections and click 'select'.
+-   Select Start to add a node. From the drop-down menu "Node Type" select "Inventory Source Sync" and click on "EC2 Dynamic Source - RHEL7 Development". This sets up the inventory you will use in your workflow. Click 'Save'.
+  
+![workflow inventory source](images/2-patching-aap2-workflow-inventory-source.png)
 
--   Select Start again to add a second node. From the drop-down menu select template and click on 'SATELLITE / RHEL - Publish Content View'. A survey is attached to this template so you will need to select 'prompt' at the bottom and select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to 'confirm' the preview. You may leave the default remaining selections and click 'select'.
+-   Hover over Start again to add a second node (Click on the appearing "+"). From the drop-down menu "Node Type" select "Job Template" then look up and click on 'SATELLITE / RHEL - Publish Content View'. Leave "Convergence" on "Any". Click, Next - a survey is attached to this template so you will need to select the correct content view for the servers we will patch. Select the 'RHEL7' content view and click 'next'. You will then need to confirm the preview by clicking 'Save': 
 
-This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'
+![workflow inventory source](images/2-patching-aap2-workflow-publish-CV-preview.png)
+
+This step in the workflow adds your first job template which runs a playbook called 'satellite_publish.yml'.
 
 -   Add third node to the workflow by hovering over your 'EC2 Dynamic Source - RHEL7 Development' inventory node and select the GREEN + icon to generate another node called 'SERVER / RHEL7 - Fact Scan'. This is what will scan the nodes in our Satellite inventory to check for package updates and errata.
 
