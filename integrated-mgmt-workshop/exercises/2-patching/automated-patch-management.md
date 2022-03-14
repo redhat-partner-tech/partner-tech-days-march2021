@@ -28,17 +28,17 @@ Exercise
 
 #### 1\. Logging into the Ansible Automation Platform
 
--   Use a web browser on your computer to access the Ansible Automation Platform GUI via the link found in the Environment above. And use the following username and password to login: admin / <password you were provided>
+-   Use a web browser on your computer to access the Ansible Automation Platform GUI via the link found in the Environment above. And use the following username and password to login: admin / &lt;password you were provided&gt;
 
 ![login screen](images/2-patching-aap2-login.png)
 
--   Once you're in Tower you will be able to see a dashboard
+-   Once you're in the Automation controller, you will be able to see a dashboard:
 
 ![dashboard](images/2-patching-aap2-dashboard.png)
 
 #### 2\. Creating a new Patching Workflow
 
-Now we will start configuring a workflow that encompasses publishing a content view, promoting a content view, a fact scan, as well as a server patching. The goal is to publish a new content view and promote our rhel7_DEV environment to QA.
+Now we will start configuring a workflow that encompasses publishing a content view, promoting a content view, a fact scan, as well as server patching. The goal is to publish a new content view and promote our rhel7_DEV environment to QA.
 
 -   Start by clicking "Templates" from the left side pane menu, and then click on the blue "Add" dropdown button and choose "Add workflow template".
 
