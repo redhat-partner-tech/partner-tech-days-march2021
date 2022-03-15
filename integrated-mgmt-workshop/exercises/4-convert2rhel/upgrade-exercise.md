@@ -5,7 +5,7 @@ Automated Smart Management Workshop: CentOS/RHEL migration and upgrade
 This use-case will focus on conversion and migration from older CentOS versions to RHEL 8.3 (latest version as of Feb 2020). While we only show this process for a few systems, however, it can be scaled to a larger number of physical, virtual or cloud hosts using content repos provided by [Red Hat Satellite](https://www.redhat.com/en/technologies/management/satellite) (included in [Red Hat Smart Management](https://www.redhat.com/en/technologies/management/smart-management)). The upgrade process will be driven with automation built and run using [Ansible Automation Platform](https://www.redhat.com/en/technologies/management/ansible).
 
 **Environment**
-- Satellite 6.8, Ansible Automation Platform 4.0.0
+- Satellite 6.10, Ansible Automation Platform 2.1
 - 3x CentOS 7 instances 
 - 3x RHEL 7  instances
 
@@ -55,7 +55,7 @@ Pre-requisites 
 
 Exercise:
 -----------------------------------------------------------------
-**Login to your Satellite & AAP UI's**
+**Login to your Satellite & AAP UIs**
 > **NOTE** The following are *example* URLs. Your student lab URLs will be different.
 * Ansible Automation Platform URL<br>
     * *Example: https://student1.smrtmgmt013.mw01.redhatpartnertech.net*
@@ -69,7 +69,7 @@ Note that in the following steps that are being performed on AAP, at any time, o
 **Steps:**<br>
 #### 1\. Logging into the Ansible Automation Platform (AAP)
 
--   Use a web browser on your computer to access the AAP GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password_set_in_deploy_vars>* 
+-   Use a web browser on your computer to access the AAP GUI via the link found in the Environment above. And use the following username and password to login: *admin / <password provided to you>* 
 
 ![login screen](images/4-convert2rhel-aap2-login.png)
 
@@ -79,7 +79,7 @@ Note that in the following steps that are being performed on AAP, at any time, o
 
 -   Use the side pane menu on the left to select **Templates**.
 
--   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 96 - Three Tier App deployment** to launch the job.
+-   Click ![launch](images/4-convert2rhel-aap2-launch.png)to the right of **CONVERT2RHEL / 96 - Three Tier App deployment** to launch the job. This will install the three tier application stack to the CentOS nodes, in this case a combination of HAProxy, Tomcat and Postgresql. 
 
 ![3tier-install](images/4-convert2rhel-3tier-install.png)
 
