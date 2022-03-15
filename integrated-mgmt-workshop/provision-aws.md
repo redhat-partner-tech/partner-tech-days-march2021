@@ -25,7 +25,7 @@ OS Config -- software tools install & config (including Ansible)
 
 - use yum for RHEL7/CentOS7, dnf for RHEL8/Fedora
 ```
-$ sudo dnf install vim git python3 expect
+$ sudo dnf install vim git python39 expect
 ```
 **RHEL family --> Set default python version via alternatives for provisioner to utilize correct python runtime**
 - "alternatives" utility used when several programs fulfilling the same or similar functions are installed on a single system at the same time, in this case, `python`
@@ -34,13 +34,13 @@ $ which python
 /usr/bin/which: no python in (/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin)
 $ alternatives --list | grep -i python
 python              	auto  	/usr/libexec/no-python
-python3             	auto  	/usr/bin/python3.6
+python3             	auto  	/usr/bin/python3.9
 $ alternatives --set python /usr/bin/python3
 $ alternatives --list | grep -i python
 python              	manual	/usr/bin/python3
-python3             	auto  	/usr/bin/python3.6
+python3             	auto  	/usr/bin/python3.9
 $ python --version
-Python 3.6.8
+Python 3.9.6
 ```
 
 **AWS Keys/Credentials - credentials file or via environment variables**
@@ -238,6 +238,11 @@ or
 > **NOTE**: Utilizing `unbuffer` utility to handle `ansible-playbook` is not required, however, provides a convenient method to monitor console while simultaneously writing to log file
 ```
 (smrtmgmt01) $ unbuffer ansible-playbook ./provisioner/provision_lab.yml -e @~/$PYVENV_PROJDIR/deploy_vars/smart_mgmt_wkshop_vars.yml | tee ~/$PYVENV_PROJDIR/deploy_logs/mgmtlab-deploy-$(date +%Y-%m-%d.%H%M).log
+```
+
+If `unbuffer` is utilized to handle the ansible-playbook command, the log output can be cleaned up post deployment with the following command:
+```
+sed -i "s,\x1B\[[0-9;]*[a-zA-Z],,g" ~/$PYVENV_PROJDIR/deploy_logs/mgmtlab-deploy-<date_timestamp>.log
 ```
 
 Unfamiliar with Python virtual environments (venv)?  Remember, the Python venv was "activated" earlier in the process via this command:
